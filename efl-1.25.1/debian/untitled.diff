@@ -1,0 +1,215 @@
+--- debian/libefl.symbols (libefl_1.25.1-0focal0_amd64)
++++ dpkg-gensymbolsZ_6Qi1       2020-10-27 14:06:05.785319641 -0400
+@@ -55,6 +55,7 @@
+ #MISSING: 1.22.4# _EFL_SELECT_MODEL_EVENT_UNSELECTED@Base 1.22.2
+  _EFL_TASK_EVENT_EXIT@Base 1.22.4
+  _ecore_magic_fail@Base 1.15.0
++ _ecore_main_loop_wakeup_time_get@Base 1.25.1-0focal0
+  _efl_startup_time@Base 1.22.2
+  ecore_animator_add@Base 1.15.0
+ #MISSING: 1.18.0# ecore_animator_class_get@Base 1.15.0
+@@ -1226,6 +1227,7 @@
+  ecore_drm2_device_pointer_warp@Base 1.18.0
+  ecore_drm2_device_pointer_xy_get@Base 1.18.0
+  ecore_drm2_device_prefer_shadow@Base 1.19.0
++ ecore_drm2_device_preferred_depth_get@Base 1.25.1-0focal0
+  ecore_drm2_device_screen_size_range_get@Base 1.18.0
+  ecore_drm2_device_touch_tap_to_click_enabled_set@Base 1.22.2
+  ecore_drm2_device_vt_set@Base 1.18.0
+@@ -1907,7 +1909,9 @@
+  ECORE_WL2_EVENT_WINDOW_ACTIVATE@Base 1.20.1
+  ECORE_WL2_EVENT_WINDOW_CONFIGURE@Base 1.19.1
+  ECORE_WL2_EVENT_WINDOW_CONFIGURE_COMPLETE@Base 1.19.1
++ ECORE_WL2_EVENT_WINDOW_CREATE@Base 1.25.1-0focal0
+  ECORE_WL2_EVENT_WINDOW_DEACTIVATE@Base 1.20.1
++ ECORE_WL2_EVENT_WINDOW_DESTROY@Base 1.25.1-0focal0
+  ECORE_WL2_EVENT_WINDOW_HIDE@Base 1.20.1
+  ECORE_WL2_EVENT_WINDOW_ICONIFY_STATE_CHANGE@Base 1.22.2
+  ECORE_WL2_EVENT_WINDOW_OFFSCREEN@Base 1.22.2
+@@ -2490,6 +2494,7 @@
+  ECORE_X_RAW_BUTTON_PRESS@Base 1.15.0
+  ECORE_X_RAW_BUTTON_RELEASE@Base 1.15.0
+  ECORE_X_RAW_MOTION@Base 1.15.0
++ _ecore_x_vsync_wakeup_time_get@Base 1.25.1-0focal0
+  ecore_x_atom_get@Base 1.15.0
+  ecore_x_atom_name_get@Base 1.15.0
+  ecore_x_atoms_get@Base 1.15.0
+@@ -5926,6 +5931,8 @@
+  efreet_desktop_x_field_set@Base 1.15.0
+  efreet_documents_dir_get@Base 1.15.0
+  efreet_download_dir_get@Base 1.15.0
++ efreet_file_cache_check@Base 1.25.1-0focal0
++ efreet_file_cache_fill@Base 1.25.1-0focal0
+  efreet_fsetowner@Base 1.15.0
+  efreet_hash_array_string_edd@Base 1.15.0
+  efreet_hash_free@Base 1.15.0
+@@ -5983,6 +5990,16 @@
+  efreet_menu_ref@Base 1.15.0
+  efreet_menu_save@Base 1.15.0
+  efreet_menu_unref@Base 1.15.0
++ efreet_mime_fallback_type_get@Base 1.25.1-0focal0
++ efreet_mime_globs_type_get@Base 1.25.1-0focal0
++ efreet_mime_init@Base 1.25.1-0focal0
++ efreet_mime_magic_type_get@Base 1.25.1-0focal0
++ efreet_mime_shutdown@Base 1.25.1-0focal0
++ efreet_mime_special_type_get@Base 1.25.1-0focal0
++ efreet_mime_type_cache_clear@Base 1.25.1-0focal0
++ efreet_mime_type_cache_flush@Base 1.25.1-0focal0
++ efreet_mime_type_get@Base 1.25.1-0focal0
++ efreet_mime_type_icon_get@Base 1.25.1-0focal0
+  efreet_music_dir_get@Base 1.15.0
+  efreet_pictures_dir_get@Base 1.15.0
+  efreet_public_share_dir_get@Base 1.15.0
+@@ -5990,6 +6007,13 @@
+  efreet_setowner@Base 1.15.0
+  efreet_shutdown@Base 1.15.0
+  efreet_templates_dir_get@Base 1.15.0
++ efreet_trash_delete_uri@Base 1.25.1-0focal0
++ efreet_trash_dir_get@Base 1.25.1-0focal0
++ efreet_trash_empty_trash@Base 1.25.1-0focal0
++ efreet_trash_init@Base 1.25.1-0focal0
++ efreet_trash_is_empty@Base 1.25.1-0focal0
++ efreet_trash_ls@Base 1.25.1-0focal0
++ efreet_trash_shutdown@Base 1.25.1-0focal0
+  efreet_uri_decode@Base 1.15.0
+  efreet_uri_encode@Base 1.15.0
+  efreet_uri_free@Base 1.15.0
+@@ -6012,24 +6036,24 @@
+  efreet_version_edd@Base 1.15.0
+  efreet_videos_dir_get@Base 1.15.0
+ libefreet_mime.so.1 libefl #MINVER#
+- efreet_mime_fallback_type_get@Base 1.15.0
+- efreet_mime_globs_type_get@Base 1.15.0
+- efreet_mime_init@Base 1.15.0
+- efreet_mime_magic_type_get@Base 1.15.0
+- efreet_mime_shutdown@Base 1.15.0
+- efreet_mime_special_type_get@Base 1.15.0
+- efreet_mime_type_cache_clear@Base 1.15.0
+- efreet_mime_type_cache_flush@Base 1.15.0
+- efreet_mime_type_get@Base 1.15.0
+- efreet_mime_type_icon_get@Base 1.15.0
++#MISSING: 1.25.1-0focal0# efreet_mime_fallback_type_get@Base 1.15.0
++#MISSING: 1.25.1-0focal0# efreet_mime_globs_type_get@Base 1.15.0
++#MISSING: 1.25.1-0focal0# efreet_mime_init@Base 1.15.0
++#MISSING: 1.25.1-0focal0# efreet_mime_magic_type_get@Base 1.15.0
++#MISSING: 1.25.1-0focal0# efreet_mime_shutdown@Base 1.15.0
++#MISSING: 1.25.1-0focal0# efreet_mime_special_type_get@Base 1.15.0
++#MISSING: 1.25.1-0focal0# efreet_mime_type_cache_clear@Base 1.15.0
++#MISSING: 1.25.1-0focal0# efreet_mime_type_cache_flush@Base 1.15.0
++#MISSING: 1.25.1-0focal0# efreet_mime_type_get@Base 1.15.0
++#MISSING: 1.25.1-0focal0# efreet_mime_type_icon_get@Base 1.15.0
+ libefreet_trash.so.1 libefl #MINVER#
+- efreet_trash_delete_uri@Base 1.15.0
+- efreet_trash_dir_get@Base 1.15.0
+- efreet_trash_empty_trash@Base 1.15.0
+- efreet_trash_init@Base 1.15.0
+- efreet_trash_is_empty@Base 1.15.0
+- efreet_trash_ls@Base 1.15.0
+- efreet_trash_shutdown@Base 1.15.0
++#MISSING: 1.25.1-0focal0# efreet_trash_delete_uri@Base 1.15.0
++#MISSING: 1.25.1-0focal0# efreet_trash_dir_get@Base 1.15.0
++#MISSING: 1.25.1-0focal0# efreet_trash_empty_trash@Base 1.15.0
++#MISSING: 1.25.1-0focal0# efreet_trash_init@Base 1.15.0
++#MISSING: 1.25.1-0focal0# efreet_trash_is_empty@Base 1.15.0
++#MISSING: 1.25.1-0focal0# efreet_trash_ls@Base 1.15.0
++#MISSING: 1.25.1-0focal0# efreet_trash_shutdown@Base 1.15.0
+ libeina.so.1 libefl #MINVER#
+  EINA_ERROR_CONVERT_0X_NOT_FOUND@Base 1.15.0
+  EINA_ERROR_CONVERT_OUTRUN_STRING_LENGTH@Base 1.15.0
+@@ -6771,6 +6795,7 @@
+  eina_strbuf_remove@Base 1.15.0
+  eina_strbuf_replace@Base 1.15.0
+  eina_strbuf_replace_all@Base 1.15.0
++ eina_strbuf_replace_last@Base 1.25.1-0focal0
+  eina_strbuf_reset@Base 1.15.0
+  eina_strbuf_rtrim@Base 1.15.0
+  eina_strbuf_rw_slice_get@Base 1.19.0
+@@ -8191,6 +8216,7 @@
+  efl_ui_focus_layer_enable_get@Base 1.22.2
+  efl_ui_focus_layer_enable_set@Base 1.22.2
+  efl_ui_focus_layer_mixin_get@Base 1.22.2
++ efl_ui_focus_manager_border_elements_changed_get@Base 1.25.1-0focal0
+  efl_ui_focus_manager_border_elements_get@Base 1.20.1
+  efl_ui_focus_manager_calc_class_get@Base 1.22.2
+  efl_ui_focus_manager_calc_register@Base 1.22.2
+@@ -12528,6 +12554,7 @@
+  elm_textpath_ellipsis_set@Base 1.22.2
+  elm_textpath_slice_number_get@Base 1.22.2
+  elm_textpath_slice_number_set@Base 1.22.2
++ elm_textpath_text_user_style_set@Base 1.25.1-0focal0
+  elm_theme_copy@Base 1.18.0
+  elm_theme_data_get@Base 1.18.0
+  elm_theme_default_get@Base 1.18.0
+@@ -13999,12 +14026,14 @@
+  eolian_expression_binary_operator_get@Base 1.15.0
+  eolian_expression_binary_rhs_get@Base 1.15.0
+  eolian_expression_eval@Base 1.15.0
++ eolian_expression_eval_fill@Base 1.25.1-0focal0
+ #MISSING: 1.22.4# eolian_expression_eval_type@Base 1.15.0
+  eolian_expression_serialize@Base 1.15.0
+  eolian_expression_type_get@Base 1.15.0
+  eolian_expression_unary_expression_get@Base 1.15.0
+  eolian_expression_unary_operator_get@Base 1.15.0
+  eolian_expression_value_get@Base 1.15.0
++ eolian_expression_value_get_fill@Base 1.25.1-0focal0
+  eolian_expression_value_to_literal@Base 1.15.0
+  eolian_file_format_version_get@Base 1.22.4
+ #MISSING: 1.22.2# eolian_file_parse@Base 1.15.0
+@@ -14595,7 +14624,7 @@
+  efl_canvas_event_grabber_class_get@Base 1.22.2
+  efl_canvas_event_grabber_freeze_when_visible_get@Base 1.22.2
+  efl_canvas_event_grabber_freeze_when_visible_set@Base 1.22.2
+-#MISSING: 1.22.2# efl_canvas_filter_internal_mixin_get@Base 1.18.0
++ efl_canvas_filter_internal_mixin_get@Base 1.25.1-0focal0
+  efl_canvas_gesture_class_get@Base 1.22.2
+  efl_canvas_gesture_custom_class_get@Base 1.22.4
+  efl_canvas_gesture_double_tap_class_get@Base 1.22.4
+@@ -15051,6 +15080,7 @@
+  efl_gfx_vg_value_provider_stroke_width_set@Base 1.22.4
+  efl_gfx_vg_value_provider_transform_get@Base 1.22.4
+  efl_gfx_vg_value_provider_transform_set@Base 1.22.4
++ efl_gfx_vg_value_provider_updated_get@Base 1.25.1-0focal0
+  efl_input_clickable_button_state_reset@Base 1.22.4
+  efl_input_clickable_interaction_get@Base 1.22.4
+  efl_input_clickable_longpress_abort@Base 1.22.4
+@@ -15979,24 +16009,24 @@
+  evas_event_refeed_event@Base 1.15.0
+  evas_event_thaw@Base 1.15.0
+  evas_event_thaw_eval@Base 1.15.0
+-#MISSING: 1.22.2# evas_filter_changed_set@Base 1.15.0
++ evas_filter_changed_set@Base 1.25.1-0focal0
+ #MISSING: 1.17.0# evas_filter_constructor@Base 1.15.0
+ #MISSING: 1.18.0# evas_filter_ctor@Base 1.17.0
+ #MISSING: 1.17.0# evas_filter_destructor@Base 1.15.0
+-#MISSING: 1.22.2# evas_filter_dirty@Base 1.15.0
++ evas_filter_dirty@Base 1.25.1-0focal0
+ #MISSING: 1.18.0# evas_filter_dtor@Base 1.17.0
+-#MISSING: 1.22.2# evas_filter_input_alpha@Base 1.15.0
+-#MISSING: 1.22.2# evas_filter_input_render@Base 1.15.0
+-#MISSING: 1.22.2# evas_filter_invalid_set@Base 1.15.0
++ evas_filter_input_alpha@Base 1.25.1-0focal0
++ evas_filter_input_render@Base 1.25.1-0focal0
++ evas_filter_invalid_set@Base 1.25.1-0focal0
+ #MISSING: 1.18.0# evas_filter_mixin_get@Base 1.15.0
+-#MISSING: 1.22.2# evas_filter_output_buffer_get@Base 1.16.0
++ evas_filter_output_buffer_get@Base 1.25.1-0focal0
+  evas_filter_program_del@Base 1.15.0
+  evas_filter_program_new@Base 1.15.0
+  evas_filter_program_padding_get@Base 1.15.0
+  evas_filter_program_parse@Base 1.15.0
+  evas_filter_program_source_set_all@Base 1.15.0
+  evas_filter_program_state_set@Base 1.15.0
+-#MISSING: 1.22.2# evas_filter_state_prepare@Base 1.19.0
++ evas_filter_state_prepare@Base 1.25.1-0focal0
+  evas_find@Base 1.22.2
+  evas_focus_get@Base 1.15.0
+  evas_focus_in@Base 1.15.0
+@@ -16007,6 +16037,8 @@
+  evas_font_cache_flush@Base 1.15.0
+  evas_font_cache_get@Base 1.15.0
+  evas_font_cache_set@Base 1.15.0
++ evas_font_data_cache_get@Base 1.25.1-0focal0
++ evas_font_data_cache_set@Base 1.25.1-0focal0
+  evas_font_hinting_can_hint@Base 1.15.0
+  evas_font_hinting_get@Base 1.15.0
+  evas_font_hinting_set@Base 1.15.0
