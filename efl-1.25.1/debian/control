@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
 Build-Conflicts: systemctl
 Build-Depends:
- debhelper,
+ debhelper (>= 12),
  check,
  doxygen,
  libblkid-dev [linux-any],
