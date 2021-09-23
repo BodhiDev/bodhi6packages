@@ -1,0 +1,2 @@
+enlightenment-module-places: new-package-should-close-itp-bug
+enlightenment-module-places: non-empty-dependency_libs-in-la-file

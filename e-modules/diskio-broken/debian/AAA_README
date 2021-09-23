@@ -1,0 +1,20 @@
+e_mod_main.c: In function ‘_diskio_conf_timer’:
+e_mod_main.c:426:4: error: format not a string literal and no format arguments [-Werror=format-security]
+  426 |    e_util_dialog_show( D_("DiskIO Configuration Updated"), data);
+      |    ^~~~~~~~~~~~~~~~~~
+e_mod_main.c: In function ‘_diskio_cb_mouse_down’:
+e_mod_main.c:464:16: warning: implicit declaration of function ‘e_util_zone_current_get’; did you mean ‘e_zone_current_get’? [-Wimplicit-function-declaration]
+  464 |         zone = e_util_zone_current_get(e_manager_current_get());
+      |                ^~~~~~~~~~~~~~~~~~~~~~~
+      |                e_zone_current_get
+e_mod_main.c:464:40: warning: implicit declaration of function ‘e_manager_current_get’; did you mean ‘e_drag_current_get’? [-Wimplicit-function-declaration]
+  464 |         zone = e_util_zone_current_get(e_manager_current_get());
+      |                                        ^~~~~~~~~~~~~~~~~~~~~
+      |                                        e_drag_current_get
+e_mod_main.c:464:14: warning: assignment to ‘E_Zone *’ {aka ‘struct _E_Zone *’} from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+  464 |         zone = e_util_zone_current_get(e_manager_current_get());
+      |              ^
+e_mod_main.c: In function ‘_diskio_cb_menu_configure’:
+e_mod_main.c:512:39: error: ‘E_Zone’ {aka ‘struct _E_Zone’} has no member named ‘comp’
+  512 |    e_int_config_diskio_module(mn->zone->comp, inst->conf_item);
+      |                                       ^~

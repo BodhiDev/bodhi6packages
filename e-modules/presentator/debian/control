@@ -1,0 +1,18 @@
+Source: enlightenment-module-presentator
+Section: utils
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper (>= 10), autotools-dev, pkg-config, libefl-dev, enlightenment
+Standards-Version: 4.5.0
+Homepage: https://git.enlightenment.org/enlightenment/modules/presentator.git/
+Rules-Requires-Root: no
+
+Package: enlightenment-module-presentator
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: presentator Module for enlightenment
+ An Enlgihtenment Module to display your current keystrokes on the screen.
+ .
+ Helpful for presentating a live demo infront of a audience
+ .
+ The visuals are displayed on the current active zone on your screen.

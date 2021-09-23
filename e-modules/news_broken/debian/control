@@ -1,0 +1,14 @@
+Source: enlightenment-module-news
+Section: utils
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper (>= 10), autotools-dev, libc6 (>= 2.4), enlightenment
+Standards-Version: 4.5.0
+Homepage: https://git.enlightenment.org/enlightenment/modules/news.git/
+Rules-Requires-Root: no
+
+Package: enlightenment-module-news
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: News Module for enlightenment
+ Enlightenment Gadget to monitor RSS feeds.

@@ -1,0 +1,14 @@
+Source: enlightenment-module-forecasts
+Section: utils
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper (>= 10), meson, pkg-config, libefl-dev, enlightenment, libjson-c-dev
+Standards-Version: 4.5.0
+Homepage: https://git.enlightenment.org/enlightenment/modules/forecasts.git/
+Rules-Requires-Root: no
+
+Package: enlightenment-module-forecasts
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Forecasts Module for enlightenment
+ Weather updates on your Enlightenment Desktop.

@@ -1,0 +1,2 @@
+enlightenment-module-diskio: new-package-should-close-itp-bug
+enlightenment-module-diskio: non-empty-dependency_libs-in-la-file

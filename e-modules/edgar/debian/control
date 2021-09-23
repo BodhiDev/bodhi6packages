@@ -1,0 +1,15 @@
+Source: enlightenment-module-edgar
+Section: utils
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper (>= 10), dh-python, meson, pkg-config, libefl-dev, enlightenment
+Build-Depends-Indep: python3, python3-efl
+Standards-Version: 4.5.0
+Homepage: https://git.enlightenment.org/enlightenment/modules/edgar.git/
+Rules-Requires-Root: no
+
+Package: enlightenment-module-edgar
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: edgar module for the enlightenment desktop
+ edgar monitor for the enlightenment desktop

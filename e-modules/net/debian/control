@@ -1,0 +1,14 @@
+Source: enlightenment-module-net
+Section: utils
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper (>= 10), autotools-dev, pkg-config, libefl-dev, enlightenment
+Standards-Version: 4.5.0
+Homepage: https://git.enlightenment.org/enlightenment/modules/net.git/
+Rules-Requires-Root: no
+
+Package: enlightenment-module-net
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: net module for the enlightenment desktop
+ net monitor for the enlightenment desktop

@@ -1,0 +1,14 @@
+Source: enlightenment-module-places
+Section: utils
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper (>= 10), autotools-dev, pkg-config, libefl-dev, enlightenment
+Standards-Version: 4.5.0
+Homepage: https://git.enlightenment.org/enlightenment/modules/places.git/
+Rules-Requires-Root: no
+
+Package: enlightenment-module-places
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Places module for the enlightenment desktop
+ Palces module manage the volumes device attached to the system.

@@ -1,0 +1,2 @@
+enlightenment-module-desksanity: new-package-should-close-itp-bug
+enlightenment-module-desksanity: non-empty-dependency_libs-in-la-file

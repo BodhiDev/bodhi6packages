@@ -1,0 +1,14 @@
+Source: enlightenment-module-stickynotes
+Section: utils
+Priority: optional
+Maintainer: Stefan Uram <the_waiter@centrum.sk>
+Build-Depends: debhelper (>= 10), autotools-dev, libc6 (>= 2.4), enlightenment
+Standards-Version: 4.5.0
+Homepage: https://github.com/thewaiter/StickyNotes
+Rules-Requires-Root: no
+
+Package: enlightenment-module-stickynotes
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Sticky Notes Module for the Enlightenment
+ Sticky Notes gadgets on your Enlightenment desktop.

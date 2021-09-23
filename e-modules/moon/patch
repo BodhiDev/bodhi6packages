@@ -1,0 +1,39 @@
+Moon fauls to compile. The below fixes that. too lazyto make proper debian patch:
+
+diff --git a/src/e_mod_config.c b/src/e_mod_config.c
+index f6576f2..6327e8d 100644
+--- a/src/e_mod_config.c
++++ b/src/e_mod_config.c
+@@ -79,7 +79,7 @@ moon_config_dialog_show(Evas_Object *o)
+ {
+    E_Config_Dialog *cfd;
+    E_Config_Dialog_View *v;
+-   E_Container *con;
++   Evas_Object *parent;
+    char buf[4096];
+ 
+    v = E_NEW(E_Config_Dialog_View, 1);
+@@ -92,9 +92,9 @@ moon_config_dialog_show(Evas_Object *o)
+        v->advanced.apply_cfdata   = NULL;
+        v->advanced.create_widgets = NULL; 
+        
+-       con = e_container_current_get(e_manager_current_get());
++       parent = e_zone_current_get();
+        snprintf(buf, sizeof(buf), "%s/e-module-moon.edj", e_module_dir_get(module));
+-       cfd = e_config_dialog_new(con, D_("Moon Settings"), "Moon", "_e_modules_moon_config_dialog", buf, 0, v, o);
++       cfd = e_config_dialog_new(NULL, D_("Moon Settings"), "Moon", "_e_modules_moon_config_dialog", buf, 0, v, o);
+        moon_config->config_dialog = cfd;
+      }
+ }
+
+--- a/src/e_mod_main.c
++++ b/src/e_mod_main.c
+@@ -249,7 +249,7 @@ _button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
+        e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, 
+                                          &cx, &cy, &cw, &ch);
+        e_menu_activate_mouse(m, 
+-                             e_util_zone_current_get(e_manager_current_get()),
++                             e_zone_current_get(),
+                              cx + ev->output.x, cy + ev->output.y, 1, 1,
+                              E_MENU_POP_DIRECTION_DOWN, ev->timestamp);
+        evas_event_feed_mouse_up(inst->gcc->gadcon->evas, ev->button, 

@@ -1,0 +1,14 @@
+Source: enlightenment-module-alarm
+Section: utils
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper (>= 10), autotools-dev, pkg-config, libefl-dev, enlightenment
+Standards-Version: 4.5.0
+Homepage: https://git.enlightenment.org/enlightenment/modules/alarm.git/
+Rules-Requires-Root: no
+
+Package: enlightenment-module-alarm
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Simple Alarm Module
+ A simple alarm Module for the enlightenment Desktop.

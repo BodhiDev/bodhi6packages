@@ -1,0 +1,102 @@
+
+Extra Menu module for Enlightenment
+===================================
+
+This is a simple module I have initially written for the OpenGeu distribution.
+The module is able to generate as many new submenu as you want in the
+enlightenemnt main menu. The new menus can have unlimited submenus and the 
+names can be translated trough a simple file text file.
+The menu are generated from .menu files as per FreeDesktop standars. So you
+can also use all the existing (fdo compliant) menus.
+
+The module will search in '~/.e/e/extra_menu' and '/usr/share/menus' directory
+for new menu to create. Every menu need 3 files (the .menu, .directory and
+optionally a .desktop for the menu icons).
+
+
+The .menu file
+==============
+
+This is the first file searched in the user and the system directory.
+It contains the menu name, the menu structure, all the menu items and even
+other menus. It also contain a link to a .directory file.
+
+it should look like this
+-------------------------------------------------------------------------------
+FILE: mymenu.menu
+-------------------------------------------------------------------------------
+   <?xml version="1.0"?>
+   <!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN" "http://standards.freedesktop.org/menu-spec/menu-1.0.dtd">
+   <Menu>
+     <Name>MyMenu</Name>
+     <DefaultAppDirs/>
+
+     <!--Uncomment this to search the .directory file in /usr/share/desktop-directory -->
+     <!--<DefaultDirectoryDirs/>  -->
+
+     <!--Or use this to search the .directory file where the .menu reside -->
+     <DirectoryDir>./</DirectoryDir>
+
+     <Directory>mymenu.directory</Directory>
+
+     <Include>
+       <Filename>xterm.desktop</Filename>
+       <Filename>firefox.desktop</Filename>
+       <Filename>anjuta.desktop</Filename>
+       <Filename>edje_editor.desktop</Filename>
+     </Include>
+   </Menu>
+-------------------------------------------------------------------------------
+
+
+The .directory file
+====================
+
+This file is used to get the icon and the (translated) text for the menu.
+It should reside where the .menu is, but you can also place in other system
+directory (see the comments in the .menu file).
+
+-------------------------------------------------------------------------------
+FILE: mymenu.directory
+-------------------------------------------------------------------------------
+   [Desktop Entry]
+
+   Encoding=UTF-8
+   Type=Directory
+   Icon=mymenu
+   #Icon=mymenu.png
+   #Icon=/full/path/mymenu.png
+   X-Enlightenment-Menu=main/0
+
+   Name=My Own Menu
+   Name[it]=Il mio menu
+-------------------------------------------------------------------------------
+
+The icon parameter can refer to a global .desktop file (if used without the
+extension) or can directly link to an image file (if used with the
+extension) The more reasonable place for icons (following the fdo spec)
+seems: /usr/share/icons/hicolor/48x48/apps/mymenu.png As a last chance you
+can also give the full path to the icon file... with the extension :P
+
+The X-Enlightenment-Menu parameter tell the modules where to place your menu
+in the enlightenment main menu. It is formed by the name of the parent menu
+and a number that is in some way related with the position you want.
+Example:
+main/0   ->   put in the top of the main menu
+main/11  ->   put in the bottom of the main menu
+sys/0    ->   put in the top of the system menu
+E Menus: main(0-11), sys, config (0-2), ...
+Note that if the number is too high your menu will not show up.
+
+
+have fun :)
+DaveMDS
+
+
+
+REFERENCE:
+-----------
+Freedesktop Menu Specification
+http://standards.freedesktop.org/menu-spec/latest/
+
+

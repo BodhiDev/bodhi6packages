@@ -1,0 +1,2 @@
+enlightenment-module-moon: new-package-should-close-itp-bug
+enlightenment-module-moon: non-empty-dependency_libs-in-la-file

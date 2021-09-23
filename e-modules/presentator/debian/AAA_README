@@ -1,0 +1,8 @@
+../src/keylogger.c: In function ‘main’:
+../src/keylogger.c:82:5: warning: ‘XKeycodeToKeysym’ is deprecated [-Wdeprecated-declarations]
+   82 |     symbol = XKeysymToString(XKeycodeToKeysym(default_display, key->keycode, 0));
+      |     ^~~~~~
+In file included from ../src/keylogger.c:3:
+/usr/include/X11/Xlib.h:1687:15: note: declared here
+ 1687 | extern KeySym XKeycodeToKeysym(
+      |               ^~~~~~~~~~~~~~~~

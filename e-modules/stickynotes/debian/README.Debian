@@ -1,0 +1,19 @@
+Sticky notes module for the E/Moksha desktops.
+
+Sticky Notes module is aimed to be a little project with possibility to add elegant notes on the screen. There are several sticky note apps around, but I did not find any good E solution suitable for me. Take this project also to be my code exercise for better understanding edje layer and E module programming.
+
+Features:
+
+ - Word wrap
+ - Any command output on the screen
+ - Refresh interval for outcome up to 1 hour
+ - Font size changing from 8px up to 16px (click on the header icon)
+ - Text HTML tag formatting (bold, italic, tab, paragraphs)
+ - Note text in the header/custom header text
+ - Notification on the text changing
+ - cal and ncal support for day highlight
+ - Nice transparent look
+ - Light on system resources
+
+<Stefan Uram thewaiter@centrum.sk>
+

@@ -1,0 +1,14 @@
+Source: enlightenment-module-photo
+Section: utils
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper (>= 10), autotools-dev, pkg-config, libefl-dev, enlightenment
+Standards-Version: 4.5.0
+Homepage: https://git.enlightenment.org/enlightenment/modules/photo.git/
+Rules-Requires-Root: no
+
+Package: enlightenment-module-photo
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Photo module for Enlightenment
+ View photos or a mini slideshow on your Enlightenment Desktop.

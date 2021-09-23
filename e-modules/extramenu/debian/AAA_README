@@ -1,0 +1,14 @@
+Right off the bat compile problems
+
+```
+libtoolize: Consider adding '-I m4' to ACLOCAL_AMFLAGS in Makefile.am.
+configure.ac:20: error: possibly undefined macro: AC_C___ATTRIBUTE__
+      If this token and others are legitimate, please use m4_pattern_allow.
+      See the Autoconf documentation.
+autoreconf: /usr/bin/autoconf failed with exit status: 1
+dh_autoreconf: error: autoreconf -f -i returned exit code 1
+make: *** [debian/rules:10: binary] Error 255
+```
+
+Debian stuff gets confused and wants to run configure
+rm configure.ac to stop that and it then builds

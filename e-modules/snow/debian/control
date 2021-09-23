@@ -1,0 +1,14 @@
+Source: enlightenment-module-snow 
+Section: utils
+Priority: optional
+Maintainer: Robert Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper (>= 10), autotools-dev, libc6 (>= 2.7), enlightenment
+Standards-Version: 4.5.0
+Homepage: https://git.enlightenment.org/devs/ajwillia-ms/snow.git/
+Rules-Requires-Root: no
+
+Package: enlightenment-module-snow 
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Snow module for Moksha
+ Adds snow to your enlightenment desktop.

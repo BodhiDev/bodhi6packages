@@ -1,0 +1,14 @@
+Source: enlightenment-module-tclock
+Section: utils
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper (>= 10), autotools-dev, pkg-config, libefl-dev, enlightenment
+Standards-Version: 4.5.0
+Homepage: https://git.enlightenment.org/enlightenment/modules/tclock.git/
+Rules-Requires-Root: no
+
+Package: enlightenment-module-tclock
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Digital clock module for Enlightenment
+ A low on recourses simple Digital clock module for Enlightenment

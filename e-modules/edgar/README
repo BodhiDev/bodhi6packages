@@ -1,0 +1,12 @@
+FIXME:
+
+Lintian warning,package-installs-python-bytecode, can not be over-ride it is an error of sorts
+
+The proper way to deal with this is to remove the python-byte code during the install
+and Move the installation and generation of the python bytecode into the postinst section.
+
+I got tired of messing with it as i have a shit load of packages to build
+
+Needs fixed.
+
+Robert WIley Aug 30, 2020

@@ -1,0 +1,165 @@
+In file included from /usr/include/enlightenment/e.h:16,
+                 from Photo.h:6,
+                 from photo_config.c:1:
+/usr/include/enlightenment/config.h:68: warning: "PACKAGE" redefined
+   68 | #define PACKAGE "enlightenment"
+      | 
+In file included from Photo.h:5,
+                 from photo_config.c:1:
+../config.h:58: note: this is the location of the previous definition
+   58 | #define PACKAGE "photo"
+      | 
+In file included from /usr/include/enlightenment/e.h:16,
+                 from Photo.h:6,
+                 from photo_config.c:1:
+/usr/include/enlightenment/config.h:70: warning: "PACKAGE_BUGREPORT" redefined
+   70 | #define PACKAGE_BUGREPORT "enlightenment-devel@lists.sourceforge.net"
+      | 
+In file included from Photo.h:5,
+                 from photo_config.c:1:
+../config.h:61: note: this is the location of the previous definition
+   61 | #define PACKAGE_BUGREPORT "ooookiwi@gmail.com"
+      | 
+In file included from /usr/include/enlightenment/e.h:16,
+                 from Photo.h:6,
+                 from photo_config.c:1:
+/usr/include/enlightenment/config.h:72: warning: "PACKAGE_NAME" redefined
+   72 | #define PACKAGE_NAME "enlightenment"
+      | 
+In file included from Photo.h:5,
+                 from photo_config.c:1:
+../config.h:64: note: this is the location of the previous definition
+   64 | #define PACKAGE_NAME "photo"
+      | 
+In file included from /usr/include/enlightenment/e.h:16,
+                 from Photo.h:6,
+                 from photo_config.c:1:
+/usr/include/enlightenment/config.h:74: warning: "PACKAGE_STRING" redefined
+   74 | #define PACKAGE_STRING "enlightenment 0.24.2"
+      | 
+In file included from Photo.h:5,
+                 from photo_config.c:1:
+../config.h:67: note: this is the location of the previous definition
+   67 | #define PACKAGE_STRING "photo 0.1.0"
+      | 
+In file included from /usr/include/enlightenment/e.h:16,
+                 from Photo.h:6,
+                 from photo_config.c:1:
+/usr/include/enlightenment/config.h:76: warning: "PACKAGE_TARNAME" redefined
+   76 | #define PACKAGE_TARNAME "enlightenment"
+      | 
+In file included from Photo.h:5,
+                 from photo_config.c:1:
+../config.h:70: note: this is the location of the previous definition
+   70 | #define PACKAGE_TARNAME "photo"
+      | 
+In file included from /usr/include/enlightenment/e.h:16,
+                 from Photo.h:6,
+                 from photo_config.c:1:
+/usr/include/enlightenment/config.h:78: warning: "PACKAGE_URL" redefined
+   78 | #define PACKAGE_URL "https://www.enlightenment.org"
+      | 
+In file included from Photo.h:5,
+                 from photo_config.c:1:
+../config.h:73: note: this is the location of the previous definition
+   73 | #define PACKAGE_URL ""
+      | 
+In file included from /usr/include/enlightenment/e.h:16,
+                 from Photo.h:6,
+                 from photo_config.c:1:
+/usr/include/enlightenment/config.h:80: warning: "PACKAGE_VERSION" redefined
+   80 | #define PACKAGE_VERSION "0.24.2"
+      | 
+In file included from Photo.h:5,
+                 from photo_config.c:1:
+../config.h:76: note: this is the location of the previous definition
+   76 | #define PACKAGE_VERSION "0.1.0"
+      | 
+In file included from /usr/include/enlightenment/e.h:16,
+                 from Photo.h:6,
+                 from photo_config.c:1:
+/usr/include/enlightenment/config.h:206: warning: "VERSION" redefined
+  206 | #define VERSION "0.24.2"
+      | 
+In file included from Photo.h:5,
+                 from photo_config.c:1:
+../config.h:82: note: this is the location of the previous definition
+   82 | #define VERSION "0.1.0"
+      | 
+In file included from Photo_includes.h:13,
+                 from Photo.h:12,
+                 from e_mod_main.c:1:
+photo_popup_warn.h:26:4: error: unknown type name ‘E_Popup’
+   26 |    E_Popup *pop;
+      |    ^~~~~~~
+In file included from Photo_includes.h:14,
+                 from Photo.h:12,
+                 from e_mod_main.c:1:
+photo_popup_info.h:20:4: error: unknown type name ‘E_Popup’
+   20 |    E_Popup *pop;
+      |    ^~~~~~~
+In file included from Photo_includes.h:13,
+                 from Photo.h:12,
+                 from photo_config_dialog.c:1:
+photo_popup_warn.h:26:4: error: unknown type name ‘E_Popup’
+   26 |    E_Popup *pop;
+      |    ^~~~~~~
+In file included from Photo_includes.h:13,
+                 from Photo.h:12,
+                 from photo_config.c:1:
+photo_popup_warn.h:26:4: error: unknown type name ‘E_Popup’
+   26 |    E_Popup *pop;
+      |    ^~~~~~~
+In file included from Photo_includes.h:14,
+                 from Photo.h:12,
+                 from photo_config_dialog.c:1:
+photo_popup_info.h:20:4: error: unknown type name ‘E_Popup’
+   20 |    E_Popup *pop;
+      |    ^~~~~~~
+In file included from Photo_includes.h:14,
+                 from Photo.h:12,
+                 from photo_config.c:1:
+photo_popup_info.h:20:4: error: unknown type name ‘E_Popup’
+   20 |    E_Popup *pop;
+      |    ^~~~~~~
+e_mod_main.c: In function ‘_e_canvas_init’:
+e_mod_main.c:210:3: error: unknown type name ‘E_Container’; did you mean ‘Efl_Container’?
+  210 |   E_Container *c;
+      |   ^~~~~~~~~~~
+      |   Efl_Container
+make[3]: *** [Makefile:523: photo_config.lo] Error 1
+make[3]: *** Waiting for unfinished jobs....
+photo_config_dialog.c: In function ‘photo_config_dialog_show’:
+photo_config_dialog.c:63:30: warning: implicit declaration of function ‘e_container_current_get’; did you mean ‘e_zone_current_get’? [-Wimplicit-function-declaration]
+   63 |    cfd = e_config_dialog_new(e_container_current_get(e_manager_current_get()),
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~
+      |                              e_zone_current_get
+e_mod_main.c:212:7: warning: implicit declaration of function ‘e_container_current_get’; did you mean ‘e_zone_current_get’? [-Wimplicit-function-declaration]
+  212 |   c = e_container_current_get(e_manager_current_get());
+      |       ^~~~~~~~~~~~~~~~~~~~~~~
+      |       e_zone_current_get
+photo_config_dialog.c:63:54: warning: implicit declaration of function ‘e_manager_current_get’; did you mean ‘e_drag_current_get’? [-Wimplicit-function-declaration]
+   63 |    cfd = e_config_dialog_new(e_container_current_get(e_manager_current_get()),
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~
+      |                                                      e_drag_current_get
+photo_config_dialog.c:63:30: warning: passing argument 1 of ‘e_config_dialog_new’ makes pointer from integer without a cast [-Wint-conversion]
+   63 |    cfd = e_config_dialog_new(e_container_current_get(e_manager_current_get()),
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                              |
+      |                              int
+In file included from /usr/include/enlightenment/e_includes.h:72,
+                 from /usr/include/enlightenment/e.h:176,
+                 from Photo.h:6,
+                 from photo_config_dialog.c:1:
+/usr/include/enlightenment/e_config_dialog.h:58:24: note: expected ‘Evas_Object *’ {aka ‘struct _Eo_Opaque *’} but argument is of type ‘int’
+   58 | E_API E_Config_Dialog *e_config_dialog_new(Evas_Object *parent, const char *title, const char *name, const char *class, const char *icon, int icon_size, E_Config_Dialog_View *view, void *data);
+      |                        ^~~~~~~~~~~~~~~~~~~
+e_mod_main.c:212:31: warning: implicit declaration of function ‘e_manager_current_get’; did you mean ‘e_drag_current_get’? [-Wimplicit-function-declaration]
+  212 |   c = e_container_current_get(e_manager_current_get());
+      |                               ^~~~~~~~~~~~~~~~~~~~~
+      |                               e_drag_current_get
+e_mod_main.c:212:5: warning: assignment to ‘int *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+  212 |   c = e_container_current_get(e_manager_current_get());
+      |     ^
+e_mod_main.c:213:29: error: request for member ‘bg_evas’ in something not a structure or union
+  213 |   evas_output_viewport_get(c->bg_evas,

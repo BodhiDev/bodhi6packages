@@ -1,0 +1,14 @@
+Source: enlightenment-module-moon
+Section: utils
+Priority: optional
+Maintainer: Robert Wiley <ylee@bodhilinux.com> 
+Build-Depends: debhelper (>= 10), autotools-dev, libc6 (>= 2.7), enlightenment
+Standards-Version: 4.5.0
+Homepage: http://enlightenment.org
+Rules-Requires-Root: no
+
+Package: enlightenment-module-moon
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Moon Module for enlightenment
+ Adds moon phases gadget to your enlightenment desktop.

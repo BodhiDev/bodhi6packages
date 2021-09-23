@@ -1,0 +1,14 @@
+Source: enlightenment-module-flame
+Section: utils
+Priority: optional
+Maintainer: Jeff Hoogland <jeffhoogland@linux.com>
+Build-Depends: debhelper (>= 10), autotools-dev, enlightenment
+Standards-Version: 4.5.0
+Homepage: https://git.enlightenment.org/devs/netstar/flame.git/
+Rules-Requires-Root: no
+
+Package: enlightenment-module-flame
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Flame Module for Enlightenment
+ Adds hot fire to your Enlightenment desktop.

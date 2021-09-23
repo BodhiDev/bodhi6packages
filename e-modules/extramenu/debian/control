@@ -1,0 +1,23 @@
+Source: enlightenment-module-extramenu
+Section: utils
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper (>= 10), autotools-dev, pkg-config, libefl-dev, enlightenment
+Standards-Version: 4.5.0
+Homepage: https://git.enlightenment.org/enlightenment/modules/extramenu.git/
+Rules-Requires-Root: no
+
+Package: enlightenment-module-extramenu
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Extra menu module for the enlightenment desktop
+ Adds a user defined extra menu item to the enlightenment's Main menu.
+ .
+ The module is able to generate as many new submenu as you want in the
+ enlightenemnt main menu. The new menus can have unlimited submenus and the 
+ names can be translated trough a simple file text file.
+ The menu are generated from .menu files as per FreeDesktop standars. So you
+ can also use all the existing (fdo compliant) menus. 
+ .
+ Please see /usr/share/doc/enlightenment-module-extramenu/README
+
