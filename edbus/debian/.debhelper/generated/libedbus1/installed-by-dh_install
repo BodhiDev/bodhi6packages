@@ -1,0 +1,9 @@
+debian/tmp/usr/lib/x86_64-linux-gnu/libebluez.a
+debian/tmp/usr/lib/x86_64-linux-gnu/libeconnman0_7x.a
+debian/tmp/usr/lib/x86_64-linux-gnu/libedbus.a
+debian/tmp/usr/lib/x86_64-linux-gnu/libehal.a
+debian/tmp/usr/lib/x86_64-linux-gnu/libenotify.a
+debian/tmp/usr/lib/x86_64-linux-gnu/libeofono.a
+debian/tmp/usr/lib/x86_64-linux-gnu/libeukit.a
+debian/tmp/usr/share/e_dbus/logo.png
+debian/tmp/usr/bin
