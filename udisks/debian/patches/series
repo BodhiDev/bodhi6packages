@@ -1,0 +1,12 @@
+# Debian patches for udisks
+00git_media_card_device_tags.patch
+02-defer_smart_probing.patch
+05-german-translations.patch
+#08-dont-probe-dm-devices.patch
+06-test-for-mdadm.patch
+07-fix-typos-udisks-man-page.patch
+10-po-pt_BR.patch
+12-bogus-uevent-paths.patch
+13-dosfslabel.patch
+14-test-for-pci-db.patch
+15-dont-watch-lvm.patch
