@@ -1,0 +1,10 @@
+Package: bodhi-plymouth-theme
+Version: 0.16
+Section: x11
+Priority: optional
+Architecture: all
+Maintainer: Robert Wiley <ylee@bodhilinux.com>
+Depends: plymouth-theme-simply-green
+Homepage: https://github.com/BodhiDev/bodhipackages
+Description: Bodhi Linux Plymouth Theme
+ Meta-package to install default Bodhi Plymouth
