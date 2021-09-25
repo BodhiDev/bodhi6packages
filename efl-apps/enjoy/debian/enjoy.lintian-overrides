@@ -1,0 +1,7 @@
+enjoy: binary-without-manpage
+enjoy: package-name-doesnt-match-sonames
+enjoy: unknown-section multimedia
+enjoy: shared-lib-without-dependency-information
+enjoy: non-empty-dependency_libs-in-la-file
+enjoy: shlib-without-versioned-soname
+enjoy: package-must-activate-ldconfig-trigger
