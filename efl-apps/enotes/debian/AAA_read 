@@ -1,0 +1,1 @@
+gcc -Werror=format-security flags this for lacking a format string. Fixes: issue I need to report

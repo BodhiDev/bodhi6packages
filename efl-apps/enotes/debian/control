@@ -1,0 +1,17 @@
+Source: enotes
+Section: utils
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper (>= 10), autotools-dev, libc6 (>= 2.4), libcurl4-openssl-dev, libefl
+Standards-Version: 4.5.0
+Homepage:https://github.com/jf-simon/enotess
+Rules-Requires-Root: no
+
+Package: enotes
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Note program.
+ Sticky Notes Program.
+ .
+ Implemented using Enlightenment Foundation Libraries (EFL).
+ 
