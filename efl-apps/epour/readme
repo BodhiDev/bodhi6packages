@@ -1,0 +1,5 @@
+No python3 support
+
+No module named 'ConfigParser'
+
+In Python 3, ConfigParser has been renamed to configparser for PEP 8 compliance.
