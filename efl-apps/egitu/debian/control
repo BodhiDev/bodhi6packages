@@ -1,0 +1,23 @@
+Source: egitu
+Section: utils
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper-compat (= 10),
+ dh-python,
+ python3-all (>= 3.8.2),
+ python3-setuptools,
+ libefl-dev,
+ python3-efl, 
+ python3-xdg,
+ git
+Standards-Version: 4.5.0
+Homepage: https://github.com/DaveMDS/egitu
+Rules-Requires-Root: no
+
+Package: egitu
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}, python3-efl, python3-xdg
+Description: Python EFL git interface
+ A git interface GUI application written in python-efl.
+ .
+ Implemented using Enlightenment Foundation Libraries (EFL).

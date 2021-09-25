@@ -1,0 +1,2 @@
+egitu: binary-without-manpage usr/bin/egitu
+egitu: new-package-should-close-itp-bug
