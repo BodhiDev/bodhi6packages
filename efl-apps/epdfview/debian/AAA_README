@@ -1,0 +1,14 @@
+I patch this so it doesn't have a broken link in help screen. 
+Should be a debian/patch
+
+--- a/src/gtk/MainView.cxx
++++ b/src/gtk/MainView.cxx
+@@ -1192,7 +1192,7 @@ main_window_about_box_cb (GtkWidget *widget, gpointer data)
+             "version", VERSION,
+             "copyright", "\xc2\xa9 2006, 2007, 2009, 2010, 2011 Emma's Software",
+             "license", licenseTranslated,
+-            "website", "http://www.emma-soft.com/projects/epdfview/",
++            "website", "https://github.com/JotaRandom/epdfview",
+             "authors", authors,
+             "comments", comments,
+             "translator-credits", _("translator-credits"),
