@@ -1,0 +1,29 @@
+Source: epymc
+Section: video
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper-compat (= 10),
+ dh-python,
+ python3-all (>= 3.8.2),
+ python3-setuptools,
+ libefl-dev,
+ python3-efl, 
+ python3-xdg,
+ python3-libdiscid,
+ python3-dbus,
+ python3-pyudev,
+ python3-mutagen,
+ python3-bs4,
+ python3-lxml,
+ python3-pil
+Standards-Version: 4.5.0
+Homepage: https://git.enlightenment.org/apps/epymc.git/
+Rules-Requires-Root: no
+
+Package: epymc
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Description: Emotion Media Center.
+ EpyMC is a Media Center application written in python.
+ .
+ Implemented using Enlightenment Foundation Libraries (EFL).
