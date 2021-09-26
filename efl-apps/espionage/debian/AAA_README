@@ -1,0 +1,1 @@
+Had to alter setup.py to remove json dependency

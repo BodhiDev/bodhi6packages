@@ -1,0 +1,22 @@
+Source: espionage
+Section: video
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper-compat (= 10),
+ dh-python,
+ python3-all (>= 3.8.2),
+ python3-setuptools,
+ libefl-dev,
+ python3-efl, 
+ python3-dbus
+Standards-Version: 4.5.0
+Homepage: https://git.enlightenment.org/apps/espionage.git/
+Rules-Requires-Root: no
+
+Package: espionage
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Description: Python D-Bus inspector
+ Espionage is a complete D-Bus inspector written in python that use the EFL.
+ .
+ Implemented using Enlightenment Foundation Libraries (EFL).
