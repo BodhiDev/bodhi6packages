@@ -1,0 +1,16 @@
+Source: eruler
+Section: utils
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper (>= 10), autotools-dev, pkg-config, libefl-dev, libefl
+Standards-Version: 4.5.0
+Homepage: https://git.enlightenment.org/apps/eruler.git/
+Rules-Requires-Root: no
+
+Package: eruler
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: ON-screen Ruler application
+ Displays a ruler on the desktop. Intended to aid graphics development.
+ .
+ Implemented using Enlightenment Foundation Libraries (EFL).
