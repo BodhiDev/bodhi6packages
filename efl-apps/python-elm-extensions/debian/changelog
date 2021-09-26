@@ -1,0 +1,6 @@
+python3-elm-extensions (0.1.0-1bodhi) focal; urgency=low
+
+  * Initial build for Focal Fossa
+  * Python3 conversion
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Sun, 23 Aug 2020 15:12:09 +0400

@@ -1,0 +1,16 @@
+Source: python3-elm-extensions
+Section: python
+Priority: optional
+Build-Depends:  python3-all (>= 3.8.2), debhelper, python3-efl, python3-distutils-extra
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Description: Python Elementary Extensions
+ Extra elementary widget library for python3.
+Standards-Version: 4.5.0
+Homepage: http://enlightenment.org
+Rules-Requires-Root: no
+
+Package:  python3-elm-extensions
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python3, python3-efl
+Description: Python Elementary Extensions
+ Extra elementary widget library for python3.
