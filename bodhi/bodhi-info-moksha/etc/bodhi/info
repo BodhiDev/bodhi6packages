@@ -1,0 +1,6 @@
+RELEASE=6.0
+CODENAME=kali
+EDITION="Moksha"
+DESCRIPTION="Bodhi Linux 6.0"
+DESKTOP=Moksha
+GRUB_TITLE=Bodhi Linux 6.0 Moksha
