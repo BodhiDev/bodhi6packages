@@ -1,0 +1,62 @@
+Source: libdvi
+Section: libs
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends:
+ debhelper,
+ libmupdf-dev, 
+ libarchive-dev, 
+ libjbig2dec0-dev, 
+ libopenjp2-7-dev, 
+ libfreetype6-dev,
+ libharfbuzz-dev, 
+ libjpeg-dev, 
+ zlib1g-dev, 
+ libtiff-dev, 
+ libdjvulibre-dev,
+ libgs-dev,
+ libkpathsea-dev,
+ texlive,
+ libgs-dev
+Standards-Version: 4.5.0
+Homepage:  https://github.com/vtorri/libdvi
+Rules-Requires-Root: no
+
+Package: libdvi0
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+ libdvi-bin(= ${binary:Version}),
+ libmupdf-dev, 
+ libarchive-dev, 
+ libjbig2dec0-dev, 
+ libopenjp2-7-dev, 
+ libfreetype6-dev,
+ libharfbuzz-dev, 
+ libjpeg-dev, 
+ zlib1g-dev, 
+ libtiff-dev, 
+ libdjvulibre-dev,
+ libgs-dev,
+ libkpathsea-dev,
+ texlive,
+ libgs-dev
+Description: DVI library for C
+ Device independent file format rendering library written in C
+
+Package: libdvi-bin
+Section: utils
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libdvi0 (= ${binary:Version})
+Description: DVI library for C
+ Device independent file format rendering library written in C
+
+Package: libdvi0-dev
+Section: libdevel
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends},libdvi0 (= ${binary:Version}),
+Description: DVI library for C
+ Device independent file format rendering library written in C.
+ .
+ Header files for the libdvi library

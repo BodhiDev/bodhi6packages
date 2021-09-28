@@ -1,0 +1,47 @@
+These should be a debian patch and I should report this issue
+
+diff --git a/src/lib/dvi_log.c b/src/lib/dvi_log.c
+index 918f970..68985f7 100644
+--- a/src/lib/dvi_log.c
++++ b/src/lib/dvi_log.c
+@@ -222,14 +222,15 @@ _dvi_log_fprint_cb(FILE *stream,
+     else
+ #endif
+     _dvi_log_posix_print_prefix_func(stream, level, file, fct, line);
+-    res = fprintf(stream, str);
++    //res = fprintf(stream, str);
++    res = fputs(str, stream);
+     free(str);
+ 
+     if (res < 0)
+         return;
+ 
+     if ((int)res != (s + 1))
+-        fprintf(stderr, "ERROR: %s(): want to write %d bytes, %d written\n", __FUNCTION__, s + 1, res);
++        fprintf(stderr, "ERROR: %s(): want to write %d bytes, %d written\n", __func__, s + 1, res);
+ 
+     (void)data;
+ }
+@@ -329,7 +330,7 @@ dvi_log_print(Dvi_Log_Level level,
+ 
+     if (!fmt)
+     {
+-        fprintf(stderr, "ERROR: %s() fmt == NULL\n", __FUNCTION__);
++        fprintf(stderr, "ERROR: %s() fmt == NULL\n", __func__);
+         return;
+     }
+ 
+bodhi@bodhi-virtualbox:~/Code/todo/libdvi$ git diff src/lib/dvi_log.h
+diff --git a/src/lib/dvi_log.h b/src/lib/dvi_log.h
+index d480dd5..0a43deb 100644
+--- a/src/lib/dvi_log.h
++++ b/src/lib/dvi_log.h
+@@ -22,7 +22,7 @@
+ #include <stdarg.h>
+ 
+ #define DVI_LOG(l, ...) \
+-    dvi_log_print(l, __FILE__, __FUNCTION__, __LINE__, __VA_ARGS__)
++    dvi_log_print(l, __FILE__, __func__, __LINE__, __VA_ARGS__)
+ 
+ #define DVI_LOG_ERR(...) \
+     DVI_LOG(DVI_LOG_LEVEL_ERR, __VA_ARGS__)
