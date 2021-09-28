@@ -1,0 +1,51 @@
+mk_add_options AUTOCLOBBER=1
+export BUILDING_RELEASE=1
+export MC_OFFICIAL=1
+export MOZILLA_OFFICIAL=1
+export MC_PALEMOON=1
+
+# Official Pale Moon branding. Please see https://www.palemoon.org/redist.shtml
+# for restrictions when using the official branding.
+ac_add_options --enable-application=palemoon
+ac_add_options --enable-official-branding
+ac_add_options --enable-official-vendor
+
+# Disable add-ons signing
+# Disable checking that add-ons are signed by the trusted root
+MOZ_ADDON_SIGNING=
+# Disable enforcing that add-ons are signed by the trusted root
+MOZ_REQUIRE_SIGNING=
+# Enable Phoenix Extensions (maybe?)
+# MOZ_PHOENIX_EXTENSIONS=1
+
+# Standard, approved Pale Moon build options.
+# Enable stuff
+ac_add_options --enable-av1
+ac_add_options --enable-optimize="-O2 -Wl,--no-keep-memory,--reduce-memory-overhead"
+ac_add_options --enable-default-toolkit=cairo-gtk2
+ac_add_options --enable-devtools
+ac_add_options --enable-jemalloc
+ac_add_options --with-pthreads
+ac_add_options --enable-strip
+ac_add_options --enable-phoenix-extensions
+
+# Disable stuff
+ac_add_options --disable-debug
+ac_add_options --disable-eme
+ac_add_options --disable-gamepad
+ac_add_options --disable-necko-wifi
+ac_add_options --disable-tests
+ac_add_options --disable-updater
+ac_add_options --disable-webrtc
+
+# Disable telemetry reporting
+export MOZ_TELEMETRY_REPORTING=
+
+# Options for creating a system package
+ac_add_options --x-libraries=/usr/lib
+ac_add_options --prefix=/usr
+
+# Builds use all available cores by default--enable and tune this option to
+# reduce CPU use and memory consumption during builds. RAM use seems to be about
+# 0.75 GiB per thread. "-jX", where X=number of threads for the build. Example:
+mk_add_options MOZ_MAKE_FLAGS="-j4"

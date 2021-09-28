@@ -1,0 +1,39 @@
+#!/usr/bin/make -f
+
+export SHELL=/bin/bash
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+	dh_auto_clean
+	find . -name '*.pyc' -delete
+	rm -f mozconfig
+
+# Use a custom mozconfig for Sid to build with one thread.
+# Builds on Debian derivatives may have to add their own distrelease codename.
+distrelease := $(shell lsb_release -cs)
+ifeq ($(distrelease),$(filter $(distrelease),sid unstable groovy))
+override_dh_auto_configure:
+	cp debian/mozconfig-sid debian/mozconfig
+endif
+
+override_dh_auto_build:
+	cp debian/mozconfig mozconfig
+	make -f client.mk build
+
+override_dh_auto_install:
+	make -f client.mk DESTDIR=$$(pwd)/debian/palemoon prefix=/usr \
+        installdir=/usr/lib/palemoon \
+        sdkdir=/usr/lib/palemoon-devel install
+	rm -rf $$(pwd)/debian/palemoon/usr/share/idl
+	rm -rf $$(pwd)/debian/palemoon/usr/lib/palemoon-devel
+	rm -rf $$(pwd)/debian/palemoon/usr/include
+# remove vestigial duplicate file
+	rm -rf $$(pwd)/debian/palemoon/usr/lib/palemoon/palemoon-bin
+
+override_dh_shlibdeps:
+	dh_shlibdeps -l /usr/lib/palemoon
+
+override_dh_strip_nondeterminism:
+	dh_strip_nondeterminism -Xdebian/palemoon/usr/lib/palemoon/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi

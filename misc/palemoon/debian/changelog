@@ -1,0 +1,2621 @@
+palemoon (29.0.0-1) obs; urgency=medium
+
+  * New major milestone release:  
+    - Implemented Intl.PluralRules API for JavaScript.
+    - Added a frequently-requested preference (browser.tabs.allowTabDetach) to
+      disable "tearing off" of tabs (meaning dragging them outside of the tab
+      bar resulting in them being made into their own window).
+    - Added FLAC as a recognized filetype-by-extension.
+    - Implemented basic support for the scrollbar-width CSS keyword. See 
+      implementation notes.
+    - Added preliminary support for modern FreeBSD builds.
+    - Selectively enabled core features of the DOM Animations API.
+    - Enabled AV1 video support by default (previously built but not enabled in
+      releases).
+    - Added support for pointer events.
+    - Added support for the SVG transform-box property.
+    - Added support for the inputmode property for forms to enable
+      context-sensitive display of soft keyboards.
+    - Enabled shutting down of the file I/O worker when idle for a while
+      (resource optimization).
+    - Enabled blocking of auto-play of media in the background by default.
+    - We now offer official GTK3 builds for Linux alongside the GTK2 builds.
+    - Partial (and as of yet, not acceptably functional) implementation of
+      Google WebComponents. See implementation notes.
+   Changes/fixes:
+    - Updated NSPR to 4.29.
+    - Updated NSS to 3.59.
+    - Disabled legacy database format for storage of certificates and passwords.
+    - Updated several site-specific user-agent overrides for web compatibility.
+    - Improved styling of the "find in page" bar to avoid unreadable text on
+      some system themes.
+    - Removed a large chunk of Android-specific code.
+    - Split gkmedias.dll back out from xul.dll.
+    - Cleaned up a number of redundant and obsolete code paths.
+    - Fixed a regression with the Performance API.
+    - Fixed an initialization issue in the browser when users would
+      force-disable certain types of caching.
+    - Fixed a crash when attempting to save a file from FTP that could be
+      displayed in the browser.
+    - Fixed the root cause of an issue with JavaScript module loading causing
+      crashes. See implementation notes.
+    - Fixed a rare initialization issue for the print preview window causing it
+      to not display.
+    - Fixed a crash on Mac when text input was not secure.
+    - Disabled the Storage Manager API by default.
+    - Disabled the <menuitem> html tag by default. If you still need this, you
+      can re-enable it with the preference dom.menuitem.enabled in about:config.
+    - Fixed a memory safety issue related to XUL trees (CVE-2021-23962).
+    - Implemented several defense-in-depth measures to improve stability and
+      future security.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 02 Feb 2021 15:10:44 -0800
+
+palemoon (28.17.0-1) obs; urgency=medium
+
+  * This is a development and security update to the browser:
+    - Changed the way dates and times are formatted in the UI to properly adhere
+      to the user's regional settings in the O.S.
+    - Re-enabled the DOM Filesystem API for web compatibility.
+    - Moved the global user-agent override to the networking component.
+    - Worked around crashes and run-time issues with module scripts.
+    - Fixed a website layout issue with table-styled elements potentially
+      overlapping when placed inside a flexbox.
+    - Fixed some code logic issues with websockets.
+    - Fixed a regression when waking the computer from standby causing high
+      CPU usage in some uncommon situations.
+    - Updated the list of prohibited ports the browser can use.
+    - Updated root certificates.
+    - Security issues addressed: CVE-2020-26978 and CVE-2020-35112.
+    - Unified XUL Platform Mozilla Security Patch Summary: 2 fixed, 1 deferred
+      to the next release, 16 not applicable.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Fri, 18 Dec 2020 14:35:04 -0800
+
+palemoon (28.16.0-1) obs; urgency=medium
+
+  * This is a development and security update to the browser:
+    - Changes/fixes:
+      - Aligned CSS tab-size with the specification and un-prefixed it.
+      - Updated Brotli library to 1.0.9.
+      - Updated JAR lib code.
+      - Optimized UI code, resulting in smaller downloads and less space
+        consumed on disk.
+      - Changed the default Firefox Compatibility version number to 68.0 (since
+        versions ending in .9 makes some frameworks unhappy, refusing access
+        to users)
+      - Cleaned up HPKP leftovers.
+      - Disabled the DOM filesystem API by default.
+      - Removed Phone Vibrator API.
+      - Fixed an issue where the software uninstaller would not remove the
+        program files it should.
+      - Fixed a devtools crash related to timeline snapshots.
+      - Fixed an issue in Skia that could cause unsafe memory access. DiD
+      - Fixed several data race conditions. DiD
+      - Fixed an XSS vulnerability where scripts could be executed when pasting
+        data into on-line editors.
+      - Linux: Fixed an overflow issue in freetype.
+      - Security issues addressed: CVE-2020-26960, CVE-2020-26951,
+        CVE-2020-26956, CVE-2020-15999 and several others that do not have a
+        CVE designation.
+      - Unified XUL Platform Mozilla Security Patch Summary: 4 fixed,
+        4 defense-in-depth, 3 rejected, 20 not applicable.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 24 Nov 2020 11:18:01 -0800
+
+palemoon (28.15.0-1) obs; urgency=medium
+
+  * This is a standard development and bugfix release.
+    - Implemented support for CSS caret-color.
+    - Implemented support for un-prefixed ::selection CSS pseudo-element
+      styling.
+    - Fixed another potential crashing scenario in ResizeObservers.
+    - Fixed several crashes in the DOM Fetch API.
+    - Fixed a crash in table pagination.
+    - Security issues fixed: CVE-2020-15680 (VG-VD-20-115) and several memory
+      safety hazards.
+
+  * Ubuntu Groovy forced to build with one thread.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Wed, 28 Oct 2020 00:49:54 -0700
+
+palemoon (28.14.2-1) obs; urgency=medium
+
+  * Fixed some additional crashes caused by the ResizeObserver API. This should
+    take care of all crashes that have been attributed to this new code.
+  * Fixed erroneous parsing of CSS percentages as number values.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Mon, 05 Oct 2020 09:20:25 -0700
+
+palemoon (28.14.1-1) obs; urgency=medium
+
+  * Fix a crash on many popular websites introduced in the new ResizeObserver.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 29 Sep 2020 21:09:07 -0700
+
+palemoon (28.14.0-1) obs; urgency=medium
+
+  * New upstream release: This is a development, bugfix and security update:
+    - Updated the browser identity code for website security to more clearly
+      indicate website status. A detailed explanation is available on the forum
+      and beyond the scope of these release notes.
+    - Updated unofficial branding to be more generic and more clearly separate
+      unofficial builds from Pale Moon as a product. Please note that this goes
+      hand in hand with an update of our redistribution license, and from this
+      point forward any "New Moon" products are to be considered separate, and
+      not unofficial Pale Moon builds or in any way related to or affiliated
+      with Pale Moon, despite the similarity in name.
+    - Added a preference (signon.startup.prompt) to give users the option to ask
+      for the Master Password the moment the application starts (before the main
+      window opens). This allows a workaround for getting multiple Master
+      Password prompts if individual components need access to the password
+      store at the same time.
+    - Changed the way download sources are displayed to always use the actual
+      domain downloads are from. In some situations the browser would previously
+      display the domain of the referring page in an inconsistent fashion.
+    - Implemented the ES2019 Object.fromEntries() utility function.
+    - Implemented the CSS flow-root keyword.
+    - (Re-)implemented percentage-based CSS opacity values according to the
+      updated spec.
+    - Implemented the last few missing bits for a standards-compliant
+      implementation of JavaScript modules.(preloading, resource: scheme, etc.)
+    - Implemented the ResizeObserver DOM API.
+    - Fixed a null crash on some websites using CSS clip paths.
+    - Updated script handling inside SVGs to only run scripts if they are
+      enabled and permitted, avoiding a potential XSS pitfall.
+    - Fixed several memory safety hazards and crashes.
+    - Updated the MediaQueryList interface to the updated spec. It now inherits
+      from EventTarget and implements AddEventListener/RemoveEventListener in
+      addition to AddListener/RemoveListener and should improve web compatibility for some sites.
+    - Removed support for the archaic and non-standard <marquee> element.
+    - Removed some leftovers from the discontinued plugin update checker
+      service.
+    - Removed some internal HPKP implementation leftovers.
+    - Cleaned up the Windows widget code to reduce potentially vulnerable
+      direct-dll loads.
+    - Security issues fixed: CVE-2020-15676 and CVE-2020-15677
+    - Unified XUL Platform Mozilla Security Patch Summary: 2 fixed, 1
+      defense-in-depth, 7 not applicable.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 29 Sep 2020 11:20:41 -0700
+
+palemoon (28.13.0-2) obs; urgency=medium
+
+  * Add "ac_add_options --enable-phoenix-extensions" to mozconfigs...
+
+ -- Steven Pusser <stevep@mxlinux.org>  Sat, 05 Sep 2020 20:31:59 -0700
+
+palemoon (28.13.0-1) obs; urgency=medium
+
+  * New upstream release: This is a development, bugfix and security update.
+    - Updated the included site-specific user-agent overrides for a number of
+      websites that need them.
+    - Rewritten the browser's padlock code to use more modern APIs and provide
+      more accurate security status indication.
+    - Now also with localized tooltips!
+    - Fixed a missing close button on the undo prompt after removing a thumbnail
+      from the QuickDial new tab page.
+    - Fixed an issue with the alternative stylesheet menu in the browser's UI
+      not working.
+    - Implemented the use of intrinsic aspect ratios for images to improve
+      layout during load and page positioning.
+    - Added a preference to the use of node.getRootNode and disabled by default.
+      See implementation notes.
+    - Added CSS -webkit-appearance as an alias for -moz-appearance to improve
+      compatibility with websites that only try to use Chrome-specific keywords to style standard form elements.
+    - Updated the SQLite library to 3.33.0.
+    - Reinstated precise floating point precision model in JavaScript for those
+      alternate builders who foolishly try to use the inaccurate "fast" model.
+    - Improved spec compliance of modular JavaScript use (ECMAScript modules).
+    - Changed media errors to be a more generic response, and added a preference
+      (media.sourceErrorDetails.enabled) to enable detailed error reporting of
+      media errors for debugging purposes. Previously, detailed errors were
+      provided by default which could lead to privacy issues.
+    - Improved code stability of the AbortController implementation.
+    - Fixed a race condition in the secure connection library (NSS).
+    - Security issues fixed: CVE-2020-15664, CVE-2020-15666, CVE-2020-15667,
+      CVE-2020-15668 and CVE-2020-15669.
+    - Unified XUL Platform Mozilla Security Patch Summary: 4 fixed, 1
+      defense-in-depth, 1 rejected, 9 not applicable.
+    Implementation notes:
+    - In 28.11.0 we introduced node.getRootNode because some websites would fail
+      with an error if this function was not present. Unfortunately, this caused
+      problems with other sites that (incorrectly) assume Google WebComponents
+      are available when this utility function is present (feature detection
+      gone wrong). While it is considered by some to be part of the Google
+      WebComponents implementation, it actually has utility value outside of
+      that use. Because of the problems caused, we've added a preference and
+      disabled it by default, fixing these kinds of websites. When needed, you
+      can re-enable this function with dom.getRootNode.enabled. This should
+      improve web compatibility by default yet still allow users to enable this
+      function for websites that use its utility but do not use WebComponents.
+
+  * Install a palemoon.desktop XFCE helper file from the debian folder so that
+    Pale Moon appears as a choice for default browser in the XFCE settings.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Fri, 04 Sep 2020 19:07:42 -0700
+
+palemoon (28.12.0-2) obs; urgency=medium
+
+  * Add python2 as alternative build-dep to allow for changes in Sid.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Sun, 09 Aug 2020 19:23:51 -0700
+
+palemoon (28.12.0-1) obs; urgency=medium
+
+  * New upstream release: This is a development, bugfix and security update.
+    - Added controls for WASM to the browser's preferences, and enabled by
+      default.
+    - Enabled various arbitrarily-disabled CSS functions.
+    - Added the use of basic path descriptors (i.e. polygon) to css clip paths.
+    - Implemented multithreaded request signal handling for the Abort API.
+      Please see implementation notes below.
+    - Updated the included US-English dictionary, adding approximately 2500
+      additional words.
+    - Removed the DOM battery API. This was already disabled for privacy reasons
+      for a long while.
+    - Fixed an erroneous warning displayed on toolkit-only add-ons like supplied
+      dictionaries.
+    - Fixed an issue with the sessionstore tab load preference.
+    - Improved the generation of the names of downloaded files to prevent
+      confusion. (CVE-2020-15658)
+    - Fixed a code issue with base64 encoding of data.
+    - Fixed 2 safety hazards in JavaScript. (One being CVE-2020-15656) DiD
+    - Fixed a spec compliance issue with regards to the cross-origin loading
+      of scripts. (CVE-2020-15652)
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 04 Aug 2020 22:17:07 -0700
+
+palemoon (28.11.0-2) obs; urgency=medium
+
+  * Add some code to rules and lsb-release to B-Ds to prevent parallel
+    builds if on Sid, which fail there because of a buggy make update.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Thu, 23 Jul 2020 20:26:20 -0700
+
+palemoon (28.11.0-1) obs; urgency=medium
+
+  * New upstream release:
+    - Changed storage format for certificates and passwords to SQLite.
+    - Added a preference (browser.tabs.insertAllAfterCurrent) to enable always
+      adding new tabs after the current tab, whether related or not.
+    - Changed the way Firefox extensions are displayed in the add-on manager
+      (provide a clear warning).
+    - Denied other types of add-ons that aren't explicitly targeting Pale
+      Moon's ID.
+    - Improved the browser's DPI-awareness to be per-monitor instead of
+      system-wide, on supported Windows operating systems.
+    - Updated bookmark backups code with the other half of what should have been
+      done way back when, so they work fully as intended.
+    - Added a preference (browser.bookmarks.editDialog.showForNewBookmarks) to
+      enable immediately showing the edit dialog for new bookmarks.
+    - If set to true, clicking the star in the address bar will pop open the
+      edit dialog immediately for changing details/sorting.
+    - Fixed the useragent string in native mode, and updated UA code to properly
+      respond to live changes to some preferences.
+    - Tidied up front-end browser JavaScript.
+    - Changed the way sources are compiled (on-going de-unification).
+    - Improved compatibility with gcc v10
+    - Removed support for the obsolete and unmaintained NVidia 3DVision
+      stereoscopic interface.
+    - Fixed some build issues in non-standard configurations.
+    - Fixed wrong positions when calculating the position for position:absolute
+      child inside a table.
+    - Aligned file name extension of saved url files with other applications
+      (lower case)
+    - Fixed building with --disable-webspeech (to disable speech synthesis)
+    - Added global menubar support for GTK.
+    - Implemented node.getRootNode
+    - Implemented AbortController (Abort API)
+    - Improved the uninstaller to use elevation when prudent and actually remove
+      program files.
+    - Fixed a rare issue with editable page content.
+    - Fixed a crash related to ES module scripts.
+    - Aligned ES module scripting better with the current spec and removed eager
+      instantiation.
+    - Fixed a potential issue with the JPEG encoder. (CVE-2020-12422) DiD
+    - Fixed a potential issue with AppCache manifests. DiD
+    - Fixed a potential crash in JavaScript date parsing.
+    - Fixed a problem with RSA key generation that would make it potentially
+      vulnerable to side-channel attacks. (CVE-2020-12402)
+    - Fixed a potential crash due to multithread race condition. DiD
+    - Fixed a correctness issue in URL handling. (CVE-2020-12418) DiD
+
+  *  Remove patches, fixed upstream.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Fri, 17 Jul 2020 15:38:40 -0700
+
+palemoon (28.10.0-2) obs; urgency=medium
+
+  * Add patch to fix FTBFS on armhf, courtesy of adesh on PM forums.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Mon, 08 Jun 2020 21:20:37 -0700
+
+palemoon (28.10.0-1) obs; urgency=medium
+
+  * This is a development, bugfix and security update:
+    - Implemented URLSearchParams' sort() function.
+    - Implemented ES2020 globalThis for web compatibility.
+    - Improved our WebM media parser to be more tolerant to different encoding
+      styles.
+    - Improved our MP3 media parser to be more tolerant to different encoding
+      styles and particularly tiny files/stream chunks.
+    - Improved performance of table drawing for more corner cases.
+    - Changed the way images without a src are handled in page layouts to align
+      with the Chrome-pushed spec.
+    - Added modern MIPS support.
+    - Fixed a regression in WebAudio channel handling due to a landed
+      security fix.
+    - Fixed a regression preventing scripting from properly disabling input
+      controls.
+    - Fixed an issue with border radius sometimes not being honored in tables.
+    - Fixed some build issues in non-standard configurations.
+    - Removed more telemetry code.
+    - Removed the in-browser speech recognition engine and API.
+    - Removed support for the obsolete and unmaintained NVidia 3DVision
+      stereoscopic interface.
+    - Changed handling of braille blanks in the ui (CVE-2020-12409) DiD
+    - Mitigated a potential timing attack against DSA keys in
+      NSS (CVE-2020-12399)
+    - Unified XUL Platform Mozilla Security Patch Summary: 1 fixed,
+      1 defense-in-depth, 8 not applicable.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Fri, 05 Jun 2020 20:32:02 -0700
+
+palemoon (28.9.3-1) obs; urgency=medium
+
+  * Security update:
+    - Fixed a potential vulnerability in the zip file reader. DiD
+    - Fixed a potential vulnerability in the JavaScript JIT compiler related to
+      aliases. DiD
+    - Ported several upstream devtools fixes (addresses CVE-2020-12392 and
+      CVE-2020-12393).
+    - Improved memory safety of some WebAudio calls.
+    - Improved memory safety in the XUL window destructor. DiD
+    - Unified XUL Platform Mozilla Security Patch Summary: 3 fixed,
+      3 Defense-in-depth, 16 not applicable.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Fri, 08 May 2020 10:48:02 -0700
+
+palemoon (28.9.2-2mx19+1) mx; urgency=medium
+
+  * debian/mozconfig:
+    - small modifications to comply with currently advised settings.
+    - pass some memory reducing flags to linker to avoid memory exhaustion with
+      gcc-8 and above on i386 and armhf arches.
+
+  * Add autoconf2.13 to build-depends.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Sat, 02 May 2020 10:07:31 -0700
+
+palemoon (28.9.2-1) obs; urgency=medium
+
+  * Minor update for stability and compatibility:
+    - Re-based the 28.9 version of browsers on a separate development branch
+      that excludes the extensive work being done for Google WebComponents, to
+      avoid potential performance and stability issues caused by as-of-yet
+      incomplete and in-progress code for the new milestone.
+    - Enabled DOM High Resolution timestamps for compatibility with websites
+      that strictly rely on them for operation.
+    - Added a preference to allow copying the unescaped URL from the address bar
+      (especially useful for internationalized domain names and paths). To
+      enable this, set browser.urlbar.decodeURLsOnCopy to true in about:config
+    - Fixed several application crashes (thanks, Fysac!)
+
+ -- Steven Pusser <stevep@mxlinux.org>  Fri, 01 May 2020 00:31:59 -0700
+
+palemoon (28.9.1-1) obs; urgency=medium
+
+  * New upstream release:
+    - Re-imported the ExtensionStorage js module for use by browser extensions.
+    - Fixed an issue with the WebRequest module having erroneously un-processed
+      build directives in it. This might have caused some subtle breakage.
+    - Removed the use of high-resolution Windows system timers from the layout
+      refresh driver; this should help with some performance and battery life
+      issues.
+    - Fixed an issue where various parts of hardware acceleration weren't
+      properly linked when changing the option from preferences. If you have
+      changed the preferences option to "use hardware acceleration when
+      available" between 28.9.0 and this release, it is recommended that you go
+      into preferences and toggle the option off/on to the preferred setting to
+      correct any discrepancies.
+    - Fixed an issue with building the user-agent string using the build date
+      as ID.
+    - Fixed an issue with the release of document content viewers
+      (CVE-2020-6819). DiD
+    - Fixed an issue with handling functions with rest parameters. DiD
+    - Unified XUL Platform Mozilla Security Patch Summary: 2 Defense-in-depth,
+      14 not applicable.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Sat, 11 Apr 2020 22:39:44 -0700
+
+palemoon (28.9.0.2+repack-3) obs; urgency=medium
+
+  * Add libfontconfig1-dev to BDs to work around FTBFS on OBS with Sid.
+    (and soon others)
+
+ -- Steven Pusser <stevep@mxlinux.org>  Mon, 06 Apr 2020 11:38:14 -0700
+
+palemoon (28.9.0.2+repack-2mx19+1) mx; urgency=medium
+
+  * Rebuild with correct UXP in source.
+  * debian:: remove obsolete make.mk and source/include-binaries files.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Thu, 02 Apr 2020 22:08:57 -0700
+
+palemoon (28.9.0.2-1) obs; urgency=medium
+
+  * This is a small bugfix update addressing 2 more important issues in 28.9.0:
+    - Fixed an issue with browser migration and initialization code causing
+      various browser run-time problems.
+    - Fixed an issue with cache behavior where some users would have trouble
+      having their windows and tabs restored in "soft refresh" mode
+      (see v28.9.0 release notes).
+
+ -- Steven Pusser <stevep@mxlinux.org>  Thu, 26 Mar 2020 17:02:54 -0700
+
+palemoon (28.9.0.1-1mx19+1) mx; urgency=medium
+
+  * debian/install: adjust the source directory for palemoon.desktop.
+  * Drop the repack from the versioning: there are no full original source
+    tarballs any longer.
+
+    [28.9.0.1]
+    - This is a small update to address a problem with user-agent overrides
+      not working as-intended for some people.
+
+    [28.9.0]
+    - This is a major development update.
+      - New features:
+        - Implemented asynchronous iterators (await iterator.next() and for
+          await loops) (ES2018)
+        - Implemented promise-based media playback.
+        - Implemented non-standard legacy CSSStyleSheet rules functions.
+        - Implemented the html5 <dialog> element. To switch this on, flip
+          dom.dialog_element.enabled to true.
+        - Implemented the optional hiding of pinned tabs in CtrlTab/AllTab
+          panes. (controlled through the preferences
+          browser.ctrlTab.hidePinnedTabs and browser.allTabs.hidePinnedTabs)
+        - Added 1.25x playback speed to html media elements.
+        - Added a hidden pref (browser.places.smartBookmarks.max) to control
+          the sizes of default smart bookmarks categories.
+
+      - Changes/fixes:
+
+        - Aligned document.open() with the overhauled specification.
+        - Aligned the way DOM styles are computed with mainstream browser
+          behavior.
+        - Removed the (unused) DOM promise implementation.
+        - Enabled seeking to next frame in media files.
+        - Enabled dynamic UA updates for emergency use.
+        - Implemented rule processing stub for font-variation-settings.
+        - Increased the maximum XML nesting depth to 2048 levels for extreme
+          corner cases and to conservatively align with other browsers.
+        - Improved the privacy of geolocation lookup calls, with thanks to a
+          generous service donation from ip-api.com
+        - Improved reporting of the operating system in site-specific user-agent
+          overrides.
+        - Improved table drawing performance again after the rewrite for sticky
+          positioning, making it slower.
+        - Updated CSP processing to allow custom scheme wildcards to be
+          specified without a port.
+        - Aligned the behavior of outlines with other browsers when dealing with
+          CSS-repositioned elements.
+        - Changed the way hardware acceleration is controlled from the
+          application.
+        - Changed the default monospace font for main languages from Courier
+          New to Consolas. This provides a more balanced font for fixed-width
+          text that is slightly more condensed and more in line with the
+          naturally more compact variable-width fonts used everywhere else.
+        - Changed the browser's behavior when restoring tabs from previous
+          sessions. To prevent stale pages, it will now by default perform a
+          "soft refresh" of the page instead of drawing it purely from cache
+          without checking if the page needs updating. If you prefer the old
+          behavior, set browser.sessionstore.cache_behavior to 0 in
+          about:config.
+        - Updated NSPR to 4.24 and NSS to ~3.48.1-RTM, removing the previous
+          custom patch level with NSS being able to support custom rounds for
+          DBM now.
+        - For extensive release notes with all NSS changes, see NSS_Releases.
+        - Implemented an NSS performance optimization for Master Password use
+          with limited effect.
+        - Fixed some potential crashing scenarios with WebGL on Linux.
+        - Completely removed showModalDialog.
+        - Disabled some logging in production builds.
+        - Removed various gadgeteering/redundant/dead DOM APIs
+          (casting/presentation, FlyWeb).
+        - Removed support for a number of critical libraries being
+          system-supplied.
+        - Removed "Copy raw data" button from the troubleshooting information
+          page, since it's never used by us in that format, and users mistakenly
+          keep using it instead of copying text.
+        - Removed a bunch of Android and iOS support code.
+        - Fixed an issue with form elements sometimes being incorrectly
+          disabled.
+        - Fixed several crashes.
+        - Fixed an issue with Captive Portal detection sometimes firing even
+          when disabled by the user.
+        - Performed various tree-wide code cleanups.
+        - Backed out a large code cleanup patch for causing subtle issues in
+          website operation (e.g. WordPress). This will have to be revisited
+          later; the reintroduced code is not in use in practice.
+        - Cleaned up the application updater code.
+
+      - Security-related fixes:
+        - Fixed a potential pointer issue issue in cubeb. DiD
+        - Disabled allowing remote jar: URIs by default for security reasons. If
+          you need this functionality for your non-standard environment, you can
+          enable it with the preference network.jar.block-remote-files, but
+          please consider moving away from this method of providing web-based
+          applications.
+        - Removed a potentially dangerous and otherwise ineffective optimization
+          from the JavaScript engine.
+        - Fixed unwanted behavior where created/focused pop-up windows could
+          potentially cover the DOM fullscreen notification, hiding it from
+          users. (CVE-2020-6810)
+        - Fixed an issue where copying data as a curl request from developer
+          tools would not properly escape parameters. (CVE-2020-6811)
+        - Updated our sctp library code with several upstream fixes.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 24 Mar 2020 22:01:45 -0700
+
+palemoon (28.8.4+repack-1) obs; urgency=medium
+
+  * This is a small security and compatibility update.
+    - Implemented optional catch binding (ES2019).
+    - Fixed a hazardous crash related to module scripting.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Sun, 01 Mar 2020 12:31:51 -0800
+
+palemoon (28.8.3+repack-1) obs; urgency=medium
+
+  * This is a regular maintenance bugfix and security release.
+    - Fixed an issue in CSP blocking requests without a port for custom schemes.
+    - Fixed a potentially hazardous crash in layers.
+    - Fixed random crashes on some sites using IndexedDB.
+    - Changed the way the application can be invoked from the command-line to
+      prevent a whole class of potential exploits involving modified omnijars.
+      If your special-needs environment requires that you launch the browser
+      with custom browser/gre omnijars from the command-line, you must set the
+      UXP_CUSTOM_OMNI environment variable before launch from this point
+      forward.
+    - Fixed an issue in the html parser after using HTML5 template tags,
+      allowing JavaScript parsing and execution when it should not be allowed,
+      risking XSS vulnerabilities on sites relying on correct operation of the
+      browser. (CVE-2020-6798)
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 18 Feb 2020 16:27:25 -0800
+
+palemoon (28.8.2.1+repack-1) obs; urgency=medium
+
+  * This is a minor release in response to YouTube deprecating their old web UI.
+    This change will enable the new YouTube UI by default.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 04 Feb 2020 15:57:40 -0800
+
+palemoon (28.8.2+repack-1~mx19+1) mx; urgency=medium
+
+  * New small bugfix and compatibility update:
+    - Reverted the addition of JavaScript regular expression lookarounds since
+      the implementation caused crashes. We'll have to revisit this later.
+    - Fixed an issue where FTP servers would hang the browser if they were not
+      sending answers according to the protocol specification.
+    - Added a workaround for GitHub trying to enforce more Google-isms (which we
+      don't support at this time) to browsers that identify as "Firefox-alike".
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 28 Jan 2020 13:38:49 -0800
+
+palemoon (28.8.1+repack-1~mx19+1) mx; urgency=medium
+
+  * New security upstream release:
+    - Fixed a sampling issue in libsoundtouch (DiD)
+    - Fixed an issue with a new upcoming Windows 10 feature not honoring Private
+      Browsing mode by default (DiD)
+    - Fixed several stability and memory safety hazards. (DiD)
+    - Fixed an issue where files could inadvertently be executed with the
+      designated file type handler instead of opened. (CVE-2019-17019)
+    - Fixed an issue with the JavaScript JIT compiler that could lead to
+      exploitable crashes. (CVE-2019-17026) actively exploited
+
+ -- Steven Pusser <stevep@mxlinux.org>  Sat, 11 Jan 2020 18:35:16 -0800
+
+palemoon (28.8.0+repack-1) obs; urgency=medium
+
+  * New major upstream release:
+    - New features:
+      - Added support for modern Solaris operating systems like Illumos
+        (thanks Athenian200!).
+      - Implemented position:sticky for table parts - You can now use CSS to e.g.
+        stick table headers so they don't scroll off the screen!
+      - Enabled basic implementation of module type scripting. While not fully
+        spec compliant (yet), this will fix the few web compatibility issues with
+        sites that rely on this feature without fallback (e.g. the Chromium
+        bugtracker).
+      - Implemented Promise.prototype.finally() (ES2018).
+      - Implemented Regular Expression lookbehind (ES2018).
+      - Implemented Regular Expression /s flag (dotAll support) (ES2018).
+      - Implemented String.prototype.matchAll (regex) (ES2020).
+      - Added Ekoru to the list of default search engines. This is a Bing-backed
+        search engine that donates the majority of its revenue to various
+        charities that support the planet and animals. An environment-supporting
+        alternative to Ecosia if you don't want to support Google in the process.
+
+    - Changes/fixes:
+      - Changed the way tables are rendered to fix a number of spec compliance
+        issues and allow relative positioning of table parts.
+      - Removed the unused DiskSpaceWatcher component.
+      - Updated cairo code.
+      - Updated SQLite to 3.30.1.
+      - Updated the Brotli library to 1.0.7.
+      - Updated the woff2 library to 1.0.2.
+      - Updated the OpenType Sanitizer to 8.0.0.
+      - Updated the Javascript math library for precision and performance fixes.
+      - Updated the embedded Emoji font to Mozilla's COLR-mapped twemoji 0.5.0
+        (Twemoji 12.1.3), to support Emoji 12.
+      - Improved CSS grid rendering.
+      - Made the second argument of (DOM/CSS) insertRule() optional for (Chrome)
+        web compatibility.
+      - Removed the non-standard object.prototype.watch()/unwatch() functions.
+        Please note that this may affect some extensions; those will need to be
+        updated to no longer use these non-standard functions.
+      - Fixed the status bar module to work around an issue with relying on
+        watch()/unwatch().
+      - Fixed a build failure in the libcubeb sndio module.
+      - Fixed a small oversight in the release branch that would potentially
+        still mark jnlp files as executable.
+      - Fixed the certificate retrieval logic in the certificate exception
+        dialog.
+      - Fixed an issue with add-ons potentially getting confused during add-on
+        updates due to cached scripts.
+      - Fixed a crash due to unnecessary reparenting calls in layout.
+      - Reinstated the mentioning of the number of accelerated/total windows in
+        Troubleshooting Information, for completeness.
+      - Moved the embedded font for Emoji from application to platform so all
+        UXP applications can easily benefit from it (thanks Tobin!).
+      - Cleaned up the jemalloc code: Removed dead/unused code, removed
+        conditionals around "always on" code, and made the allocator VLA-free.
+
+    - Security-related fixes:
+      - Added a preference for, and disabled, the confirmation prompt for URL
+        authentication (prevents evil traps).
+      - Disabled the use of HPKP by default due to the inherent risks involved
+        with this feature. A preference was added to completely disable header
+        processing, and using preloaded pins is effectively disabled. Please
+        note that this is automatically disabled by default for everyone,
+        regardless of your previous setting for this feature, and it is strongly
+        recommended you keep this feature disabled. HPKP will eventually be
+        removed (overall Internet concensus).
+      - Fixed a potential issue when interacting with plugins. (DiD)
+      - Fixed a potential crash scenario when reading PAC configuration. (DiD)
+      - Fixed a potential issue with text selection painting. (DiD)
+      - Fixed an issue with element references not being properly updated. (DiD)
+      - Fixed an issue with incorrect saving of web pages as text. (DiD)
+      - Fixed a potential issue with clipboard handling. (DiD)
+      - Fixed a potential issue with attaching the debugger to web workers. (DiD)
+      - Updated NSS to 3.41.4 to address CVE-2019-11756 and CVE-2019-11745.
+      - Unified XUL Platform Mozilla Security Patch Summary: 2 fixed, 8 DiD, 16
+        not applicable.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Wed, 11 Dec 2019 15:42:31 -0800
+
+palemoon (28.7.2+repack-1) obs; urgency=medium
+
+  * Import 28.7.2 security and bugfix update:
+    - Disabled the use of ICC color profiles for images on Linux by default.
+    - Updated timezone data for internationalization functions.
+    - Fixed the option to use hardware acceleration over RDP for Windows 8.1
+      and 10.
+    - Fixed an issue with inner window navigation potentially leaking.
+    - Fixed a startup crash caused by Qihoo 360 Safeguard/360 Total Security.
+    - Ported some expat parser fixes from upstream.
+    - Ported several NSS upstream fixes to our build.
+    - Aligned handling of U+0000 in the html5 parser with expectations.
+    - Added size checks to WebGL data buffering.
+    - Fixed build issues with newer glibc versions.
+    - Fixed build issues for ARM targets.
+    - Worked around a gcc9 compiler issue that would prevent building with it.
+    - Sec bug fixes: CVE-2019-15903, CVE-2019-11757, CVE-2019-11763 and several
+      potentially exploitable crashes and memory safety hazards that don't have
+      a CVE number.
+    - Unified XUL Platform Mozilla Security Patch Summary: 6 fixed, 6 DiD,
+      1 rejected, 24 not applicable.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 29 Oct 2019 10:41:23 -0700
+
+palemoon (28.7.1+repack-1) obs; urgency=medium
+
+  * Import 28.7.1 security and bugfix update:
+    - Fixed an issue where saving a webpage to disk would sometimes drop tags
+      from the document.
+    - Fixed an issue with click-to-play plugin content throwing up a blank
+      notification.
+    - Fixed an issue in the renderer where region intersections would sometimes
+      return the wrong result. This fixes a regression caused by the fix for
+      CVE-2016-5252.
+    - Fixed security issues: CVE-2019-11744, CVE-2019-11752, CVE-2019-11737,
+      CVE-2019-11746, CVE-2019-11750, CVE-2019-11747 and CVE-2019-11738.
+    - Unified XUL Platform Mozilla Security Patch Summary: 7 fixed, 1 DiD,
+      1 already covered, 22 not applicable.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 10 Sep 2019 20:48:42 -0700
+
+palemoon (28.7.0+repack-1~mx19+1) mx; urgency=medium
+
+  * New major upstream release:
+    - Landed a large JavaScript parser tune-up, which as a targeted goal brings
+      our ES6 stringification fully in line with the ES2018 revision for
+      classes, and implements rest/spread parameters for object literals.
+      (Cheers to Luke!)
+    - Fixed a crash with the tuned-up parser code when certain error messages
+      were triggered.
+    - Aligned browser behavior with mainstream regarding inner window behavior
+      when domain is manipulated.
+    - Improved performance dealing with frame properties.
+    - Improved performance for handling html5 strings.
+    - Improved performance of image content loading.
+    - Fixed potential type confusion in array joins.
+    - Fixed an issue on some pages causing high CPU usage when wrongly
+      specifying plugin content.
+    - Fixed an issue with the add-ons manager "discover" pane if no network
+      connection is present.
+    - Fixed an issue with bookmark/history search results offering context menu
+      options that would be invalid without a selection.
+    - Fixed the devtools JSON viewer and enabled it by default.
+    - Fixed searching from about:home not working for search plugins using the
+      POST method.
+    - Fixed an issue with the checkboxes for location bar preferences.
+    - Fixed SVG alignment issues if SVG-containing elements fall on odd pixel
+      sizes, causing blurry display of especially small SVGs like icons/glyphs.
+    - SVGs will now always be pixel-snapped to provide expected crisp display.
+    - Fixed precompilation of Sync client modules when packaging. This also
+      removes the redundant services.sync.enabled pref.
+    - Added support for matroska containers and h264-based webm video formats.
+    - Added support for AAC audio in matroska and webm video formats.
+    - Added support for spaces in the Mac package and application name.
+    - Added an exception to the unique file origin policy for font types.
+    - Added native file picker support for xdg on Linux.
+    - Updated the default bookmark icons.
+    - Updated the SQLite lib to 3.29.0.
+    - Removed e10s information from about:troubleshooting.
+    - Removed hotfix leftovers.
+    - Removed the WebIDE developer tool.
+    - Removed conditional build-time disabling of the Pale Moon status bar code.
+    - Removed "Delete this page" and "Forget about this site" links from live
+      bookmarks (since they make no sense on feeds).
+    - Removed the Financial Times' polyfill user-agent override since they
+      updated their detection to work with Pale Moon.
+
+  * Add code to force the use of gcc-8 on Bullseye, Sid, and Eoan, now that the
+    default gcc version in those versions is 9.
+  * Add lsb-release to build-depends to enable the distrelease detection.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Fri, 30 Aug 2019 11:05:05 -0700
+
+palemoon (28.6.1+repack-2) obs; urgency=medium
+
+  * Add override for dh_strip_nondeterminism to address build failures with the
+    latest version of that in Debian Testing and Sid.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Fri, 02 Aug 2019 14:48:44 -0700
+
+palemoon (28.6.1+repack-1~mx19+1) mx; urgency=medium
+
+  * Import new 28.6.1 security and bugfix update:
+    - Improved handling of FTP resource loading (allow save-as and cater to some
+      FTP-based browsing).
+    - Added a preference (security.block_ftp_subresources) to allow users to
+      completely bypass the blocking of FTP subresources if required for their
+      environment, if the improvements made in this release do not suffice.
+    - Added blocking of authentication-locked cross-origin image subresources by
+      default to prevent spurious auth prompts.
+    - A preference (network.auth.subresource-http-img-XO-auth) was added to
+      allow users to bypass this blocking if required for their environment.
+    - Changed the behavior of file: URIs to treat each URI as a unique origin.
+      This prevents cross-file access from scripting.
+    - A preference (security.fileuri.unique_origin) was added to allow users to
+      relax this restriction if required for their environment.
+    - Implemented a revised version of http2PushedStream to address some thread
+      safety issues.
+    - Aligned browser behavior with mainstream regarding inner window behavior
+      when domain is manipulated.
+    - Backed out a 28.5.* patch for causing multiple issues in the UI and web
+      content.
+    - Updated NSS to 3.41.2 (custom) to pick up several upstream fixes.
+    - Fixed a type confusion issue in JavaScript Arrays. (DiD)
+    - Added a fix for cross-thread access of Necko. (DiD)
+    - Added a port safety check for Alternative Services.
+    - Implemented fixes for applicable security issues: CVE-2019-11719,
+      CVE-2019-11711, CVE-2019-11715, CVE-2019-11717, CVE-2019-11714 (DiD),
+      CVE-2019-11729 (DiD), CVE-2019-11727 (DiD), CVE-2019-11730 (DiD),
+      CVE-2019-11713 (DiD) and several networking and memory-safety hazards
+      that do not have CVE numbers.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Wed, 24 Jul 2019 18:55:35 -0700
+
+palemoon (28.6.0.1+repack-1~mx19+1) mx; urgency=medium
+
+  * Out-of-band update to fix some pressing issues:
+    - Updated the application icon to provide better visuals on Windows classic
+      and other grey backgrounds.
+    - Reduced the Master Password hashing rounds to prevent issues with stored
+      password retrieval while still sufficiently strengthening the encryption.
+      If you have previously re-keyed the database after the update to 28.6.0,
+      you should do so again by going through the change master password process
+      to reduce access times.
+    - Updated the WhatsApp Web site-specific user-agent override to respond to
+      Google refusing access based on the old string.
+    - Updated the branding for the portable launcher.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Fri, 05 Jul 2019 16:33:56 -0700
+
+palemoon (28.6.0+repack-1~mx17+1) mx; urgency=medium
+
+  * Major development update, focusing on under-the-hood improvements and
+    bugfixes, code cleanup, and performance:
+
+    - Implemented String.prototype.trimStart and String.prototype.trimEnd
+      (ES2019)
+    - Implemented Array.prototype.flat and Array.prototype.flatMap (ES2019)
+    - Implemented Symbol.prototype.description (ES2019)
+    - Added support for gzip-compressed SVG-in-Opentype fonts.
+    - Updated official branding.
+    - Updated reader view components.
+    - Added a preference to control the setting of cookies through meta header
+      information (non-standard feature) and disabled by default.
+    - Updated ES6 Atomics and re-enabled them.
+    - Updated internationalization code to support updated time zones and the
+      Japanese Reiwa era.
+    - Updated NSS to a custom version to have better encryption strength for
+      master passwords.
+      IMPORTANT: To use this strong encryption and re-key the password database
+      with it, change your master password (can be changed to the same one you
+      already had if desired, but you have to go through the change password
+      process). Depending on your computer and the number of stored passwords,
+      this encryption update may take some time, so please be patient. Please be
+      aware that once re-keyed, the password store will be locked to the new
+      encryption and will no longer be accessible with the master password in
+      older versions of Pale Moon.
+    - Restored "Release notes" in the help menu.
+    - Rearchitectured the application/extension update code.
+    - Added several performance improvements to DOM and the parser.
+    - Improved JavaScript garbage collection of dead compartments.
+    - Fixed a performance issue with painting on some pages.
+    - Improved performance of some websites with complex event regions.
+    - Fixed a potential performance issue in display lists on some pages.
+    - Fixed a rendering bottleneck for the use of XRender when using a remote
+      session.
+    - Fixed graphical artifacts/flickering when using XRender on Intel or
+      Intel-hybrid GPU setups.
+    - Added a DiD fix for potential future issues with inlining array natives.
+    - Fixed a potential UAF situation in the HTML5 parser (DiD)
+    - Fixed an origin-clean bypass issue.
+    - Changed the way permissions for predefined sites are loaded.
+    - Reverted the 28.5.1 change to treat *.jnlp files as executables
+      (CVE-2019-11696) after input from an Oracle representative. Java Web Start
+      files are not executable and should not be treated any different than
+      regular documents handled by external applications.
+    - Removed SecurityUI telemetry.
+    - Removed some other dead telemetry code.
+    - Removed geo-specific selection of default search engines.
+    - Deprecated the use of FUEL.
+    - Removed the unused code for "enhanced tiles" in the new tab page.
+    - Removed preference to brute-force e10s to on.
+    - Removed Unboxed Array code.
+    - Removed Unboxed Object code.
+    - Fixed failure to print if a page contains a 0-sized element.
+    - Fixed an issue with tab-modal dialogs being presented in the wrong order.
+    - Fixed an issue with the tab bar remaining collapsed in customize mode if
+      normally hidden.
+    - Fixed an issue with Sync when choosing to overwrite data with synced data.
+    - Fixed an issue with tab previews on the taskbar.
+    - Fixed an issue with IntersectionObserver viewport accuracy.
+    - Fixed Scroll bar orientation on Mac OS X.
+    - Fixed an issue with anchor/link targets not re-using a named target.
+    - Fixed a build issue with Gnu-CC on PPC64.
+    - Fixed browser.link.open_newwindow functionality.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 02 Jul 2019 14:14:16 -0700
+
+palemoon (28.5.2+repack-1) obs; urgency=medium
+
+  * New upstream security and bugfix release:
+    # Changes/fixes:
+      - Restored a global getBoolPref() function shortcut for extension
+        compatibility with old extensions.
+      - If you are currently using this global function, please change it to
+        Services.prefs.getBoolPref()
+      - Fixed an issue with the UI when the address bar was removed from the
+        navigation toolbar.
+      - Fixed an issue with scripting of the Help menu.
+      - Fixed a crash resulting from non-standard manipulation of XML stylesheets
+        by extensions.
+      - Fixed Aero Peek (taskbar previews) on Windows.
+      - Fixed browser.link.open_newwindow functionality.
+      - Removed the default handler for webcal since the site doesn't seem to be
+        properly maintained.
+      - Prevented some ways smart places queries could be abused for social
+        engineering attacks.
+      - Ported an upstream Skia fix.
+      - Improved the origin-clean algorithm for canvases.
+      - Improved the efficiency of certain types of memory allocations in the
+        JavaScript compiler.
+      - Changed the way the application update checker code is hooked up so it
+        will not require a user to go idle before being activated.
+      - This solves the primary issue with application updates not notifying
+        users as promptly as they should; more improvements are slated for the
+        next major release.
+      - Applicable security issues fixed: CVE-2019-7317, CVE-2019-11701,
+        CVE-2019-11698, CVE-2019-9817 (DiD), CVE-2019-11700, CVE-2019-11696,
+        CVE-2019-11693, and several potentially exploitable crashes and memory
+        safety hazards that do not have a CVE number assigned to them.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Thu, 06 Jun 2019 19:28:50 -0700
+
+palemoon (28.5.0+repack-1) obs; urgency=medium
+
+  * New upstream release:
+    - Redesigned the about box.
+    - Added "Check for updates" menu entries to the AppMenu and classic menu
+      (since the About box redesign no longer has application update in it).
+    - Restored the app.update.url.override pref for AUS testing/override.
+    - Added "Loop" control to html5 video.
+    - Fixed a crash with frames (e.g. when using Tile Tabs).
+    - Fixed an issue with textarea placeholders (spec compliance).
+    - Removed the Windows Maintenance Service one last time.
+    - Improved http basic auth DoS heuristics.
+    - Fixed an issue on big-endian machines (e.g. PPC64/linux).
+    - Removed e10s code from widgets.
+    - Preffed the various http "Accept" headers and aligned with the Fetch spec
+      (except for image requests).
+    - Aligned URLSearchParams with the spec.
+    - Updated several site-specific UA overrides.
+    - Fixed "Yet Another special case of a flex frame being the absolute
+      containing block"™
+    - Fixed border drawing when the tab bar is hidden.
+    - Pref-controlled and disabled the use of unboxed plain objects in
+      JavaScript's JIT compiler.
+    - Improved handling of interrupted connections through proxies and
+      pseudo-VPN extensions.
+    - Removed contextual identity.
+    - Updated the 7zip installer stub to a much more recent code version.
+    - Fixed an issue with applying percentages to 0 in layout sizes.
+    - Fixed an issue with calculating linear sums in JS JITed code.
+    - Added default value feature to get*Pref() preference functions.
+    - Fixed an issue that would occasionally overwrite the new tab custom URL.
+    - Updated the SQLite library to 3.27.2
+    - Killed the crashreporter toolkit files and exception handler hooks.
+    - Fixed an issue with a missing border on the tab bar when on the bottom.
+    - Fixed a crash with badly-formatted SVG files.
+    - Showed the robots to the exit after squatting in the browser for decades.
+    - JavaScript: Implemented TC39 toString() revision proposal.
+    - Rearchitectured the JavaScript front-end parser to provide better and more
+      logical parsing of JS code.
+    - Removed support code and leftovers for unsupported SunOS, AIX, BEOS, HPUX
+      and OS/2 operating systems.
+    - Fixed a scrollbar arrow issue on OS X.
+    - Removed all Firefox Accounts code.
+    - Made the CSS parser more robust and aligned url() behavior with the CSS3
+      spec in case of bad input.
+    - Fixed an issue with blocklist updates not actually dynamically applying
+      due to a wrong URL.
+    - Updated the embedded emoji font to the TweMoji v11.4.0 equivalent.
+    - Fixed an issue with async/deferred scripts preventing page loads from
+      completing.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 30 Apr 2019 10:19:50 -0700
+
+palemoon (28.4.1+repack-1~mx17+1) mx; urgency=medium
+
+  * New upstream security and bugfix release:
+    - Fixed hover state arrows on some controls.
+    - Fixed potential denial-of-service issues involving FTP (loading of
+      subresources and spamming errors).
+    - Disabled Microsoft Family Safety (Win 8.1) by default. This prevents
+      security issues as a result of a local MitM setup.
+    - Added several site-specific overrides (Firefox Send and polyfill.io) to
+      work around website UA-sniffing isues.
+    - Implemented the origin-clean algorithm for controlling access to image
+      resources.
+    - Cleaned up the helper application service code.
+    - Ported applicable security fixes from Mozilla (CVE-2019-9791,
+      CVE-2019-9792, CVE-2019-9796, CVE-2019-9801, CVE-2019-9793, CVE-2019-9794,
+      CVE-2019-9808 and ZDI-CAN-8368).
+    - Implemented several defense-in-depth measures (for CVE-2019-9790,
+      CVE-2019-9797, CVE-2019-9804, and a JavaScript issue).
+    - Fixed several memory safety hazards and crashes.
+
+  * Add provides for www-browser and gnome-www-browser.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 26 Mar 2019 13:01:22 -0700
+
+palemoon (28.4.0+repack-1~mx17+1) mx; urgency=medium
+
+  * New upstream major development, stability and security release:
+    - Removed more telemetry code from the platform.
+    - Fixed implementation of the IntersectionObserver API to avoid crashes, and
+      enabled it by default.
+    - Switched to the new ffmpeg decode API to avoid dropping of frames.
+    - Fixed a buffering issue in the WebP decoder that caused intermittent
+      browser crashes.
+    - Improved resource-efficiency for internal stopwatch timers.
+    - Improved handling of incorrectly-encoded CTTS in media files, resolving
+      some playback issues of videos.
+    - Improved the Cycle Collector and Garbage Collector.
+    - Improved fullscreen navigation bar handling in the situation it has focus
+      when switching to full screen.
+    - Aligned instanceof with the final ES6 spec.
+    - Improved Windows DIB (bitmap) clipboard data handling.
+    - Exposed TLS 1.3 cipher suite prefs in about:config in case people want to
+      disable them individually.
+    - Allowed empty string on the location.search setter to clear URL query
+      parameters from JS.
+    - Added a potential fix for external links not opening in the current
+      window/tab (untested).
+    - Enabled C++11 thread-safe statics in the entire application.
+    - Updated several preferences for integration with the new add-ons site.
+     Security fixes:
+    - Fixed a potential use-after-free in IndexedDB code. (DiD)
+    - Improved proxy handling to avoid localhost getting proxied.
+      (CVE-2018-18506)
+    - Ported upstream Skia fixes. (CVE-2018-18356, CVE-2018-18335)
+    - Fixed an additional Skia issue. (CVE-2019-5785)
+    - Fixed several potentially-exploitable memory safety hazards and crashes.
+      (DiD)
+    - Fixed a possible data race when performing compacting GC.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 19 Feb 2019 10:52:00 -0800
+
+palemoon (28.3.1+repack-1~mx17+1) mx; urgency=medium
+
+  * New upstream minor security and stablility release:
+    - Disabled the IntersectionObserver API by default while we work on
+      resolving crashes caused by it.
+    - Added isIntersecting to the IntersectionObserver API per specification.
+    - Added an option to the preferences window to enable Captive Portal
+      detection (Advanced -> General). If your network connection regularly
+      encounters Captive Portals (e.g. using a laptop on the road or other WiFi
+      connections that require login or agreement to terms) then enabling this
+      detection may make your use of such networks more convenient.
+      For those worried about privacy: the detection service makes use of our own
+      infrastructure and does not contact third parties like Apple or Google.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Fri, 25 Jan 2019 11:45:09 -0800
+
+palemoon (28.3.0+repack-1~mx17+1) mx; urgency=medium
+
+  * Import new 28.3.0 major development and bugfix release:
+    - Added AV1 support for MP4/MSE videos. Please note that this is a reference
+      library implementation and the upstream decoding lib currently has poor
+      performance for higher resolutions (720p+). This is disabled by default;
+      use the about:config preference media.av1.enabled to enable this codec.
+    - Changed the API used for video playback with FFmpeg 58+. This should solve
+      performance issues (dropped frames) with VP8 and VP9.
+    - Redesigned the main toolbar icons as SVG images to make them HiDPI
+      compliant.
+    - Fixed the sync notification (infobar) icon.
+    - Fixed a potential cycle collector resource leak.
+    - Added icons and controls to tabs to indicate if sound is playing the tab
+      and if so, allowing the user to mute it with a click. This is a native
+      implementation of the API in use in Basilisk and performs the same
+      function as the "expose noisy tabs" extension, although the extension may
+      still be preferred by some for e.g. skinning capabilities. The feature may
+      be disabled with browser.tabs.showAudioPlayingIcon.
+    - Removed support for VR hardware.
+    - Fixed out-of-bounds sizes for CSS calculation strings.
+    - Removed the DirectShow component since it is no longer necessary.
+    - Removed Firefox Accounts integration, phase 1:
+      - Changed the Sync client to the one from Tycho.
+      - Made Sync optional at build time.
+    - Stopped trying to cater to addons.mozilla.org since they no longer offer
+        anything useful to Pale Moon after the Great XUL Extension Purge™.
+    - Added an option to process favicons for optimal sized display and removing
+      animations. Enable this with browser.chrome.favicons.process
+    - Fixed an incorrect preference reference in feed reader.
+    - Fixed an issue with lazy frame construction on display:contents elements.
+      This should solve e.g. the use of mathjax in comments on stackoverflow.
+    - Media code improvements and cleanup (ongoing).
+    - Updated the DropBox useragent override to solve login issues.
+    - Fixed potential crashes due to shutdown observers in VTT and font
+      lists. DiD
+    - Enabled some mistakingly-disabled optimizations in the JS JIT compiler.
+    - Fixed several potential crashes in JS. DiD
+    - Fixed several potential crashes in WebCrypto. DiD
+    - Fixed a potential crash in JS Range Analysis. DiD
+    - Fixed a potential crash in the layout engine due to combo boxes. DiD
+    - Fixed a potential shutdown crash in non-standard environments related to
+      2D Canvas. DiD
+    - Fixed a potential overflow in the PNG writer. DiD
+    - Fixed a potential double-free in the MAR signing utility. DiD
+    - Fixed an issue where URLs could be extracted cross-origin (CVE-2018-18494).
+    - Updated NSPR to v4.20.
+    - Updated NSS to 3.41, providing (among other things) full compatibility with
+      the final version of TLS 1.3 on websites.
+    - Updated location.protocol to the latest spec.
+    - Updated Intersection Observers to the latest spec and enabled them
+      by default.
+    - Updated the SQLite lib to 3.26.0.
+    - Fixed errors about the login manager's recipeManager not being
+      available (yet).
+    - Switched status bar download arrow to SVG.
+    - Fixed a crash in IntersectionObservers.
+    - Fixed initialization of the Search service from browser code to avoid
+      synchronous init.
+    - Added logging of performance warnings to devtools consoles.
+    - Fixed favicons in taskbar tab preview listings.
+    - Blocked Comodo IS dll < version 6.3 to prevent startup crashes.
+    - Fixed issues in the HTML form submit observer module.
+    - Limited resolving depth of CSS variables to a sane maximum (fixes
+      cras.sh issue).
+    - Removed Mozilla's proprietary constructor on WebAudio's AudioContext,
+      aligning it with the standard specification.
+    - Exposed the previously hidden preference in about:config for page thumbnail
+      generation (some people prefer this for local privacy).
+    - Aligned Element.ScrollIntoView with the DOM specification. This improves,
+      among other things, compatibility with the React framework.
+
+  * Totally revise debian/copyright to conform to Debian Policy.
+  * Install copies of MPL-1.1 and MPL-2 licenses in docs.
+  * Change versioning to "+repack" now that the OBS supports it.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 15 Jan 2019 12:11:18 -0800
+
+palemoon (28.2.2~repack-1~mx17+1) mx; urgency=medium
+
+  * New upstream minor security and stablility release.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Wed, 05 Dec 2018 12:23:18 -0800
+
+palemoon (28.2.1~repack-1~mx17+1) mx; urgency=medium
+
+  * New release; addresses issues with history and bookmarks.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Sun, 18 Nov 2018 11:54:00 -0800
+
+palemoon (28.2.0~repack-1) obs; urgency=medium
+
+  * Import new 28.2.0 major development and bugfix release:
+    - Fixed a major performance issue with web workers.
+    - Fixed a rare crash on local networks with HTTP basic auth and unsupported
+      cipher suites.
+    - Fixed a performance/timer issue when leaving the browser idle.
+    - Fixed an issue causing an empty dialog when launching executable files
+      from the browser.
+    - Fixed an issue preventing making entries to disallow sites to store data
+      for off-line use.
+    - Removed code to prevent extensions with binary components.
+    - Fixed an issue with common dialogs being sized incorrectly for their
+      content.
+    - Fixed an issue with event handling on the tab bar that would cause
+      frustrating behavior when trying to open/close tabs in rapid succession.
+    - Switched default behavior for scrolling when a context or pop-up menu is
+      open to allow scrolling, like in v27. This also affects scrolling in very
+      long menus, e.g. bookmarks.
+    - Added experimental Asynchronous Panning and Zooming (APZ) for desktop use.
+    - Re-enabled the use and parsing of ICC v4 color profiles.
+    - Removed telemetry code from the caching subsystem.
+    - Improved full-screen detection for suppressing status messages.
+    - Made all arguments passed to Init*Event() optional except the first for
+      parity with other browsers.
+    - Cleaned up some internal installer code.
+    - Fixed making caret width configurable when dealing with CJK characters
+      (regression).
+    - Fixed drawing of table borders consistently when zooming a page
+      (regression).
+    - Exposed the "Save download location per site" pref in about:config.
+    - Improved media handling (ongoing).
+    - Added experimental support for AV1 in WebM videos (disabled by default).
+    - Note: this is for WebM only for now, so MP4 and MSE AV1 streams (e.g.
+      YouTube) will not (yet) play.
+    - Removed the (defunct and incomplete) in-browser translation code.
+    - Fixed an issue with CSS Grid layouts unnecessarily shrinking element
+      blocks.
+    - Fixed notification settings menu entry (opes about:permissions with
+      relevant data now).
+    - Fixed the launching of an undesirable background content process for
+      capturing page thumbnails.
+    - Fixed a focus issue in the bookmark properties dialog.
+    - Changed the setting for reporting CSS errors to the console to false by
+      default, to prevent unnecessary performance loss for recording this data.
+    - Added control mechanisms for Opportunistic Encryption (both for
+      alternative services and upgrade-insecure-requests) in preferences,
+      and disabled this by default due to potential security and privacy issues
+      with this transitional technology.
+    - Updated the default reported Firefox version in Firefox Compatibility Mode
+      to prevent "too old Firefox" complaints on websites.
+    - Updated libnestegg, ffvpx, reader view components and several other
+      modules from upstream.
+    - Implemented security fixes for CVE-2018-12381, CVE-2017-7797, a better fix
+      for CVE-2018-12386 (DiD), CVE-2018-12401 (DiD), CVE-2018-12398,
+      CVE-2018-12392, several Skia bugs, and several crashes and memory safety
+      hazards that do not have a CVE number.
+
+  * debian/mozconfig: enable AV1 decoding.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Mon, 12 Nov 2018 09:38:43 -0800
+
+palemoon (28.1.0~repack-1) obs; urgency=medium
+
+  * New upstream release:
+
+    - Updated NSS to 3.38, removed TLS 1.3 draft version check since it's
+      considered final.
+    - Reinstated RC4 as an optional encryption cypher for non-standard
+      environments (e.g. old routing/peripheral networked hardware on LAN). RC4
+      and 3DES are marked weak and disabled, and will never be used in the first
+      handshake with a site, only as last-ditch fallback when specifically
+      enabled (meaning they won't show up on ssllabs' test, for example).
+    - Removed Telemetry accumulation calls, automatic timers and stopwatches.
+      This removes a very noticeable performance sink for all operations on all
+      platforms.
+    - Fixed many occurrences of discouraged types of memory access for primarily
+      GCC 8 compatibility. This improves overall code security as a
+      defense-in-depth measure.
+    - Re-implemented the pref-controlled custom background color for
+      standalone images.
+    - Updated session history handling for internal pages. about:logopage is no
+      longer stored in history, and you can choose to store the QuickDial page in
+      history by setting the pref browser.newtabpage.add_to_session_history to
+      true. This is disabled by default (meaning you can't use the "Back" button
+      to go back to the QuickDial page) as a defense-in-depth security measure.
+    - Added ui.menu.allow_content_scroll to control whether content can be
+      scrolled if a context menu is open.
+    - Fixed incorrect code removal in ipc.
+    - Removed support for TLS session caches in TLSServerSocket.
+    - Added support for local-ref as SVG xlink:href values.
+    - Changed the find bar to be a browser-global toolbar again (like in Pale
+      Moon 27) instead of per-tab. For people who prefer search terms to be
+      saved on a per-tab basis (like with the per-tab findbar previously), this
+      is possible by setting findbar.termPerTab to true. This resolves a number
+      of issues, including styling with lightweight themes not applying to the
+      find bar, and status pop-ups overlapping the find bar.
+    - Ported all relevant security fixes from Mozilla's Gecko/62 release,
+      including CVE-2018-12377 and CVE-2018-12379.
+    - Restored part of the searchplugin API that was removed by Mozilla, so
+      extensions can provide and save edits to installed search engines.
+    - Improved the speed of restoring browsing sessions upon startup.
+    - Fixed the "Restore previous session" button sometimes being missing from
+      about:home, while a restorable session would be present.
+    - Fixed tab previews in the Windows taskbar (if enabled).
+    - Fixed the setting of the new tab page being "My Home Page" so it'll pick up
+      subsequent changes to the home page URL automatically.
+    - Removed the Firefox Accounts migrator from Sync.
+    - Fixed an issue with the enabled state of number controls if appearances
+      changed.
+    - Stopped building ffvpx on 32-bit platforms (except Windows) to use the
+      (faster) system-installed lib instead.
+    - Re-added a horizontal scroll action option for mouse wheel. (regression)
+    - Fixed handling of content language if the locale is changed.
+    - Fixed document navigation with the F6 key.
+    - Fixed toolbar styling in toolkit themes.
+    - Fixed viewing the source of a selection.
+
+  * Now has full support for gcc-8, so stop forcing gcc-7 build on Buster and
+    recent Ubuntus where gcc-8 is default.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Mon, 17 Sep 2018 19:05:20 -0700
+
+palemoon (28.0.1~repack-1~mx17+1) mx; urgency=medium
+
+  * New upstream release.
+    - Backed out a Mozilla upstream patch causing issues with IPC and texture
+      allocation for the compositor.
+    - Backed out a Mozilla upstream patch causing issues with Javascript memory
+      buffer allocation.
+  * debian/mozconfig: add an option to tune for the number of parallel build
+    threads.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Fri, 31 Aug 2018 17:26:11 -0700
+
+palemoon (28.0.0~repack-3) obs; urgency=medium
+
+  * Add libavcodec-ffmpeg56 and libavcodec-ffmpeg-extra56 D for Ubuntu 16.04.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Sat, 18 Aug 2018 11:19:45 -0700
+
+palemoon (28.0.0~repack-2) obs; urgency=medium
+
+  * Add alternative libavcodec-extraXX dependencies.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Thu, 16 Aug 2018 18:15:14 -0700
+
+palemoon (28.0.0~repack-1) obs; urgency=medium
+
+  * Import final 28.0.0 release.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Wed, 15 Aug 2018 11:55:12 -0700
+
+palemoon (28.0.0~rc1~repack-2) obs; urgency=medium
+
+  * Depend on a version of libavcodec instead of ffmpeg.
+  * For Buster, build on gcc-7, just to be safe. Restore the lsb-release distro
+    detection setup to rules to enable this, and add the new build-depends. This
+    should no longer be required in 28.1.0.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 14 Aug 2018 12:13:31 -0700
+
+palemoon (28.0.0~rc1~repack-1) obs; urgency=medium
+
+  * New upstream release.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Sun, 12 Aug 2018 13:28:16 -0700
+
+palemoon (28.0.0~b5~repack-1) obs; urgency=medium
+
+  * Import new beta release.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Wed, 01 Aug 2018 14:41:07 -0700
+
+palemoon (28.0~b4~repack-1mx17+1) mx; urgency=medium
+
+  * New beta release.
+  * Build with native gcc releases, remove lsb-release as build-depend since it's
+    no longer needed to check for the distrelease.
+  * Add libgconf2-dev and libx11-xcb-dev to build-depends.
+  * Add command to dh_auto_clean override to remove pyc files somehow generated
+    by dh_clean.
+  * Add new options to debian/mozconfig.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Sat, 28 Jul 2018 15:06:18 -0700
+
+palemoon (27.9.4~repack-1~mx17+1) mx; urgency=medium
+
+  * Import new upstream 27.9.4 release.
+    - Updated the useragent for addons.mozilla.org to work around their "Only
+      with Firefox" discrimination preventing users from downloading themes, old
+      versions of extensions, and other files with Pale Moon.
+    - Restricted web access to the moz-icon:// scheme that could potentially be
+      abused to infringe the user's privacy.
+    - Prevented various location-based threats. DiD
+    - Fixed a potential vulnerability with plugins being redirected to different
+      origins (CVE-2018-12364).
+    - Improved the security check for launching executable files
+      (by association) on Windows from the browser. For users who have (most
+      likely accidentally) granted a system-wide waiver for opening these kinds
+      of files without being prompted, this permission has been reset.
+    - Fixed an issue with invalid qcms transforms (CVE-2018-12366).
+    - Fixed a buffer overflow using the computed size of canvas elements
+      (CVE-2018-12359).
+    - Fixed a use-after-free when using focus() (CVE-2018-12360).
+    - Added some sanity checks on nsMozIconURI. DiD
+    - Fixed an issue in the case the preferences file in the profile would not be
+      writable (e.g. temporary permission issues due to backup, virus scanning or
+      similar external processes).
+
+ -- Steven Pusser <stevep@mxlinux.org>  Wed, 11 Jul 2018 13:59:46 -0700
+
+palemoon (27.9.3~repack-1~mx17+1) mx; urgency=medium
+
+  * New upstream security update:
+
+    - Changes/fixes:
+      - (CVE-2017-0381) Ported a patch from libopus upstream. Note, contrary to
+        that report, the libopus maintainers state they don't believe remote
+        code execution was possible, so this was not a critical patch.
+      - Fixed an issue with task counting in JS GC.
+      - Fixed a use-after-free in DOMProxyHandler::EnsureExpandoObject (thanks
+        to Berk Cem Göksel for reporting).
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 12 Jun 2018 11:12:06 -0700
+
+palemoon (27.9.2~repack-1~mx17+1) mx; urgency=medium
+
+  * New upstream security and stability update:
+
+    - Changes/fixes:
+      - We changed the language strings for softblocked items so people will cry
+        less when we do our job.
+      - (CVE-2018-5174) Prevent potential SmartScreen bypass on Windows 10.
+      - (CVE-2018-5173) Fixed an issue in the Downloads panel improperly
+        rendering some Unicode characters, allowing for the file name to be
+        spoofed. This could be used to obscure the file extension of potentially
+        executable files from user view in the panel.
+      - (CVE-2018-5177) Fixed a vulnerability in the XSLT component leading to a
+        buffer overflow and crash if it occurs.
+      - (CVE-2018-5159) Fixed an integer overflow vulnerability in the Skia
+        library resulting in possible out-of-bounds writes.
+      - (CVE-2018-5154) Fixed a use-after-free vulnerability while enumerating
+        attributes during SVG animations with clip paths.
+      - (CVE-2018-5178) Fixed a buffer overflow during UTF8 to Unicode string
+        conversion within JavaScript with extremely large amounts of data. This
+        vulnerability requires the use of a malicious or vulnerable extension in
+        order to occur.
+      - Fixed several stability issues (crashes) and memory safety hazards.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Mon, 21 May 2018 11:43:14 -0700
+
+palemoon (27.9.1~repack-1) obs; urgency=medium
+
+  * New upstream maintenance update:
+    - Removed the unused/incomplete places protocol handler.
+    - Worked around an issue with MSE media without a Track ID. This should help
+      with the playability of some live streams.
+    - Ported across jemalloc improvements from UXP.
+    - Ported across cairo mutex improvements from UXP.
+    - Added support for FFmpeg 4.0/libavcodec 58.
+    - Added a fix for Windows 10's "isAlpha()" not being what one would expect
+      in v1803.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Mon, 07 May 2018 15:07:33 -0700
+
+palemoon (27.9.0~repack-1~mx17+1) mx; urgency=medium
+
+  * New upstream release:
+    - Fixed a number of spec compliance issues in our media subsystem.
+    - Added a trailing slash to referrers when policy is set to fix some web
+      compatibility issues.
+    - Fixed the property order in Object.getOwnPropertyNames(string) and others
+      for web compatibility.
+    - Updated RegExp(RegExp object, flags) to the ES6 standard specification.
+    - Changed the embedded font from the no longer free EmojiOne to the
+      open-licensed Twemoji (with additional fixes). This also further extends
+      unicode support to Unicode 10 emoji(s). Please note that as a result, color
+      emoji(s) will look different than before.
+    - Adjusted some things in our memory allocator code to provide, among other
+      things, better allocation alignment on Windows.
+    - Made the attempt to migrate people from the old sync server domain name to
+      the current one more aggressive. We will be retiring the old
+      pmsync.palemoon.net Sync server address shortly to remove the need for us
+      to maintain a security certificate for it; this preference migration should
+      automatically put everyone on the correct server address when upgrading.
+    - Made reading of the sessionstore synchronous, to speed up startup and
+      prevent the homepage from being loaded when restoring a session.
+    - Added a fix to switch to the correct window/tab when a web notification
+      is clicked.
+    - Changed the placeholder text to not include "Search" when all search
+      functions from the address bar are disabled.
+    - Enabled the use of Skia for canvas on Linux and OSX.
+    - Worked around a potential cause for some non-standard bitmapped fonts
+      ending up with incorrect line heights (I'm looking at you, Noto fonts!).
+    - Added a workaround for incorrectly-encoded JPEG-XR images with planar
+      alpha. Ultimately, the jxrlib reference implementation should be fixed to
+      encode according to spec.
+    - Aligned XCTO:nosniff allowed script MIME types with the updated spec.
+    - Improved the logic for storing vector images in the surface cache.
+    - Fixed character set handling for XMLHttpRequests.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 17 Apr 2018 10:14:19 -0700
+
+palemoon (27.8.3~repack-1) obs; urgency=medium
+
+  * New upstream bugfix update:
+    - This is a small update to solve a pervasive crash in responsive web
+      layouts.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Thu, 29 Mar 2018 12:48:14 -0700
+
+palemoon (27.8.2~repack-1) obs; urgency=medium
+
+  * New upstream security update:
+    - Privacy fix: prevented update checks for the default theme.
+    - Added a user-agent override for Dropbox to improve compatibility with
+      their service.
+    - Fixed an issue with mouseover handling related to (CVE-2018-5103). DiD
+    - Disabled the Mac OSX Nano allocator. DiD
+    - Fixed (CVE-2018-5129) OOB Write.
+    - Updated the lz4 library to 1.8.0 to solve potential issues. DiD
+    - Fixed (CVE-2018-5137) Path traversal on chrome:// URLs
+    - Fixed several memory safety an synchronicity hazards.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Thu, 22 Mar 2018 10:31:24 -0700
+
+palemoon (27.8.1~repack-1) obs; urgency=medium
+
+  * New upstream release:
+    - Backed out the NSPR/NSS update from 27.8.0 for causing crashes, general
+      operational instability and handshake issues.
+    - Disabled TLS 1.3 draft support by default, because with the NSS backout we
+      only support an older draft right now that is no longer current and may
+      cause connectivity issues. You can manually re-enable it at your own risk
+      in about:config by setting security.tls.version.max to 4.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 06 Mar 2018 12:04:10 -0800
+
+palemoon (27.8.0~repack-1) obs; urgency=medium
+
+  * New upstream release:
+    - Added support for emojis on Windows systems that have relatively poor
+      support for them with standard font sets by including our own font
+      (EmojiOne based for now).
+    - Added a setting in preferences to select the use of tab previews with
+      Ctrl+Tab.
+    - Added Eyedropper menu entry to the AppMenu.
+    - Added a preference to control whether the text cursor (caret) should be
+      thicker when dealing with CJK characters or not (default = yes).
+    - Added URL fix-ups for schemes (mis-typed "ttp://" etc.).
+    - Added support for ES6 "Symbol species".
+    - Updated our TLS 1.3 support to the latest (probably final) draft.
+    - Fixed gap inconsistency in the tabstrip.
+    - Fixed a number of browser crashes.
+    - Fixed a crash with the exponentiation operator "**"
+    - Set the performance timer granularity to 1 ms.
+    - Updated the kiss-fft library to our forked 1.4.0 version.
+    - Disabled a potentially problematic optimization on Win 8+ with high
+      contrast themes in use.
+    - Removed the notification bar when in full screen to prevent unwanted
+      visible screen elements.
+    - Removed unmaintained and insecure WebRTC code - building with WebRTC
+      enabled is no longer an option.
+    - Removed redundant checks for "Vista or later" since that is all we support.
+    - Added display of the http status to raw request displays.
+    - Added a workaround for cloned videos not retaining their muted state.
+    - Added a temporary workaround to avoid crashes on trackless media.
+    - Removed some superfluous ellipses from menu labels.
+    - Fixed undesired shrinking of line heights as a result of setting minimum
+      font size in preferences.
+    - Fixed some issues with setting the new tab preference (regression).
+
+  * Add support for building on Debian Buster on gcc-4.9.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Fri, 02 Mar 2018 17:38:20 -0800
+
+palemoon (27.7.2~repack-1~mx17+1) mx; urgency=medium
+
+  * New upstream release:
+    - Changed the X-Content-Type-Options: nosniff behavior to only check
+      "success" class server responses, for web compatibility reasons.
+    - Changed the perfomance timer resolution once more to a granularity of
+      1 ms, after evaluating more potential ways of abusing Spectre. This
+      takes the most cautious approach possible lacking more information
+      (because apparently NDAs have been signed over this between mainstream
+      players), follows Safari's lead, and should make it not just infeasible
+      but downright impossible to use these timers for nefarious purposes in
+      this context.
+    - Improved the debug-only startup cache wrapper to prevent a rare crash.
+    - Fixed a crash in the XML parser.
+    - Added a check for integer overflow in AesTask::DoCrypto()
+      (CVE-2018-5122) DiD
+    - Fixed a potential race condition in the browser cache.
+    - Fixed a crash in HTML media elements (CVE-2018-5102)
+    - Fixed a crash in XHR using workers.
+    - Fixed a crash with some uncommon FTP operations.
+    - Fixed a potential race condition in the JAR library.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Thu, 01 Feb 2018 13:48:26 -0800
+
+palemoon (27.7.1~repack-1~mx17+1) mx; urgency=medium
+
+  * New upstream release:
+    - Added support for Array.prototype[@@unscopables].
+      Unfortunately, the addition of Javascript's ES6 Unscopables in 27.7.0 was
+      incomplete, which caused a number of websites (e.g. Chase on-line banking,
+      some Russian government sites) to display blank or not complete loading
+      after updating to that version of the browser. This update should fix the
+      problem by adding the missing part of the feature.
+    - Fixed an issue with the default theme causing tab borders to be drawn too
+      thick at higher settings for visual element scaling (125/150%) in Windows.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Thu, 18 Jan 2018 10:03:02 -0800
+
+palemoon (27.7.0~repack-1~mx17+1) mx; urgency=medium
+
+  * New upstream release:
+    - Reorganized access to preferences (moved to the Tools menu on Linux, and
+      renamed from "Options" to "Preferences" on Windows).
+    - Renamed "Restart with add-ons disabled" to "Restart in Safe Mode" to
+      better reflect what it does.
+    - Worked around an issue with some improperly-encoded PNG files not decoding
+      after our libpng update.
+    - Fixed an issue on Mac builds not properly populating the application menu.
+    - Added "My home page" as an option for new tabs.
+    - Added an option to disable the 4th and 5th mouse buttons (Windows).
+    - (mouse.button4.enabled and mouse.button5.enabled, respectively)
+    - Improved the resetting of non-default profiles.
+    - Fixed an issue with details/summary having the incorrect height if floated,
+      breaking layouts.
+    - Implemented support for flex/columnset contents inside buttons to align
+      its behavior with other browsers.
+    - (this should fix layout issues with Twitch's new web interface)
+    - Made several more improvements to the details/summary tags to align them
+      with the current spec and fix several bugs.
+    - Fixed an issue where CSS clone operations would draw a border.
+    - Changed the way fractional border widths are rounded to provide more
+      natural behavior.
+    - Fixed an issue where number inputs would incorrectly be flagged as
+      read-only.
+    - Added assets for tile display in the Windows start panel.
+    - Finished sync infra swapover by adding a one-time pref migration for
+      server used.
+    - Improved WebAudio API: Return the connected audio node from
+      AudioNode.connect()
+    - Added support for a default playback start position in media elements.
+    - Fixed an assert in cubeb-alsa code (Linux).
+    - Added support for media cue-change events (e.g. subtitles).
+    - Updated SQLite to 3.21.0.
+    - Fixed a crash when trying to use the platform embedded.
+    - Fixed devtools (gcli) screenshots on vertical-text pages.
+    - Fixed devtools copy as cURL for POST requests.
+    - Improved the HTML editor component (several bugfixes).
+    - Added support for ES7's exponentiation a ** b operator.
+    - Fixed an issue with arrow functions incorrectly creating an arguments
+      binding.
+    - Added Javascript's ES6 unscopables.
+    Security/privacy fixes:
+    - Disabled automatic filling in of log-in details by default to prevent
+      potential risks of credentials being abused (e.g. for tracking) or stolen.
+    - Added a preference (in the category security) to easily enable or disable
+      automatic filling in of log-in data.
+    - Removed the sending of referrers when opening a link in a new
+      private window.
+    - Added an option to disable the page visibility Web API
+      (dom.visibilityAPI.enabled), allowing users to prevent pages from knowing
+      whether they are being actively displayed to the user or not.
+    - Removed the "ask every time" policy for cookies. For granular control,
+      please use any of the excellent available extensions to regulate cookie use
+      on a per-site or per-url basis.
+    - Added support for X-Content-Type-Options: nosniff (for scripts).
+    - Changed the resolution of performance timers to a level where any future
+      potential abuse for hardware-timing attacks becomes impractical.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 16 Jan 2018 12:02:55 -0800
+
+palemoon (27.6.2~repack-1) obs; urgency=medium
+
+  * Minor security and bugfix release:
+    - Implemented the concept of so-called "cookie-averse document objects",
+      which is a security&privacy measure that blocks certain web content from
+      setting cookies. This mitigates cookie-injection, which might help against
+      "hidden" cookie tracking.
+    - Mitigated some domain name spoofing through IDN by using dotless-i and
+      dotless-j with accents. (CVE-2017-7832)
+    - Pale Moon will display these kinds of spoofed domains in punycode now in
+      the actual address bar. Please note that the identity panel will always be
+      able to help you on secure sites when IDNs are in use to notice potential
+      spoofing, as opposed to relying on detection algorithms in the URL itself.
+      As such, some other issues like CVE-2017-7833 are already mitigated by us.
+    - Fixed an issue with mixed-content blocking. (CVE-2017-7835)
+    - Added an extra check for the correct signature data type on certificates.
+    - Added missing sanitization in exporting bookmarks to HTML. (CVE-2017-7840)
+    - Fixed several crashes and memory safety hazards.
+  * Bump debhelper build-depend to >= 9.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Wed, 29 Nov 2017 12:31:22 -0800
+
+palemoon (27.6.1~repack-1mx15+1) mx; urgency=medium
+
+  * Minor bugfix release:
+    - Fixed a regression with new windows (opening two windows from the
+      command-line or file association, focus issues on new windows, not
+      loading the home page in a new window, etc.)
+    - Aligned XHR with the currect spec to allow withCredentials.
+    - Fixed an input element focus issue within handlers.
+    - Fixed the processing of all-padding HTTP/2 frames to prevent rare
+      HTTP/2 hangups.
+    - Updated CitiBank override to work around their login issues.
+    - Updated Netflix override to a community-supplied one that seems to
+      satisfy their arbitrary restrictions better.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Mon, 20 Nov 2017 15:52:34 -0800
+
+palemoon (27.6.0~repack-1) obs; urgency=medium
+
+  * Major development update; changes can be viewed at
+    https://github.com/MoonchildProductions/Pale-Moon/releases.
+  * debian/mozconfig: add vectorization flags for distreleases that support it.
+    Those that don't get the mozconfig without the flags.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Wed, 08 Nov 2017 11:10:24 -0800
+
+palemoon (27.5.1~repack-1) obs; urgency=medium
+
+  * Minor bugfix release:
+    - Changed the default Windows 10 styling when no accent color is applied to
+      black-on-white.
+    - Changed the theme styling on Windows 10 when the system window frame is
+      used (menu bar enabled) to use the window manager background directly,
+      preventing visual lag updating the window color when it changes.
+    - Updated user agent overrides for DropBox, YouTube and Yahoo to work around
+      user agent sniffing issues.
+    - Fixed a crash in the media subsystem.
+    - Fixed a regression where video playback hardware acceleration was disabled
+      incorrectly on some systems.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Fri, 13 Oct 2017 15:15:01 -0700
+
+palemoon (27.5.0~repack-1mx15+1) mx; urgency=medium
+
+  * New upstream major release, changes can be viewed at
+    https://github.com/MoonchildProductions/Pale-Moon/releases.
+  * Disable updater and installer in mozconfig.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 26 Sep 2017 18:32:35 -0700
+
+palemoon (27.4.2~repack-1) obs; urgency=medium
+
+  * New upstream bugfix release:
+    - Fixed a number of crashes.
+    - Enabled the opt-in debugging feature to log SSL keys to a file in all
+      builds.
+    - Added a fix for TLS 1.3 handshakes causing a browser hangup.
+    - Handshakes should be considerably faster now and no longer stall in the
+      wrong circumstances.
+    - Updated NSPR to 4.15.
+    - Updated NSS to 3.31.1.
+    - Fixed a DoS issue using overly long Username in URL scheme (CVE-2017-7783)
+    - Fixed an issue where (cross domain) iframes could break
+      scope (CVE-2017-7787)
+    - Fixed an issue in WindowsDllDetourPatcher (CVE-2017-7804)
+    - Fixed an issue with elliptic curve addition in mixed Jacobian-affine
+      coordinates (CVE-2017-7781)
+    - Fixed a UAF in nsImageLoadingContent (CVE-2017-7784)
+    - Fixed a UAF in WebSockets (CVE-2017-7800)
+    - Fixed a heap-UAF in RelocateARIAOwnedIfNeeded (CVE-2017-7809) DiD
+      (accessibility is disabled)
+
+ -- Steven Pusser <stevep@mxlinux.org>  Wed, 23 Aug 2017 15:50:07 -0700
+
+palemoon (27.4.1~repack-1mx15+1) mx; urgency=medium
+
+  * New upstream bugfix release:
+    - Fixed an issue where MSE media playback would not use hardware
+      acceleration when it could, causing choppy playback and high CPU usage.
+    - Fixed ES6 iterator chains to be spec-compliant.
+    - Fixed ES6 vector append calls and some related memory leaks.
+    - Added a workaround to reduce the chances of a rare crash occurring.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Fri, 04 Aug 2017 18:22:19 -0700
+
+palemoon (27.4.0~repack-2) obs; urgency=medium
+
+  * debian/mozconfig: drop deprecated "--disable-gstreamer" option.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Wed, 12 Jul 2017 13:25:27 -0700
+
+palemoon (27.4.0~repack-1) obs; urgency=medium
+
+  * New upstream release--the github 27.4.0 was not a real release:
+    Changes/fixes:
+    - Completely re-worked the Media Source Extensions code to make it spec
+      compliant, and asynchronous as per specification for MSE with MP4. This
+      should fix playback problems on YouTube, Twitch, Vimeo and other sites
+      that previously had some issues. A massive thank you to Travis for his
+      tireless work on making this happen!
+      Please note that MSE+WebM (disabled by default) is not using this new code
+      yet (planned for the next release), and as such there is a temporary set
+      of things to keep in mind if you don't use default settings:
+        If you have previously enabled MSE+WebM, this setting will be reset when
+        you update to avoid conflicting settings with the updated MSE code.
+        We've added an extra setting in Options to disable the updated MSE code
+        (asynchronous use) in case you need to use WebM or are otherwise having
+        issues with the updated code (please let us know in that case).
+        Once again, the MSE+WebM and Asynchronous MSE use are currently mutually
+        exclusive. You can have one or the other, not both, until we sort out
+        the code for WebM. To enable MSE+WebM you will first have to disable
+        Asynchronouse MSE in settings (otherwise the WebM setting will be greyed
+        out and disabled).
+    - Added a control in options/preferences for HSTS and HPKP usage.
+    - Changed HTML bookmark exports to write CRLF line endings to the file on
+      Windows.
+    - Leveraged multi-core rendering for libVPX (VP8/VP9 WebM decoding).
+    - Fixed some issues accessing DeviantArt (useragent-sniffing).
+    - Aligned CSS text-align with the spec.
+    - Added a recovery module for browser initialization issues (e.g. when using
+      a wrong language pack).
+    - Fixed spurious console errors for XHR requests with certain http response
+      codes.
+    - Enabled v-sync aligned refresh for a smoother scrolling experience.
+    - Removed support for CSS XP-theme media queries.
+    - Improved console error reporting.
+    - Fixed resetting toolbars and controls from the safe mode dialog.
+    - Fixed bookmark recovery option from the safe mode dialog.
+    - Fixed innerText getters for display:none elements.
+    - Fixed a GL buffer crash that might occur with certain combinations of
+      drivers and hardware.
+    - Added some more details to about:support.
+    - Fixed a potential crash when the last audio device is removed during
+      playback.
+    - Fixed a crash on about:support when windowless browsers are created.
+    - Updated <select> elements to blank if the actively set value doesn't match
+      any of the options.
+    - Updated the interpretation of 2-digit years in date formats to match other
+      browsers:
+     - 0-49 = 2000-2049, 50-99 = 1950-1999.
+    - Added "q" units to CSS (quarter of a millimeter).
+    - Added .origin property to blobs.
+    - Fixed several minor layout issues.
+    - Fixed disabled HTML elements not producing the proper JS events.
+    - Implemented web content handler blacklist according to the spec, allowing
+      more than feeds to be registered.
+    - Fixed a spec compliance issue with execCommand() on HTML elements.
+    - Fixed a problem with table borders being drawn uneven or being omitted
+      when zooming the page.
+    - Added devtools "filter URLs" option in the network panel.
+    - Added visual sorting options to the Network inspector.
+    - Added importing of login data from Chrome profiles on Windows (Chrome
+      has to be closed first).
+    - Added importing of tags from bookmark export files (HTML format).
+    - Updated usage of SourceMap headers with the updated spec (SourceMap
+      header, keeping X-SourceMap as a fallback).
+    - Fixed several cases of wrongly-used negations in JS modules.
+    - Added the auxclick mouse event.
+    - Added a control to not autoplay video unless it is in view
+     (media.block-play-until-visible).
+    - Updated the Graphite font library to 1.3.10.
+    - Updated how image and media elements respond to window size changes
+      (responsive design).
+    - Added parsing and use of rotation meta data in video.
+    - Fixed several crashes in a number of modules.
+    - Fixed performance regression for scaling large vector images (e.g. MSIE
+      Chalkboard test) \o/
+    - Fixed some issues with notification icons.
+    - Fixed some internal errors with live bookmarks.
+    - Updated SQLite to 3.19.3.
+    - Fixed several reported issues with devtools (cli-cookies, cli help,
+      copying cURL, inspecting SVGs, element size calculations, etc.)
+    - Fixed an issue where a server response was allowed to override add-ons'
+      specified version ranges even for add-ons that have strict compatibility
+      (e.g. themes, language packs).
+
+    Security fixes:
+
+    - Removed preloading of HPKP hosts and enabled HPKP header enforcement.
+    - Added support for TLS 1.3, the up-next secure connection protocol.
+    - Fixed an issue with TLS 1.3 not supporting renegotiation by design.
+    - Relaxed some restrictions for CSP to temporarily work around web
+      compatibility issues with the CSP-3 deprecated `child-src` directive.
+    - Updated NSS to 3.28.5.1-PM to address some security issues.
+    - Updated the installer selfextractor module to address unsafe loading of
+      libraries.
+    - Changed the way certain resources are included to reduce effectiveness of
+      some common fingerprinting techniques. (e.g. browserleaks.org)
+    - Fixed a regression in the display of security information in the page info
+      dialog for insecure content.
+    - Fixed two potential issues with allocating memory for video. DiD
+    - Fixed a potential issue with the network prediction algorithm. DiD
+    - Restricted the use of Aspirational scripts in IDNs to prevent domain
+      spoofing, in anticipation of the UAX#31 update making this official.
+    - Prevented a Mac font specific issue that could be abused for domain
+      spoofing (CVE-2017-7763)
+    - Fixed several potentially exploitable crashes. (CVE-2017-7751)
+      (CVE-2017-7757) and some that do not have a CVE designation.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Wed, 12 Jul 2017 10:54:26 -0700
+
+palemoon (27.3.0~repack-1) obs; urgency=medium
+
+  * New upstream release.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Sat, 29 Apr 2017 19:50:41 -0700
+
+palemoon (27.2.1~repack-1) obs; urgency=medium
+
+  * New upstream release:
+
+    - Changes/Fixes:
+      - Fixed an issue with planar alpha handling (transparency) when drawing
+        JXR images.
+      - Fixed a crash related to a change JavaScript array handling introduced
+        in 27.2.0. This became apparent with the pentadactyl extension, but
+        could happen in other situations as well.
+      - Fixed a crash when opening ridiculously large images with HQ scaling
+        enabled (default). Pale Moon will now only apply HQ scaling for images
+        within reasonable limits (64 Mpix or smaller). Images larger than that
+        may not display properly when zooming in, or may not display at all,
+        even scaled down (e.g. >256 Mpix large) and show a "broken image"
+        placeholder instead; please use dedicated image viewer applications for
+        those kinds of images; it is outside the scope of a web browser to
+        handle such large images.
+      - Changed the way URL hashes are handled, and will no longer %-decode
+        anchor hash identifiers by default. Note that this is against RFC 3986,
+        which states that any part of the URL scheme that isn't data should be
+        decoded. This is required for web compatibility because several sites
+        use hash links to pass actual data to web applications (Please don't do
+        this! Hashes are part of the URL address, should only consist of "safe"
+        characters, and aren't suited to pass arbitrary data) and the most
+        common browsers no longer follow the RFC in that respect. If you want
+        RFC compliance, switch dom.url.getters_decode_hash to true.
+      - Restored 2 RSA Camellia cipher suites that were missing:
+        TLS_RSA_WITH_CAMELLIA_128_CBC_SHA and TLS_RSA_WITH_CAMELLIA_256_CBC_SHA.
+      - Fixed an issue with custom toolbars getting deleted during upgrade
+        from 27.0/27.1 to 27.2
+
+ -- Steven Pusser <stevep@mxlinux.org>  Wed, 29 Mar 2017 12:27:06 -0700
+
+palemoon (27.2.0~repack-1mx15+1) mx; urgency=medium
+
+  * New upstream release:
+
+    - Changes/Fixes:
+      - Updated the ICU lib to 58.2 to fix a number of issues.
+      - Added proper control for the user for offline storage for web
+        applications.
+      - Added a check to prevent auto-filled URLs from copying the auto-filled
+        selection to clipboard/primary.
+      - Added the feature to pass a URL to open in a private window from the
+        command-line.
+      - Improved the display of the downloads indicator on the button in
+        bright-text situations.
+      - DOM storage now honors the "3rd party cookie" setting in that it will
+        not allow 3rd party data to be stored if 3rd party cookies are
+        disallowed.
+      - Allowed toolbar button badges to be properly styled.
+      - Updated the hunspell spellchecking library to 1.6.0 to fix a number
+        of issues.
+      - Fixed desktop notifications being off-screen if fired in rapid
+        succession.
+      - Added Element.insertAdjacentElement and Element.insertAdjacentText
+        DOM functions.
+      - Added support for JPEG-XR images. This makes Pale Moon have the broadest
+        support for image formats of all web browsers. (enabled by default; you
+        can disable this with media.jxr.enabled).
+      - Completely removed the use of GStreamer on Linux.
+      - Added support for Element.innerText.
+      - Custom toolbars should now properly remember their state.
+      - Fixed some more playback issues with MP4/MSE videos. Please be aware
+        that we are still working on further improving MSE video handling.
+      - Changed media processing to reduce dangerous processing asynchronicity.
+        This should also make media elements and playback more responsive.
+      - Fixed a useragent string regression always displaying the minor Goanna
+        version as .0
+      - Updated NSPR to 4.13.1.
+      - Updated NSS to 3.28.3-RTM.
+      - Fixed unrestricted icon sizes in PMkit buttons.
+      - Fixed unresponsive buttons on support page when not building
+        the updater.
+      - Fixed the use of "View image" and "Save image as" on extremely
+        large images.
+      - Changed the way "View Image" and "Save image as" work on canvas
+        elements.
+      - Made checking for dangerously large resolution PNG images smarter. It
+        will now accept larger "strip"-aspect ratio images while reducing
+        unsupported large image resolutions. This will e.g. fix Gmail's "emoji"
+        window that uses a ridiculously long but very narrow single image to
+        store all the emoticon pictures.
+      - Converted several hard-coded URLs to preferences.
+      - Updated the google.com override so it would not cripple services based
+        on UA sniffing.
+      - Added Inner and Outer Window ID administration.
+      - Fixed the add-on discovery pane detection.
+      - Added support for canvas ellipse.
+      - Improved drawing of certain MathML elements at problematic zoom levels.
+      - No longer building gamepad support.
+      - Updated Harfbuzz font shaper to 1.4.3 to fix a number of issues.
+      - Fixed a number of crashes (layout, plugins, uncommon navigation,
+        bad URLs).
+      - Aligned SVG specular filters with the spec.
+
+    - Security/privacy changes:
+      - Added support for 256-bit AES-GCM encryption.
+      - Added support for ChaCha20-Poly1305 encryption.
+      - Removed support for Camellia-GCM since nobody seems interested in it.
+        (Camellia in 128/256-bit CBC block mode is still fully supported).
+      - Added support for SHA-224, SHA-256, SHA-384 and SHA-512 to Crypto utils.
+      - Improved status handling of secure sites to be less sensitive to
+        "insecure" items that are local.
+      - Fixed print preview hijacking. (CVE-2017-5421)
+      - Fixed a potentially exploitable crash in OnStartRequest. (CVE-2017-5416)
+      - Fixed potential cross-origin content-stealing through a timing
+        attack. (CVE-2017-5407)
+      - Fixed a denial-of-service problem with view-source. (CVE-2017-5422)
+      - Fixed crash in directional controls. (CVE-2017-5413)
+      - Fixed a perceived problem with chrome manifests. (CVE-2017-5427)
+      - Fixed the use of an uninitialized value. (CVE-2017-5405)
+      - Fixed a buffer overflow. (CVE-2017-5412)
+      - Fixed a UAF situation. (CVE-2017-5403)
+      - Fixed a potential spoofing issue with the address bar. (CVE-2017-5417)
+      - Fixed a potential issue in libvpx. (CVE-2017-5402) DiD
+      - Fixed a potential issue with HTTP auth. (CVE-2017-5418)
+      - Fixed several memory safety hazards and potentially exploitable crashes.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Sun, 19 Mar 2017 12:49:24 -0700
+
+palemoon (27.1.2~repack-1mx15+1) mx; urgency=medium
+
+  * New upstream release:
+    -adds workaround for potential deadlocks happening in media elements.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Fri, 03 Mar 2017 13:45:54 -0800
+
+palemoon (27.1.1~repack-1mx15+1) mx; urgency=medium
+
+  * New upstream release:
+    - Implemented a fix in media handling to prevent crashes with concurrent
+      videos and/or rapidly starting/stopping video playback in the browser.
+    - Fixed the way the Adobe Flash plugin is detected to prevent confusion with
+      other plugins that identify themselves as "Flash" (e.g. VLC).
+    - Windows: Solved stability issues caused by the release build process,
+      resulting in unexpected behavior (e.g. hangups).
+
+ -- Steven Pusser <stevep@mxlinux.org>  Wed, 22 Feb 2017 13:52:07 -0800
+
+palemoon (27.1.0~repack-1) obs; urgency=medium
+
+  * New major upstream release:
+    - Reworked the media back-end completely (thanks Travis!) to use FFmpeg
+      (including support for FFmpeg v3 and MP3 playback) and our own MP4 parser,
+      and no longer relying on gstreamer on Linux, as well as adding some
+      improvements on Windows for media parsing and playing.
+    - On Linux, Apple .mov files of the correct type will also be played through
+      FFmpeg now, for those rare occasions where they are still in use,
+      considering there is no Quicktime plug-in available on that operating
+      system.
+    - Restored the classic about:config styling.
+    - Added a fallback to US-ASCII if the autoconfig UTF-8 conversion fails.
+    - Improved cross-compartment wrapper handling when managing a large number
+      of tabs (fixes a performance regression with v27).
+    - Changed the way audio and video synchronization is calculated to account
+      for (slow) device latency, preventing things from getting out of sync on,
+      e.g. BlueTooth-connected speakers.
+    - Changed the way scripts are handled when they are stopped from the
+      "unresponsive script" dialog, to prevent browser lockup. We will now stop
+      all scripts in the affected compartment in one go.
+    - Fixed several errors in the devtools.
+    - Fixed a nasty crash caused by cross-origin referrers.
+    - Added HTML5-spec clipboard handling for content (cut&copy only -- paste
+      is not allowed for security reasons).
+    - Made multiple changes to the toolkit jetpack modules to cater to PMkit
+      extensions. This should make running SDK-based extensions as PMkit
+      extensions fairly simple for extension developers.
+    - Fixed a css layout issue: make max-width affect contributions to intrinsic
+      min-width.
+    - Implemented several updates to the permissions manager. Among others,
+      improved the permissions manager (about:permissions) with a more complete
+      set of permissions for pages.
+    - Removed otherwise unused Metro browser platform/widget code.
+    - Removed support for non-standard/deprecated let blocks and expressions.
+    - Made the use of let as a keyword versionless and ES6 compliant.
+    - Made the privacy category in preferences a tabbed setup to better fit the
+      current options.
+    - Fixed a regression preventing certain MP4 video files from playing.
+    - Fixed a regression where seeking in media files would halt playback/jump
+      to the end of the stream.
+    - Fixed a crash caused by certain downloadable fonts with DirectWrite
+      in use.
+     -Improved downloads-button indicator legibility on some combinations of
+      Windows versions and system theme colors.
+    - Changed the Facebook user-agent override to be our native one, based on
+      reports from users that it is (finally) working acceptably.
+    - Fixed site-specific useragents being ignored if a global override is
+      defined.
+
+    Security/privacy changes:
+
+    - Changed CORS handling to allow data: sources, assuming they are
+      same-origin. This should fix the infamous "Facebook endless reload" issue
+      and may make some other sites that assume this particular (unspecified)
+      CORS behavior happy with Pale Moon.
+    - Reinstated the network.stricttransportsecurity.enabled preference so
+      people who choose privacy over HSTS can do so again.
+    - Added, In HSTS "off" state, prevention of HSTS site status from being
+      written to disk.
+    - Updated the IDN blacklist with more extended unicode characters that
+      "look very similar to" normal ASCII characters, to prevent spoofing of
+      well-known domains. If blacklisted characters are found, the IDN domain
+      name will be displayed in its punycode form. (CVE-2017-5383 and similar)
+    - Fixed an exploitable crash when using MP4 video. (CVE-2017-5396)
+    - Fixed an exploitable crash in XSL parsing. (CVE-2017-5376)
+    - Fixed a potential security issue when exporting certificates with
+      specially-crafted credentials. (CVE-2017-5381)
+    - Fixed a potential use-after-free situation in frame selection.
+      (CVE-2017-5380) DiD
+    - Fixed a leak of window details through the Ion compiler in certain
+      situations.
+    - Fixed the potential for an exploitable crash involving Javascript GC. DiD
+    - Fixed a potential overflow situation in (non-released) WebRTC code. DiD
+    - Fixed a potentially unsafe situation in websockets. DiD
+    - Fixed several memory and other safety hazards (BMO bugs 1318766, 1325877,
+      1328834 DiD, 1288561 DiD, 1322420 DiD, 1293327 DiD, 1322315, 1325344,
+      1285960).
+  * debian/mozconfig:
+    - add "ac_add_options --disable-necko-wifi" and "--disable-gstreamer"..
+    - drop "ac_add_options --enable-jemalloc-lib".
+  * debian/control:
+    - remove all gstreamer dependencies and build-deps.
+    - ffmepg | libav-tools added to Depends.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Thu, 09 Feb 2017 13:53:41 -0800
+
+palemoon (27.0.3~repack-3) stable; urgency=medium
+
+  * debian rules and control: add some code and alternative depends to force
+    building on gcc-4.9 on releases that default to gcc 5 or 6.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Wed, 25 Jan 2017 10:19:25 -0800
+
+palemoon (27.0.3~repack-2) stable; urgency=medium
+
+  * debian/mozconfig: reenable the dev tools.
+  * debian/rules: don't install duplicate /usr/lib/palemoon/palemoon-bin file.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Thu, 29 Dec 2016 12:05:29 -0800
+
+palemoon (27.0.3~repack-1) stable; urgency=medium
+
+  * New upstream bugfix and security release.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Mon, 19 Dec 2016 20:05:49 -0800
+
+palemoon (27.0.2~repack-1mx15+1) mx; urgency=medium
+
+  * New upstream bugfix release.
+    -fixed crash in SVG renderer related to CVE-2016-9079 (defense in depth)
+    -Firefox compatibility mode is default in useragent string.
+  * Drop debian/menu, deprecated with the use of desktop file.
+  * Drop use of debian/palemoon.xpm, link takes care of that in pixmaps.
+  * Install much better palemoon.desktop from source instead of from debian
+    folder.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Fri, 02 Dec 2016 17:39:30 -0800
+
+palemoon (27.0.1~repack-3mx15+1) mx; urgency=medium
+
+  * Revise debian/mozconfig to remove deprecated configs and add sse2
+    optimization.
+  * debian/rules: add override to help shlibdeps find libs on some releases.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Wed, 30 Nov 2016 16:42:03 -0800
+
+palemoon (27.0.1~repack-2mx15+1) mx; urgency=medium
+
+  * debian/mozconfig: drop the "1.0" from the gstreamer flag.
+  * debian/install: don't install anything from /integration; part of default
+    install now.
+  * debian/compat: bump compat level to 9.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Sun, 27 Nov 2016 13:50:54 -0800
+
+palemoon (27.0.1~repack-1) mx; urgency=medium
+
+  * New upstream release.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Sat, 26 Nov 2016 10:09:18 -0800
+
+palemoon (26.5.0~repack-1mx150+1) mx; urgency=medium
+
+  * Repackaged for MX 15.
+
+ -- Mike Elstad (v3g4n) <maintainer@mepiscommunity.org>  Thu, 29 Sep 2016 18:22:24 -0500
+
+palemoon (26.5.0~repack-1) obs; urgency=medium
+
+  * New upstream release:
+    Fixes/Changes:
+    - Implemented a breaking CSP (content security policy) spec change; when a
+      page with CSP is loaded over http, Pale Moon now interprets CSP directives
+      to also include https versions of the hosts listed in CSP if a scheme
+      (http/https) isn't explicitly listed. This breaks with CSP 1.0 which is
+      more restrictive and doesn't allow this cross-protocol access, but is in
+      line with CSP 2 where this is allowed.
+    - Fixed an issue with the XML parser where it would sometimes end up in an
+      unknown state and throw an error (e.g. when specific networking errors
+      would occur).
+    - Improved the performance of canvas poisoning by explicitly
+      parallelizing it.
+
+    Security fixes:
+    - Fixed a potentially exploitable crash related to text writing direction.
+      (CVE-2016-5280)
+    - Made checking for invalid PNG files more strict. Pale Moon will now reject
+      more PNG files that have corrupted/invalid data that could otherwise lead
+      to potential security issues.
+    - Changed the way paletted image frames are allocated so the space is
+      cleared before it's used. DiD
+    - Fixed a crash in nsNodeUtils::CloneAndAdopt() due to a typo. DiD
+    - Fixed several memory safety errors.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Wed, 28 Sep 2016 11:44:18 -0700
+
+palemoon (26.4.1~repack-1) obs; urgency=medium
+
+  * New upstream release:
+    Changes/fixes:
+    - Fixed a crash in the XSS filter.
+    - Slightly changed the address bar shading on secure sites to be more subtle
+      and easily-blended.
+    - Fixed the occurrence of "null" titles in bookmarks dragged from special
+     folders.
+    - Fixed an error initializing the browser due to trying to restore
+      scratchpad data from a stored session when having switched from a version
+      with devtools to a version without devtools, and the previous version had
+      scratchpad data saved.
+    - Fixed some minor issues in scratchpad and gcli devtools.
+
+    Security fixes:
+    - Updated the HSTS preload list to a much more updated source list, and
+      performing our own checks on validity from now on to have the list be as
+      accurate as possible.
+    - Disabled Triple-DES cipher suites by default (mitigating SWEET32).
+
+  * Add a "~repack" to the versioning because we have to repack the source.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Fri, 23 Sep 2016 17:07:58 -0700
+
+palemoon (26.4.0-1mx150+1) mx; urgency=medium
+
+  * New upstream release:
+    - Removed Google Search as a bundled search provider. If desired, you can
+      manually install it (or other search engines) after the update by following
+      the steps in the Manage Search Engines topic.
+    - Fixed the URL API to allow "stringification" of the object per
+      specification. This should make a number of websites happy.
+    - Added the ES6 string .includes() function in addition to the pre-existing
+      .contains() function for  checking if a string contains another string.
+      The .contains() function is retained for compatibility with web and
+      extension scripts that adhere to the ES6 pre-release specification up to
+      and including RC3.
+    - Fixed the calculation of standalone SVG embeds width and height, which
+      should solve some reported issues with html5 graphs being displayed
+      incorrectly.
+    - Linux: improved memory allocation.
+    - Updated the graphite font library to 1.3.9.
+    - Added a blocking rule for F-Secure's 64-bit deepguard library to prevent
+      crashes.
+    - Updated the SQLite library to 3.13.0.
+    - Download= properties of links are now honored from the context menu
+      "Save" option.
+    - Fixed a crash in the XSS filter.
+    - Fixed a crash in the DOM error module.
+    - Worked around a crash on Linux
+    - Linux: Improved optimization and GCC6 compatibility (Note: compiling with
+      GCC 6 is still not recommended and it may or may not work, depending on
+      your environment)
+
+    Security fixes:
+    - (CVE-2016-5251)Potential URL spoofing in the address bar.
+    - (CVE-2016-0718) Context-dependent crash in expat 2.1.0.
+    - (CVE-2016-5266) Outgoing dataTransfer items are not properly filtered.
+    - Fixed potentially exploitable crash in the array splice implementation.
+    - Fixed potentially exploitable crash caused by badly formatted ICO files.
+    - (CVE-2016-5254) Heap-use-after-free in nsXULPopupManager::KeyDown
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Fri, 19 Aug 2016 13:08:56 -0700
+
+palemoon (26.3.3-1mx150+1) mx; urgency=medium
+
+  * New upstream release:
+    - Fixed an additional issue found that could cause menu text on Windows 10
+      to be white-on-white (and therefore unreadable).
+    - Fixed an issue with news feeds not showing up when embedded in web pages.
+    - Removed recently-added parsing of the child-src content security policy
+      directive, after some web compatibility issues with it came to light, as
+      well as it becoming clear that the CSP spec will see it removed in favor
+      of the previous directive for embedded content. This should fix some
+      intermittent issues people have reported on e.g. the main google.com page
+      and phpMyAdmin installations.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Fri, 01 Jul 2016 12:50:32 -0700
+
+palemoon (26.3.2-1mx150+1) mx; urgency=medium
+
+  * New upstream release:
+    - 26.3.2 (2016-06-27) - Windows only
+      This release only has pertinent changes for Windows. Other operating
+      systems do not need this update.
+      Changes/fixes:
+
+     -Fixed a rare issue where the browser would not initialize properly
+      (missing bookmarks and menu entries) if certain Windows registry values
+      were missing (Windows 8 only).
+     -Fixed an issue on Windows 10 where the classic menu bar would become
+      unreadable (white on white).
+     -Portable only: Switched to non-compressed binaries to prevent issues with
+      antivirus packages, to prevent issues with browser run-time operation, and
+      to simplify code signing.
+
+    - 26.3.1 (2016-06-25)
+      Changes/fixes:
+
+     -Fixed an issue with new tab button theming on dark toolbars.
+     -Reverted the useragent identification of Firefox compatibility mode to
+      38.9 to avoid  WOFF2 font issues for sites that don't use proper font
+      deployment as recommended by the W3C.
+     -Added a site-specific override for Google fonts to make sure it always
+      works even if not using Firefox compatibility mode. (workaround pending
+      for a proper solution on Google's side)
+     -Adjusted the "dark color" detection routine to switch text to white at
+      higher relative contrast levels. This will more closely match Windows 10's
+      "flip point" for different accent colors and is within the recommended
+      range determined by the WCAG.
+
+    - 26.3.0 (2016-06-21)
+      Changes/fixes:
+
+     -Added detection for dark system themes on Windows 10 and re-worked Windows
+      10 specific theming to better integrate into the OS and provide more
+      clarity.
+     -HTML5 media controls have been reworked to a horizontal volume control on
+      all media, including HTML5 audio that was previously without an
+      element-control for volume.
+     -Default HTML5 media volume preference added as media.default_volume --
+      fractional, default 1.0 (=100%).
+     -String.prototype.match() and .replace() are now fully spec compliant.
+     -NSPR and NSS now correctly no longer enforce IA32 architecture
+      compatibility, getting the advantage of SSE2 like the rest of the code.
+     -Worked around crashes in the XSS filter when navigating back in history
+      due to document fragments.
+     -Instated a hard minimum of 10,000 places entries regardless of free disk
+      space and total memory to prevent undesired expiration of history. That is
+      around 16MB for an average entry size, which should be sane enough even on
+      low-memory machines.
+     -Fixed a typo in networking code introduced in 26.2.2 that would cause
+      issues on some sites due to adding extra forward slashes to the URL.
+
+    - Security fixes:
+
+     -Fixed a number of memory safety hazards and potentially exploitable
+      crashes.
+     -Fixed CVE-2016-2821 Use-after-free in the mozilla::dom::Element class
+     -Fixed netaddr deserialization for AF_UNSPEC and AF_LOCAL.
+     -Fixed a memory overrun error in the VP8 encoder. DiD
+     -Fixed non-threadsafe re-use of pixman images to prevent potential race
+      conditions. DiD
+     -Fixed CVE-2016-2825 Partial Same Origin Policy violation
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Mon, 27 Jun 2016 10:51:22 -0700
+
+palemoon (26.2.2-1mx150+1) mx; urgency=medium
+
+  * New upstream bugfix and security release:
+
+    - CSS classes prefixed with "--" no longer stop parsing of the selectors.
+    - Several crash fixes.
+    - Made GC suppression more aggressive to prevent issues when actually out
+      of memory.
+    - Fixed a memory safety hazard in jpeg decoding.
+    - Fixed a potentially exploitable crash when using bi-directional text.
+    - Updated NSS to 3.19.4.2-PM, fixing CVE-2016-1938 among other things.
+  * Add Suggested packages gstreamer1.0-libav, gstreamer1.0-plugins-good,
+    gstreamer1.0-plugins-bad, gstreamer1.0-plugins-ugly to provide the most
+    comprehensive HTML 5 media playback.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Tue, 10 May 2016 18:26:54 -0700
+
+palemoon (26.2.1-2) mx; urgency=medium
+
+  * Switch to gstreamer 1.0 build-deps.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Sat, 09 Apr 2016 10:58:13 -0700
+
+palemoon (26.2.1-1) mx; urgency=medium
+
+  * New upstream release.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Fri, 08 Apr 2016 20:50:19 -0700
+
+palemoon (26.1.1-1mx150+1) mx; urgency=medium
+
+  * Repackaged for MX 15.
+
+ -- Mike Purtell <mandbx@sbcglobal.net>  Sat, 27 Feb 2016 19:41:04 -0800
+
+palemoon (26.1.0-1mx150+1) mx; urgency=medium
+
+  * New security, web compatibility, and bugfix release.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Wed, 17 Feb 2016 10:18:12 -0800
+
+palemoon (26.0.3-1mx150+1) mx; urgency=medium
+
+  * Repackaged for MX 15.
+
+ -- Mike Purtell <mandbx@sbcglobal.net>  Sat, 06 Feb 2016 18:02:47 -0800
+
+palemoon (26.0.2-1mx150+1) mx; urgency=medium
+
+  * Repackaged for MX 15.
+
+ -- Mike Purtell <mandbx@sbcglobal.net>  Thu, 04 Feb 2016 19:31:53 -0800
+
+palemoon (26.0.2-1mcr120+1) mepis; urgency=medium
+
+  * New security and bugfix release.
+  * Install extensions directly from /integration folder in source, remove
+    debian/distribution.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Thu, 04 Feb 2016 14:02:54 -0800
+
+palemoon (26.0.0-1mcr120+2) mepis; urgency=medium
+
+  * Install addons from debian/distribution, taken from Pale Moon tarball.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Mon, 01 Feb 2016 08:08:54 -0800
+
+palemoon (26.0.0-1mcr120+1) mepis; urgency=medium
+
+  * Add libpulse-dev to build-depends to prevent FTBFS.
+  * Add Suggests: gstreamer0.10-ffmpeg to debian/control file.
+  * Add Mozilla Public License 2.0 to debian/copyright.
+  * debian/mozconfig: use -O2 optimization and remove the jmalloc option,
+    and match what results from about:buildconfig from the official binary.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Tue, 26 Jan 2016 15:43:43 -0800
+
+palemoon (25.8.1-2mcr120+1) mepis; urgency=medium
+
+  * Drop mozconfig.patch; use debian/mozconfig instead.
+  * Refresh debian/copyright.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Sun, 06 Dec 2015 13:08:26 -0800
+
+palemoon (25.8.1-1mcr120+1) mepis; urgency=medium
+
+  * A small update to address two important issues:
+    - Fix for a crash that could occur at random since the update to 25.8.0.
+    - Fix for CSP (Content Security Policy) to be more lenient towards the
+      incorrect passing of full URLs with all sorts of parameters in the CSP
+      header, leading to misinterpretation of the header and incorrectly
+      blocking the loading of content.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Mon, 30 Nov 2015 10:20:18 -0800
+
+palemoon (25.8.0-1mcr120+1) mepis; urgency=medium
+
+  * New bugfix and maintenance release:
+     Fixes/changes:
+     - Updated LibVPX to 1.4.x to be able to play more kinds of VP9-encoded
+       videos.
+     - Updated the JPEG decoder library to 1.4.0.
+     - Fixed and cleaned up XPCOM timer thread code to avoid intermittent
+       issues with events not firing (especially after stand-by).
+     - Updated overrides to work around issues with Facebook and Netflix.
+     - Fixed an issue where too-old system-supplied NSPR and/or NSS libraries
+       would be accepted for use.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Wed, 18 Nov 2015 11:52:32 -0800
+
+palemoon (25.7.3-1mcr120+1) mepis; urgency=medium
+
+  * New bugfix and maintenance release:
+    - usability update needed due to the fact that Mozilla has shut down their key
+      exchange (J-PAKE) server along with the old Sync servers.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Wed, 14 Oct 2015 19:40:39 -0700
+
+palemoon (25.7.2-1mcr120+1) mepis; urgency=medium
+
+  * New bugfix and maintenance release:
+    - Fixed a critical hang caused by recursive reloads that might happen in
+      iframes if its hash changed.
+    - Fixed a critical hang caused by lazy-loading of stylesheets through a
+      specific web programming technique as advocated by Google's PageSpeed.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Mon, 05 Oct 2015 15:19:18 -0700
+
+palemoon (25.7.1-1mcr120+1) mepis; urgency=medium
+
+  * New bugfix and maintenance release:
+
+     Fixes/changes:
+
+    - Code cleanup: Removed the majority of remaining telemetry code (including
+      the data reporting back-end and health report) to prevent a few issues
+      with partially removed code in earlier versions.
+    - Fixed a crash due to handling of bogus URIs passed to CSS style filters
+      (e.g. whatsapp's web interface).
+    - Permitted spec-breaking syntax in Regex character classes, allowing
+      ranges that would be permitted per the grammar rules in the spec but not
+      necessarily following the syntax rules. This impacts a good number of
+      (also higher profile) sites that use invalid ranges in regular
+      expressions (e.g. Cisco's networking academy site, Yahoo Fantasy
+      Football).
+    - Fixed a crash due to the newly introduced WASAPI handling of audio
+      channel mapping that doesn't like actual surround hardware setups (e.g.
+      playing a video with quadraphonic audio on a 4-speaker setup).
+    - Fixed an issue where site-specific dictionary selections would be written
+      to content preferences without the user's action, potentially overwriting
+      or clearing a previously-chosen dictionary.
+    - Added support for drag and drop of local files from sources which use
+      text/uri-lists. (Some Linux flavors/file managers)
+    - Updated libnestegg to the most current version.
+    - Fixed an issue where setting the location to an empty string could cause
+      a reload loop.
+
+      Security fixes:
+
+    - Changed the jemalloc poison address to something that is not a NOP-slide.
+      DiD
+    - Fixed a memory safety hazard in ConvertDialogOptions (CVE-2015-4521)
+    - Fixed a buffer overflow/crash hazard in the
+      VertexBufferInterface::reserveVertexSpace function in libGLES in ANGLE
+      (CVE-2015-7179)
+    - Fixed an overflow/crash hazard in the XULContentSinkImpl::AddText function
+      (CVE-2015-7175)
+    - Fixed a stack buffer overread hazard in the ICC v4 profile parser
+      (CVE-2015-4504)
+    - Fixed an HTMLVideoElement Use-After-Free Remote Code Execution 0-day
+      vulnerability (ZDI-CAN-3176) (CVE-2015-4509)
+    - Fixed a potentially exploitable crash in nsXBLService::GetBinding
+    - Fixed a memory safety hazard in nsAttrAndChildArray::GrowBy
+      (CVE-2015-7174)
+    - Fixed a memory safety hazard for callers of nsUnicodeToUTF8::GetMaxLength
+      (CVE-2015-4522)
+    - Fixed a heap buffer overflow/crash hazard caused by invalid WebM headers
+      (CVE-2015-4511)
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Wed, 30 Sep 2015 12:11:14 -0700
+
+palemoon (25.7.0-1mcr120+1) mepis; urgency=medium
+
+  * New bugfix and maintenance release:
+    - Code cleanup: Removed the (otherwise unused) visual event tracer code.
+    - Code cleanup: Removed reflow performance tracing code (telemetry).
+    - Fixed a key JavaScript bug where defining properties on an object would
+      wipe the object.
+    - This seems to be a common issue with "modern" libraries that use "define"
+      instead of "change" and expecting the other properties on the object to be
+      retained, resulting in "x is undefined" errors all over the place if the
+      object is wiped.
+    - This aligns the behavior with ES6's "Validate and apply property
+      descriptor" pseudo-function.
+    - Updated the SQLite library to 3.8.11.1.
+    - Added support for the element.matches() Web API function.
+    - Added support for BASE tag parsing in source view. Previously, when
+      viewing the source of a document, clickable links would be incorrect if a
+      base path was specified in the document with this tag.
+    - Fixed an issue with running timers after the computer would have been put
+      to sleep with the browser opened.
+
+     Security fixes:
+
+    - Added protection against potential bugs where our SVG mPositions is out of
+      sync with the characters in the DOM. DiD
+    - Fixed use-after-free vulnerability in XMLHttpRequest::Open()
+      (CVE-2015-4492)
+    - Fixed use-after-free vulnerability in the StyleAnimationValue class
+      (CVE-2015-4488)
+    - Fixed crash or memory corruption in nsTArray (CVE-2015-4489)
+    - Fixed crash or memory corruption in nsTSubstring::ReplacePrep
+      (CVE-2015-4487)
+    - Fixed potential escalation of privileges or crash (out-of-bounds write)
+      via a crafted name in MARs (x64 only) -(CVE-2015-4482)
+    - Fixed an issue that would allow man-in-the-middle attackers to bypass a
+      mixed-content protection mechanism via a feed: URL in a POST request.
+      (CVE-2015-4483)
+  * Added blurb to postinst script.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Wed, 26 Aug 2015 14:50:58 -0700
+
+palemoon (25.6.0-1mcr120+1) mepis; urgency=medium
+
+  * New upstream release.
+  * Add debian README.7z-source to explain how to use the .7z source archive.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Fri, 31 Jul 2015 16:40:45 -0700
+
+palemoon (25.5.0-1mx150+1) mx; urgency=medium
+
+  * Rebuild for MX 15.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Fri, 26 Jun 2015 14:43:57 -0700
+
+palemoon (25.5.0-1mcr120+1) mepis; urgency=medium
+
+  * New upstream release.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Thu, 11 Jun 2015 14:53:31 -0700
+
+palemoon (25.4.1-1mcr120+1) mepis; urgency=low
+
+  * Bugfix release, rebuild for MEPIS 12.0.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Fri, 01 May 2015 12:47:55 -0700
+
+palemoon (25.3.1-0mcr120+1) mepis; urgency=low
+
+  * Rebuild for MEPIS 12.0.
+  * debian/rules: compress deb packages with xz.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Thu, 26 Mar 2015 11:23:26 -0700
+
+palemoon (25.3.1-0~precise1) precise; urgency=low
+
+  * New upstream release
+
+ -- Marián Kadaňka <marian.kadanka@openmailbox.org>  Wed, 25 Mar 2015 20:46:17 +0100
+
+palemoon (25.3.0-0~trusty1) trusty; urgency=low
+
+  * New upstream release
+
+ -- Marián Kadaňka <marian.kadanka@openmailbox.org>  Sat, 14 Mar 2015 12:12:57 +0100
+
+palemoon (25.2.1-0~trusty1) trusty; urgency=low
+
+  * New upstream release
+
+ -- Marián Kadaňka <marian.kadanka@openmailbox.org>  Sun, 01 Feb 2015 16:18:52 +0100
+
+palemoon (24.5.0-0~precise1) precise; urgency=low
+
+  * Initial packaging
+
+ -- Marián Kadaňka <marian.kadanka@openmailbox.org>  Mon, 12 May 2014 20:42:01 +0200

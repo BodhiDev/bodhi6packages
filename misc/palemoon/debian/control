@@ -1,0 +1,43 @@
+Source: palemoon
+Section: web
+Priority: optional
+Maintainer: Steven Pusser <stevep@mxlinux.org>
+XSBC-Original-Maintainer: Marian Kadanka <marian.kadanka@openmailbox.org>
+Build-Depends: autoconf2.13,
+               debhelper (>= 9),
+               libasound2-dev,
+               libdbus-1-dev (>=0.60),
+               libdbus-glib-1-dev (>= 0.60),
+               libfontconfig1-dev,
+               libgconf2-dev (>= 1.2.1),
+               libgtk2.0-dev (>= 2.14),
+               libpulse-dev,
+               libx11-xcb-dev,
+               libxt-dev,
+               lsb-release,
+               mesa-common-dev,
+               pkg-config,
+               python2 (>= 2.7.18-2~) | python (>= 2.7),
+               unzip,
+               yasm (>= 1.1),
+               zip
+Standards-Version: 3.9.6
+Homepage: http://www.palemoon.org/
+
+Package: palemoon
+Architecture: any
+Depends: libavcodec54 | libavcodec-extra54 | libavcodec55 | libavcodec-extra55 | libavcodec56 | libavcodec-extra56 | libavcodec57 | libavcodec-extra57 | libavcodec58 | libavcodec-extra58 | libavcodec-ffmpeg56 | libavcodec-ffmpeg-extra56,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Provides: gnome-www-browser, www-browser, x-www-browser
+Conflicts: palemoon-nonsse2
+Replaces: palemoon-nonsse2
+Description: Firefox-based, efficient and easy to use web browser
+ Pale Moon offers selected features and optimizations to maximize
+ the browser's speed, stability and user experience, while maintaining
+ compatibility with the thousands of Firefox extensions you have come
+ to love and rely on.
+ .
+ Pale Moon requires a processor that supports the SSE2 instruction set.
+ Run "/proc/cpuinfo" in a terminal, and look for sse2 in the flags to ensure
+ that your processor supports it.
