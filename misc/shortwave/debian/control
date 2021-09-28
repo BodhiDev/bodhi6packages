@@ -1,0 +1,31 @@
+Source: shortwave
+Section: misc
+Priority: optional
+Maintainer: Robert Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper,
+               cmake,
+               meson,
+               rustc,
+               libdbus-1-dev,
+               openssl,
+               libglib2.0-dev,
+               libgdk-pixbuf2.0-dev,
+               libgtk-3-dev,
+               libsqlite3-dev,
+               libhandy-0.0-dev,
+               libgstreamer-plugins-bad1.0-dev,
+               libgstreamer-plugins-good1.0-dev,
+               libgstreamer1.0-dev,
+               libgstreamer-plugins-base1.0-dev
+Standards-Version: 4.5.0
+Homepage: https://gitlab.gnome.org/World/Shortwave
+Rules-Requires-Root: no
+
+Package: shortwave
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},gstreamer1.0-gl, gstreamer1.0-plugins-base, gstreamer1.0-plugins-good, gstreamer1.0-pulseaudio, gstreamer1.0-x, gstreamer1.0-plugins-bad
+Description: Online radio streamer
+ Shortwave is a GTK Internet radio player written in Rust, which uses 
+ radio-browser.info as its radio stations database.
+
+

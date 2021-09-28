@@ -1,0 +1,11 @@
+shortwave (1.1.1-2) focal; urgency=low
+
+  * Install need gstreamer plugins
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Wed, 23 Dec 2020 11:55:49 +0400
+
+shortwave (1.1.1-1) focal; urgency=low
+
+  * Initial Release for Bodhi
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Wed, 21 Oct 2020 16:56:17 +0400

@@ -1,0 +1,6 @@
+# The OpenSSL license exception is implied by official upstream binary releases
+# that contain a statically linked libssl.
+shortwave: possible-gpl-code-linked-with-openssl
+shortwave: binary-without-manpage usr/bin/shortwave
+shortwave: new-package-should-close-itp-bug
+shortwave: embedded-library usr/bin/shortwave: curl
