@@ -1,0 +1,4 @@
+/etc/sysctl.d/bodhi.conf
+/etc/systemd/system.conf.d/50_linuxbodhi.conf
+/etc/timeshift/restore-hooks.d/50_bodhi
+/etc/udev/rules.d/61-debian-system-adjustments-polling.rules
