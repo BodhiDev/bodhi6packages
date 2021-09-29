@@ -4,5 +4,10 @@
 
 Debian folders used to package the applications and libraries for [Bodhi 6.x.y](http://bodhilinux.com) series.
 
+The debian folders used to package our themes and backgrounds are found separately:
+
+* [Bodhi Themes](https://github.com/BodhiDev/Bodhi-themes)
+* [Bodhi Backgrounds](https://github.com/BodhiDev/bodhi-backgrounds)
+
 Credits: 
 - Robert Wiley 
