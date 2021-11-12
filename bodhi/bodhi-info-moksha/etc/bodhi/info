@@ -1,5 +1,5 @@
 RELEASE=6.0
-CODENAME=kali
+CODENAME=focal
 EDITION="Moksha"
 DESCRIPTION="Bodhi Linux 6.0"
 DESKTOP=Moksha
