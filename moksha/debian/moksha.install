@@ -10,5 +10,5 @@ usr/share/locale
 usr/share/xsessions
 usr/share/enlightenment/AUTHORS
 usr/share/enlightenment/doc/*
-usr/lib/x86_64-linux-gnu/libepulse.so
-usr/lib/x86_64-linux-gnu/libepulse.la
+usr/lib/*/libepulse.so
+usr/lib/*/libepulse.la
