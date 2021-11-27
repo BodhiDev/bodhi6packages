@@ -1,3 +1,14 @@
+moksha (0.3.4-5) focal; urgency=low
+
+  * Key bindings list dialog
+  * ilist items feed bug when widget disabled - fix
+  * Dummy proof shelf removal
+  * Sys: unsaved apps list in logout dialog added
+  * Everything: on/off used item history added
+  * Shot legacy mode: copy link
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Sat, 27 Nov 2021 09:24:35 -0500
+
 moksha (0.3.4-4) focal; urgency=low
 
   * Updated localization
