@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" ] && ! [ -f /var/lbreakouthd.hscr]
+then
+ chown root:games /var/lbreakouthd.hscr
+ chmod 666 /var/lbreakouthd.hscr
+fi
+

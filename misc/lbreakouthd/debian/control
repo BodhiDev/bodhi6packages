@@ -1,0 +1,19 @@
+Source: lbreakouthd
+Section: games
+Priority: optional
+Maintainer: Robert Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper (>= 9),libsdl2-dev, libpng-dev, libsdl2-image-dev, libsdl2-mixer-dev, libsdl2-ttf-dev, autotools-dev
+Homepage: https://sourceforge.net/projects/lgames/files/lbreakouthd/
+Standards-Version: 4.3.0
+
+Package: lbreakouthd
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: ball-and-paddle game with nice graphics
+ lbreakouthd is a game similar to the classics breakout and xboing, featuring
+ a number of added graphical enhancements and effects.  You control a paddle
+ at the bottom of the playing-field, and must destroy bricks at the top
+ by bouncing balls against them.
+ .
+ lbreakouthd is a complete rewrite of the game "lbreakout".  Users of
+ lbreakout probably want to install this.

@@ -1,0 +1,11 @@
+lbreakouthd (1.0.8-1) focal; urgency=medium
+
+  * Team upload.
+  * Move package into team maintenance of Debian Games team
+  * Prevent random pauses ingame without external actions (thanks for the
+    patch to bitfreak25 <bitfreak25@gmx.de>
+    Closes: #916606
+  * Standards-Version: 4.3.0
+  * Drop unneeded versioned Build-Depends: dpkg-dev
+
+ -- Andreas Tille <tille@debian.org>  Thu, 21 Feb 2019 13:04:56 +0100

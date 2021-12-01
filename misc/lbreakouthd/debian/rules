@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+# GNU copyright 1997 to 1999 by Joey Hess.
+# copyright 2000 Daniel Burrows
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+#export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_BUILD_MAINT_OPTIONS=hardening=-format
+
+%:
+	dh $@ --with autoreconf
