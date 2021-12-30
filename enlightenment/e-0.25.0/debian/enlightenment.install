@@ -1,0 +1,7 @@
+etc/enlightenment/sysactions.conf
+etc/enlightenment/system.conf
+usr/bin/*
+usr/lib/*/enlightenment/modules/*
+usr/lib/*/enlightenment/utils/enlightenment_*
+usr/share/applications/*
+usr/lib/systemd/user
