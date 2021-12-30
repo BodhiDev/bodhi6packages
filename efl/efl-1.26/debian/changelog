@@ -1,8 +1,13 @@
 efl (1.26.1-0focal0) focal; urgency=low
 
   * Upstream release
+  * edje entry - complete key handling for cut (shft+del)
+  * edje entry - fix past to use shft+ins for paste and no ctl
+  * elm theme - fix mis-named colorclass for inwin bg
+  * Eio: fix functions name  
+  * elm theme - win - fix mystery off-by-1 resize of content
 
- -- Robert Wiley <ylee@bodhilinux.com>  Sun, 26 Dec 2021 13:37:29 -0500
+ -- Robert Wiley <ylee@bodhilinux.com>  Thu, 30 Dec 2021 16:49:11 -0500
 
 efl (1.25.1-0focal0) focal; urgency=low
 
