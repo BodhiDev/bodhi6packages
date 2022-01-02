@@ -1,4 +1,11 @@
-rage (0.3.0-1) focal; urgency=medium
+rage (0.4.0-1) focal; urgency=low
+
+  * Initial release 
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Sun, 02 Jan 2022 12:07:30 -0500
+
+
+rage (0.3.0-1) focal; urgency=low
 
   * Initial release 
 
