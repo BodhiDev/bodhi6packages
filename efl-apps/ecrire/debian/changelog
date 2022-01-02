@@ -1,3 +1,10 @@
+ecrire (0.2.0-1) focal; urgency=medium
+
+  * New upstream release
+  * Many changes
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Sun, 26 Dec 2021 12:44:19 -0500
+
 ecrire (0.1.2-1) focal; urgency=medium
 
   * UI improvements
