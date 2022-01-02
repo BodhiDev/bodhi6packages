@@ -1,0 +1,4 @@
+# Bodhi Linux 6.0 repos
+#
+deb http://packages.bodhilinux.com/bodhi focal b6raster
+deb http://packages.bodhilinux.com/bodhi focal b6main
