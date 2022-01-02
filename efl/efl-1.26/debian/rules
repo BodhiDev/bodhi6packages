@@ -55,6 +55,7 @@ endif
 		-Ddrm=true \
 		-Dbuild-tests=false \
 		-Dxpresent=true \
+		-Devas-loaders-disabler="['json', 'avif']" \
 		$(arch_flags) \
 		$(fb_flags) \
 		$(lua_flags)

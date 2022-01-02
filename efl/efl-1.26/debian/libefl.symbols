@@ -245,7 +245,7 @@ libecore.so.1 libefl #MINVER#
  ecore_thread_max_get@Base 1.15.0
  ecore_thread_max_reset@Base 1.15.0
  ecore_thread_max_set@Base 1.15.0
- ecore_thread_name_set@Base 1.26.1-0focal0
+ ecore_thread_name_set@Base 1.26.1
  ecore_thread_pending_feedback_get@Base 1.15.0
  ecore_thread_pending_get@Base 1.15.0
  ecore_thread_pending_total_get@Base 1.15.0
@@ -2111,27 +2111,27 @@ libecore_wl2.so.1 libefl #MINVER#
  ecore_wl2_window_weight_set@Base 1.22.2
  ecore_wl2_window_wm_rotation_supported_get@Base 1.20.1
  ecore_wl2_window_wm_rotation_supported_set@Base 1.20.1
-#MISSING: 1.26.1-0focal0# efl_aux_hints_interface@Base 1.20.1
-#MISSING: 1.26.1-0focal0# efl_hints_interface@Base 1.22.2
-#MISSING: 1.26.1-0focal0# www_interface@Base 1.19.1
-#MISSING: 1.26.1-0focal0# www_surface_interface@Base 1.19.1
-#MISSING: 1.26.1-0focal0# xdg_popup_interface@Base 1.19.1
-#MISSING: 1.26.1-0focal0# xdg_positioner_interface@Base 1.22.2
+#MISSING: 1.26.1# efl_aux_hints_interface@Base 1.20.1
+#MISSING: 1.26.1# efl_hints_interface@Base 1.22.2
+#MISSING: 1.26.1# www_interface@Base 1.19.1
+#MISSING: 1.26.1# www_surface_interface@Base 1.19.1
+#MISSING: 1.26.1# xdg_popup_interface@Base 1.19.1
+#MISSING: 1.26.1# xdg_positioner_interface@Base 1.22.2
 #MISSING: 1.22.2# xdg_shell_interface@Base 1.19.1
-#MISSING: 1.26.1-0focal0# xdg_surface_interface@Base 1.19.1
-#MISSING: 1.26.1-0focal0# xdg_toplevel_interface@Base 1.22.2
-#MISSING: 1.26.1-0focal0# xdg_wm_base_interface@Base 1.22.2
-#MISSING: 1.26.1-0focal0# zwp_e_session_recovery_interface@Base 1.19.1
-#MISSING: 1.26.1-0focal0# zwp_linux_buffer_params_v1_interface@Base 1.19.1
-#MISSING: 1.26.1-0focal0# zwp_linux_dmabuf_v1_interface@Base 1.19.1
-#MISSING: 1.26.1-0focal0# zwp_teamwork_interface@Base 1.19.1
+#MISSING: 1.26.1# xdg_surface_interface@Base 1.19.1
+#MISSING: 1.26.1# xdg_toplevel_interface@Base 1.22.2
+#MISSING: 1.26.1# xdg_wm_base_interface@Base 1.22.2
+#MISSING: 1.26.1# zwp_e_session_recovery_interface@Base 1.19.1
+#MISSING: 1.26.1# zwp_linux_buffer_params_v1_interface@Base 1.19.1
+#MISSING: 1.26.1# zwp_linux_dmabuf_v1_interface@Base 1.19.1
+#MISSING: 1.26.1# zwp_teamwork_interface@Base 1.19.1
 #MISSING: 1.22.2# zwp_text_input_manager_v1_interface@Base 1.19.1
 #MISSING: 1.22.2# zwp_text_input_v1_interface@Base 1.19.1
-#MISSING: 1.26.1-0focal0# zxdg_popup_v6_interface@Base 1.19.1
-#MISSING: 1.26.1-0focal0# zxdg_positioner_v6_interface@Base 1.19.1
-#MISSING: 1.26.1-0focal0# zxdg_shell_v6_interface@Base 1.19.1
-#MISSING: 1.26.1-0focal0# zxdg_surface_v6_interface@Base 1.19.1
-#MISSING: 1.26.1-0focal0# zxdg_toplevel_v6_interface@Base 1.19.1
+#MISSING: 1.26.1# zxdg_popup_v6_interface@Base 1.19.1
+#MISSING: 1.26.1# zxdg_positioner_v6_interface@Base 1.19.1
+#MISSING: 1.26.1# zxdg_shell_v6_interface@Base 1.19.1
+#MISSING: 1.26.1# zxdg_surface_v6_interface@Base 1.19.1
+#MISSING: 1.26.1# zxdg_toplevel_v6_interface@Base 1.19.1
 libecore_x.so.1 libefl #MINVER#
  ECORE_X_ATOM_ATOM@Base 1.15.0
  ECORE_X_ATOM_CARDINAL@Base 1.15.0
@@ -2954,7 +2954,7 @@ libecore_x.so.1 libefl #MINVER#
  ecore_x_randr_screen_primary_output_refresh_rates_get@Base 1.15.0
  ecore_x_randr_screen_primary_output_size_set@Base 1.15.0
  ecore_x_randr_screen_primary_output_sizes_get@Base 1.15.0
- ecore_x_randr_screen_refresh@Base 1.26.1-0focal0
+ ecore_x_randr_screen_refresh@Base 1.26.1
  ecore_x_randr_screen_reset@Base 1.15.0
  ecore_x_randr_screen_size_range_get@Base 1.15.0
  ecore_x_randr_version_get@Base 1.15.0
@@ -2979,10 +2979,10 @@ libecore_x.so.1 libefl #MINVER#
  ecore_x_region_subtract@Base 1.15.0
  ecore_x_region_translate@Base 1.15.0
  ecore_x_region_window_shape_set@Base 1.15.0
- ecore_x_rersource_load@Base 1.26.1-0focal0
- ecore_x_resource_db_flush@Base 1.26.1-0focal0
- ecore_x_resource_db_string_get@Base 1.26.1-0focal0
- ecore_x_resource_db_string_set@Base 1.26.1-0focal0
+ ecore_x_rersource_load@Base 1.26.1
+ ecore_x_resource_db_flush@Base 1.26.1
+ ecore_x_resource_db_string_get@Base 1.26.1
+ ecore_x_resource_db_string_set@Base 1.26.1
  ecore_x_root_screen_barriers_set@Base 1.22.4
  ecore_x_screen_count_get@Base 1.15.0
  ecore_x_screen_get@Base 1.15.0
@@ -3050,7 +3050,7 @@ libecore_x.so.1 libefl #MINVER#
  ecore_x_ungrab@Base 1.15.0
  ecore_x_version@Base 1.15.0
  ecore_x_visual_id_get@Base 1.15.0
- ecore_x_vsync_animator_tick_delay_set@Base 1.26.1-0focal0
+ ecore_x_vsync_animator_tick_delay_set@Base 1.26.1
  ecore_x_vsync_animator_tick_source_set@Base 1.15.0
  ecore_x_window_area_clear@Base 1.15.0
  ecore_x_window_area_expose@Base 1.15.0
@@ -3296,7 +3296,7 @@ libector.so.1 libefl #MINVER#
  ector_shutdown@Base 1.15.0
  ector_software_buffer_base_mixin_get@Base 1.17.0
  ector_software_buffer_class_get@Base 1.17.0
- ector_software_buffer_pixels_clear@Base 1.26.1-0focal0
+ ector_software_buffer_pixels_clear@Base 1.26.1
  ector_software_surface_class_get@Base 1.15.0
 #MISSING: 1.17.0# ector_software_surface_context_get@Base 1.15.0
 #MISSING: 1.17.0# ector_software_surface_context_set@Base 1.15.0
@@ -3320,7 +3320,7 @@ libedje.so.1 libefl #MINVER#
  _edje_cache_file_unref@Base 1.15.0
  _edje_data_font_list_desc_make@Base 1.15.0
  _edje_default_log_dom@Base 1.15.0
- _edje_edd_edje_color_class_info@Base 1.26.1-0focal0
+ _edje_edd_edje_color_class_info@Base 1.26.1
  _edje_edd_edje_file@Base 1.15.0
  _edje_edd_edje_part_collection@Base 1.15.0
  _edje_edd_init@Base 1.15.0
@@ -3357,7 +3357,7 @@ libedje.so.1 libefl #MINVER#
  edje_collection_cache_get@Base 1.15.0
  edje_collection_cache_set@Base 1.15.0
  edje_color_class_active_iterator_new@Base 1.15.0
- edje_color_class_apply@Base 1.26.1-0focal0
+ edje_color_class_apply@Base 1.26.1
  edje_color_class_del@Base 1.15.0
  edje_color_class_get@Base 1.15.0
  edje_color_class_list@Base 1.15.0
@@ -4004,8 +4004,8 @@ libedje.so.1 libefl #MINVER#
  edje_file_cache_set@Base 1.15.0
  edje_file_collection_list@Base 1.15.0
  edje_file_collection_list_free@Base 1.15.0
- edje_file_color_class_used_free@Base 1.26.1-0focal0
- edje_file_color_class_used_list@Base 1.26.1-0focal0
+ edje_file_color_class_used_free@Base 1.26.1
+ edje_file_color_class_used_list@Base 1.26.1
  edje_file_data_get@Base 1.15.0
  edje_file_group_exists@Base 1.15.0
  edje_file_iterator_new@Base 1.15.0
@@ -4026,7 +4026,7 @@ libedje.so.1 libefl #MINVER#
  edje_mmap_collection_list@Base 1.15.0
  edje_mmap_collection_list_free@Base 1.15.0
  edje_mmap_color_class_iterator_new@Base 1.15.0
- edje_mmap_color_class_used_list@Base 1.26.1-0focal0
+ edje_mmap_color_class_used_list@Base 1.26.1
  edje_mmap_data_get@Base 1.15.0
  edje_mmap_group_exists@Base 1.15.0
  edje_mmap_size_class_iterator_new@Base 1.17.0
@@ -6121,7 +6121,7 @@ libeina.so.1 libefl #MINVER#
  EINA_VALUE_TYPE_VALUE@Base 1.22.2
  _EINA_VALUE_TYPE_BASICS_END@Base 1.15.0
  _EINA_VALUE_TYPE_BASICS_START@Base 1.15.0
- _EINA_VALUE_TYPE_CONTENT@Base 1.26.1-0focal0
+ _EINA_VALUE_TYPE_CONTENT@Base 1.26.1
  _EINA_VALUE_TYPE_FILE@Base 1.22.2
  _EINA_VALUE_TYPE_OPTIONAL@Base 1.17.0
  _EINA_VALUE_TYPE_RECTANGLE@Base 1.22.2
@@ -6311,7 +6311,7 @@ libeina.so.1 libefl #MINVER#
  eina_file_virtualize@Base 1.15.0
  eina_file_xattr_get@Base 1.15.0
  eina_file_xattr_value_get@Base 1.15.0
- eina_fnmatch@Base 1.26.1-0focal0
+ eina_fnmatch@Base 1.26.1
  eina_freeq_clear@Base 1.19.0
  eina_freeq_count_max_get@Base 1.19.0
  eina_freeq_count_max_set@Base 1.19.0
@@ -6839,7 +6839,7 @@ libeina.so.1 libefl #MINVER#
  eina_thread_cancellable_set@Base 1.19.0
  eina_thread_create@Base 1.15.0
  eina_thread_equal@Base 1.15.0
- eina_thread_init@Base 1.26.1-0focal0
+ eina_thread_init@Base 1.26.1
  eina_thread_join@Base 1.15.0
  eina_thread_name_set@Base 1.16.0
  eina_thread_queue_fd_get@Base 1.15.0
@@ -6855,7 +6855,7 @@ libeina.so.1 libefl #MINVER#
  eina_thread_queue_wait@Base 1.15.0
  eina_thread_queue_wait_done@Base 1.15.0
  eina_thread_self@Base 1.15.0
- eina_thread_shutdown@Base 1.26.1-0focal0
+ eina_thread_shutdown@Base 1.26.1
  eina_threads_init@Base 1.15.0
  eina_threads_shutdown@Base 1.15.0
  eina_tile_grid_slicer_iterator_new@Base 1.15.0
@@ -7054,7 +7054,7 @@ libeio.so.1 libefl #MINVER#
  eio_eet_data_image_write_cipher@Base 1.15.0
  eio_eet_data_read_cipher@Base 1.15.0
  eio_eet_data_write_cipher@Base 1.15.0
- eio_eet_flush@Base 1.26.1-0focal0
+ eio_eet_flush@Base 1.26.1
  eio_eet_open@Base 1.15.0
  eio_eet_read_cipher@Base 1.15.0
  eio_eet_read_direct@Base 1.15.0
@@ -7071,7 +7071,7 @@ libeio.so.1 libefl #MINVER#
  eio_file_container_get@Base 1.15.0
  eio_file_copy@Base 1.15.0
  eio_file_direct_ls@Base 1.15.0
- eio_file_direct_lstat@Base 1.26.1-0focal0
+ eio_file_direct_lstat@Base 1.26.1
  eio_file_direct_stat@Base 1.15.0
  eio_file_ls@Base 1.15.0
  eio_file_map_all@Base 1.15.0
@@ -7127,11 +7127,11 @@ libeldbus.so.1 libefl #MINVER#
  eldbus_connection_unref@Base 1.15.0
  eldbus_hello@Base 1.15.0
  eldbus_init@Base 1.15.0
- eldbus_introspection_argument_find@Base 1.26.1-0focal0
- eldbus_introspection_interface_find@Base 1.26.1-0focal0
- eldbus_introspection_node_free@Base 1.26.1-0focal0
- eldbus_introspection_parse@Base 1.26.1-0focal0
- eldbus_introspection_property_find@Base 1.26.1-0focal0
+ eldbus_introspection_argument_find@Base 1.26.1
+ eldbus_introspection_interface_find@Base 1.26.1
+ eldbus_introspection_node_free@Base 1.26.1
+ eldbus_introspection_parse@Base 1.26.1
+ eldbus_introspection_property_find@Base 1.26.1
  eldbus_message_arguments_append@Base 1.15.0
  eldbus_message_arguments_get@Base 1.15.0
  eldbus_message_arguments_vappend@Base 1.15.0
@@ -7325,7 +7325,7 @@ libelementary.so.1 libefl #MINVER#
  ELM_CODE_PARSER_STANDARD_TODO@Base 1.18.0
 #MISSING: 1.19.0# ELM_CTXPOPUP_SMART_NAME@Base 1.18.0
  ELM_ECORE_EVENT_ETHUMB_CONNECT@Base 1.18.0
- ELM_EVENT_ATSPI_BRIDGE_STATE_CHANGED@Base 1.26.1-0focal0
+ ELM_EVENT_ATSPI_BRIDGE_STATE_CHANGED@Base 1.26.1
  ELM_EVENT_CONFIG_ALL_CHANGED@Base 1.18.0
  ELM_EVENT_POLICY_CHANGED@Base 1.18.0
  ELM_EVENT_PROCESS_BACKGROUND@Base 1.18.0
@@ -9514,17 +9514,17 @@ libelementary.so.1 libefl #MINVER#
  elm_config_mirrored_set@Base 1.18.0
  elm_config_offline_get@Base 1.22.2
  elm_config_offline_set@Base 1.22.2
- elm_config_palette_color_set@Base 1.26.1-0focal0
- elm_config_palette_color_unset@Base 1.26.1-0focal0
- elm_config_palette_delete@Base 1.26.1-0focal0
- elm_config_palette_free@Base 1.26.1-0focal0
- elm_config_palette_get@Base 1.26.1-0focal0
- elm_config_palette_list@Base 1.26.1-0focal0
- elm_config_palette_list_free@Base 1.26.1-0focal0
- elm_config_palette_load@Base 1.26.1-0focal0
- elm_config_palette_save@Base 1.26.1-0focal0
- elm_config_palette_set@Base 1.26.1-0focal0
- elm_config_palette_system_has@Base 1.26.1-0focal0
+ elm_config_palette_color_set@Base 1.26.1
+ elm_config_palette_color_unset@Base 1.26.1
+ elm_config_palette_delete@Base 1.26.1
+ elm_config_palette_free@Base 1.26.1
+ elm_config_palette_get@Base 1.26.1
+ elm_config_palette_list@Base 1.26.1
+ elm_config_palette_list_free@Base 1.26.1
+ elm_config_palette_load@Base 1.26.1
+ elm_config_palette_save@Base 1.26.1
+ elm_config_palette_set@Base 1.26.1
+ elm_config_palette_system_has@Base 1.26.1
  elm_config_password_show_last_get@Base 1.18.0
  elm_config_password_show_last_set@Base 1.18.0
  elm_config_password_show_last_timeout_get@Base 1.18.0
@@ -9893,7 +9893,7 @@ libelementary.so.1 libefl #MINVER#
  elm_fileselector_mode_set@Base 1.18.0
  elm_fileselector_multi_select_get@Base 1.18.0
  elm_fileselector_multi_select_set@Base 1.18.0
- elm_fileselector_part_class_get@Base 1.26.1-0focal0
+ elm_fileselector_part_class_get@Base 1.26.1
  elm_fileselector_path_get@Base 1.18.0
  elm_fileselector_path_set@Base 1.18.0
  elm_fileselector_selected_get@Base 1.18.0
@@ -12283,7 +12283,7 @@ libelementary.so.1 libefl #MINVER#
  elm_progressbar_span_size_get@Base 1.18.0
  elm_progressbar_span_size_set@Base 1.18.0
  elm_progressbar_unit_format_function_set@Base 1.18.0
- elm_progressbar_unit_format_function_set_full@Base 1.26.1-0focal0
+ elm_progressbar_unit_format_function_set_full@Base 1.26.1
  elm_progressbar_unit_format_get@Base 1.18.0
  elm_progressbar_unit_format_set@Base 1.18.0
  elm_progressbar_value_get@Base 1.18.0
@@ -12442,7 +12442,7 @@ libelementary.so.1 libefl #MINVER#
  elm_slider_horizontal_get@Base 1.18.0
  elm_slider_horizontal_set@Base 1.18.0
  elm_slider_indicator_format_function_set@Base 1.18.0
- elm_slider_indicator_format_function_set_full@Base 1.26.1-0focal0
+ elm_slider_indicator_format_function_set_full@Base 1.26.1
  elm_slider_indicator_format_get@Base 1.18.0
  elm_slider_indicator_format_set@Base 1.18.0
  elm_slider_indicator_show_get@Base 1.18.0
@@ -12469,7 +12469,7 @@ libelementary.so.1 libefl #MINVER#
  elm_slider_unit_format_get@Base 1.18.0
  elm_slider_unit_format_set@Base 1.18.0
  elm_slider_units_format_function_set@Base 1.18.0
- elm_slider_units_format_function_set_full@Base 1.26.1-0focal0
+ elm_slider_units_format_function_set_full@Base 1.26.1
  elm_slider_value_get@Base 1.18.0
  elm_slider_value_set@Base 1.18.0
  elm_slideshow_add@Base 1.18.0
@@ -12594,8 +12594,8 @@ libelementary.so.1 libefl #MINVER#
  elm_textpath_slice_number_get@Base 1.22.2
  elm_textpath_slice_number_set@Base 1.22.2
  elm_textpath_text_user_style_set@Base 1.25.1
- elm_theme_color_class_list@Base 1.26.1-0focal0
- elm_theme_color_class_list_free@Base 1.26.1-0focal0
+ elm_theme_color_class_list@Base 1.26.1
+ elm_theme_color_class_list_free@Base 1.26.1
  elm_theme_copy@Base 1.18.0
  elm_theme_data_get@Base 1.18.0
  elm_theme_default_get@Base 1.18.0
@@ -13219,9 +13219,9 @@ libelput.so.1 libefl #MINVER#
  ELPUT_EVENT_SEAT_CAPS@Base 1.18.0
  ELPUT_EVENT_SEAT_FRAME@Base 1.18.0
  ELPUT_EVENT_SESSION_ACTIVE@Base 1.18.0
- ELPUT_EVENT_SWIPE_BEGIN@Base 1.26.1-0focal0
- ELPUT_EVENT_SWIPE_END@Base 1.26.1-0focal0
- ELPUT_EVENT_SWIPE_UPDATE@Base 1.26.1-0focal0
+ ELPUT_EVENT_SWIPE_BEGIN@Base 1.26.1
+ ELPUT_EVENT_SWIPE_END@Base 1.26.1
+ ELPUT_EVENT_SWIPE_UPDATE@Base 1.26.1
  ELPUT_EVENT_SWITCH@Base 1.22.2
  elput_device_caps_get@Base 1.20.1
  elput_device_output_name_get@Base 1.20.1
@@ -13248,7 +13248,7 @@ libelput.so.1 libefl #MINVER#
  elput_input_touch_tap_to_click_enabled_set@Base 1.22.2
  elput_manager_close@Base 1.18.0
  elput_manager_connect@Base 1.18.0
- elput_manager_connect_gestures@Base 1.26.1-0focal0
+ elput_manager_connect_gestures@Base 1.26.1
  elput_manager_disconnect@Base 1.18.0
  elput_manager_open@Base 1.18.0
  elput_manager_seats_get@Base 1.18.0
@@ -13258,11 +13258,11 @@ libelput.so.1 libefl #MINVER#
  elput_seat_manager_get@Base 1.20.1
  elput_seat_name_get@Base 1.20.1
  elput_shutdown@Base 1.18.0
- elput_swipe_device_get@Base 1.26.1-0focal0
- elput_swipe_dx_get@Base 1.26.1-0focal0
- elput_swipe_dy_get@Base 1.26.1-0focal0
- elput_swipe_finger_count_get@Base 1.26.1-0focal0
- elput_swipe_window_get@Base 1.26.1-0focal0
+ elput_swipe_device_get@Base 1.26.1
+ elput_swipe_dx_get@Base 1.26.1
+ elput_swipe_dy_get@Base 1.26.1
+ elput_swipe_finger_count_get@Base 1.26.1
+ elput_swipe_window_get@Base 1.26.1
  elput_touch_click_method_get@Base 1.19.0
  elput_touch_click_method_set@Base 1.19.0
  elput_touch_drag_enabled_get@Base 1.19.0
@@ -13638,7 +13638,7 @@ libeo.so.1 libefl #MINVER#
  _efl_object_api_op_id_get@Base 1.19.0
  _efl_object_call_end@Base 1.19.0
  _efl_object_call_resolve@Base 1.19.0
- _efl_object_event_callback_count@Base 1.26.1-0focal0
+ _efl_object_event_callback_count@Base 1.26.1
  _efl_object_init_generation@Base 1.19.0
  _efl_object_op_api_id_get@Base 1.19.0
 #MISSING: 1.19.0# _eo_add_end@Base 1.15.0
@@ -13650,7 +13650,7 @@ libeo.so.1 libefl #MINVER#
 #MISSING: 1.18.0# _eo_do_end@Base 1.15.0
 #MISSING: 1.18.0# _eo_do_start@Base 1.15.0
 #MISSING: 1.19.0# _eo_init_generation@Base 1.18.0
- _eo_no_anon@Base 1.26.1-0focal0
+ _eo_no_anon@Base 1.26.1
 #MISSING: 1.19.0# _eo_self_get@Base 1.18.0
 #MISSING: 1.18.0# _eo_stack_get@Base 1.16.0
  efl_allow_parent_unref_get@Base 1.22.2
@@ -13868,10 +13868,10 @@ libeo_dbg.so.1 libefl #MINVER#
  _efl_object_api_op_id_get@Base 1.19.0
  _efl_object_call_end@Base 1.19.0
  _efl_object_call_resolve@Base 1.19.0
- _efl_object_event_callback_count@Base 1.26.1-0focal0
+ _efl_object_event_callback_count@Base 1.26.1
  _efl_object_init_generation@Base 1.19.0
  _efl_object_op_api_id_get@Base 1.19.0
- _eo_no_anon@Base 1.26.1-0focal0
+ _eo_no_anon@Base 1.26.1
  efl_allow_parent_unref_get@Base 1.22.2
  efl_allow_parent_unref_set@Base 1.22.2
  efl_callbacks_cmp@Base 1.19.0
@@ -14607,20 +14607,20 @@ libevas.so.1 libefl #MINVER#
 #MISSING: 1.18.0# _EVAS_ZOOMABLE_INTERFACE_EVENT_ZOOM_CHANGE@Base 1.15.0
 #MISSING: 1.18.0# _EVAS_ZOOMABLE_INTERFACE_EVENT_ZOOM_START@Base 1.15.0
 #MISSING: 1.18.0# _EVAS_ZOOMABLE_INTERFACE_EVENT_ZOOM_STOP@Base 1.15.0
- _efl_gfx_vg_value_provider_fill_color_get@Base 1.26.1-0focal0
- _efl_gfx_vg_value_provider_fill_color_set@Base 1.26.1-0focal0
- _efl_gfx_vg_value_provider_stroke_color_get@Base 1.26.1-0focal0
- _efl_gfx_vg_value_provider_stroke_color_set@Base 1.26.1-0focal0
- _efl_gfx_vg_value_provider_stroke_width_get@Base 1.26.1-0focal0
- _efl_gfx_vg_value_provider_stroke_width_set@Base 1.26.1-0focal0
- _efl_gfx_vg_value_provider_updated_get@Base 1.26.1-0focal0
+ _efl_gfx_vg_value_provider_fill_color_get@Base 1.26.1
+ _efl_gfx_vg_value_provider_fill_color_set@Base 1.26.1
+ _efl_gfx_vg_value_provider_stroke_color_get@Base 1.26.1
+ _efl_gfx_vg_value_provider_stroke_color_set@Base 1.26.1
+ _efl_gfx_vg_value_provider_stroke_width_get@Base 1.26.1
+ _efl_gfx_vg_value_provider_stroke_width_set@Base 1.26.1
+ _efl_gfx_vg_value_provider_updated_get@Base 1.26.1
 #MISSING: 1.22.2# _evas_canvas3d_texture_source_set@Base 1.15.0
  _evas_canvas_image_data_regenerate@Base 1.18.0
  _evas_canvas_image_data_unset@Base 1.18.0
  _evas_common_rgba_image_data_offset@Base 1.18.0
  _evas_common_rgba_image_plane_get@Base 1.19.0
  _evas_common_rgba_image_surface_size@Base 1.18.0
- _evas_font_log_dom_global@Base 1.26.1-0focal0
+ _evas_font_log_dom_global@Base 1.26.1
  _evas_log_dom_global@Base 1.15.0
  _evas_module_engine_inherit@Base 1.15.0
  _evas_module_libdir_get@Base 1.15.0
@@ -14629,7 +14629,7 @@ libevas.so.1 libefl #MINVER#
  _evas_native_tbm_surface_image_set@Base 1.18.0
  _evas_native_tbm_surface_stride_get@Base 1.18.0
  _evas_object_intercept_call@Base 1.19.0
- _evas_textblock_cursor_is_format@Base 1.26.1-0focal0
+ _evas_textblock_cursor_is_format@Base 1.26.1
 #MISSING: 1.17.0# ector_cairo_software_surface_class_get@Base 1.15.0
 #MISSING: 1.17.0# ector_cairo_software_surface_get@Base 1.15.0
 #MISSING: 1.17.0# ector_cairo_software_surface_set@Base 1.15.0
@@ -14848,14 +14848,14 @@ libevas.so.1 libefl #MINVER#
  efl_canvas_scene_seats@Base 1.22.4
  efl_canvas_sequential_group_animation_class_get@Base 1.22.4
  efl_canvas_snapshot_class_get@Base 1.18.0
- efl_canvas_surface_class_get@Base 1.26.1-0focal0
- efl_canvas_surface_native_buffer_get@Base 1.26.1-0focal0
- efl_canvas_surface_native_buffer_set@Base 1.26.1-0focal0
- efl_canvas_surface_tbm_class_get@Base 1.26.1-0focal0
- efl_canvas_surface_wayland_class_get@Base 1.26.1-0focal0
- efl_canvas_surface_x11_class_get@Base 1.26.1-0focal0
- efl_canvas_surface_x11_pixmap_get@Base 1.26.1-0focal0
- efl_canvas_surface_x11_pixmap_set@Base 1.26.1-0focal0
+ efl_canvas_surface_class_get@Base 1.26.1
+ efl_canvas_surface_native_buffer_get@Base 1.26.1
+ efl_canvas_surface_native_buffer_set@Base 1.26.1
+ efl_canvas_surface_tbm_class_get@Base 1.26.1
+ efl_canvas_surface_wayland_class_get@Base 1.26.1
+ efl_canvas_surface_x11_class_get@Base 1.26.1
+ efl_canvas_surface_x11_pixmap_get@Base 1.26.1
+ efl_canvas_surface_x11_pixmap_set@Base 1.26.1
 #MISSING: 1.20.1# efl_canvas_text_annotation_del@Base 1.18.0
 #MISSING: 1.20.1# efl_canvas_text_annotation_get@Base 1.18.0
 #MISSING: 1.20.1# efl_canvas_text_annotation_insert@Base 1.18.0
@@ -15373,7 +15373,7 @@ libevas.so.1 libefl #MINVER#
  evas_async_events_process@Base 1.15.0
  evas_async_events_process_blocking@Base 1.15.0
  evas_async_events_put@Base 1.15.0
- evas_bidi_shape_string@Base 1.26.1-0focal0
+ evas_bidi_shape_string@Base 1.26.1
  evas_box_class_get@Base 1.15.0
 #MISSING: 1.22.2# evas_cache2_flush@Base 1.15.0
 #MISSING: 1.22.2# evas_cache2_image_cache_key_create@Base 1.15.0
@@ -15409,9 +15409,9 @@ libevas.so.1 libefl #MINVER#
  evas_cache_engine_image_data@Base 1.15.0
  evas_cache_engine_image_dirty@Base 1.15.0
  evas_cache_engine_image_drop@Base 1.15.0
- evas_cache_engine_image_dup@Base 1.26.1-0focal0
+ evas_cache_engine_image_dup@Base 1.26.1
  evas_cache_engine_image_engine@Base 1.15.0
- evas_cache_engine_image_flush@Base 1.26.1-0focal0
+ evas_cache_engine_image_flush@Base 1.26.1
  evas_cache_engine_image_get@Base 1.15.0
  evas_cache_engine_image_init@Base 1.15.0
  evas_cache_engine_image_load_data@Base 1.15.0
@@ -15858,7 +15858,7 @@ libevas.so.1 libefl #MINVER#
  evas_common_font_int_load@Base 1.15.0
  evas_common_font_int_load_complete@Base 1.15.0
  evas_common_font_int_load_init@Base 1.15.0
- evas_common_font_int_memory_load@Base 1.26.1-0focal0
+ evas_common_font_int_memory_load@Base 1.26.1
  evas_common_font_int_modify_cache_by@Base 1.15.0
  evas_common_font_int_unref@Base 1.15.0
  evas_common_font_load@Base 1.15.0
@@ -15868,8 +15868,8 @@ libevas.so.1 libefl #MINVER#
  evas_common_font_memory_hinting_add@Base 1.15.0
  evas_common_font_memory_hinting_load@Base 1.15.0
  evas_common_font_memory_load@Base 1.15.0
- evas_common_font_ot_cluster_size_get@Base 1.26.1-0focal0
- evas_common_font_ot_populate_text_props@Base 1.26.1-0focal0
+ evas_common_font_ot_cluster_size_get@Base 1.26.1
+ evas_common_font_ot_populate_text_props@Base 1.26.1
  evas_common_font_query_advance@Base 1.15.0
  evas_common_font_query_char_at_coords@Base 1.15.0
  evas_common_font_query_char_coords@Base 1.15.0
@@ -15890,7 +15890,7 @@ libevas.so.1 libefl #MINVER#
  evas_common_font_source_memory_load@Base 1.15.0
  evas_common_get_char_index@Base 1.15.0
  evas_common_hinting_available@Base 1.15.0
- evas_common_image_alpha_create@Base 1.26.1-0focal0
+ evas_common_image_alpha_create@Base 1.26.1
  evas_common_image_alpha_line_buffer_obtain@Base 1.15.0
  evas_common_image_alpha_line_buffer_release@Base 1.15.0
 #MISSING: 1.22.2# evas_common_image_cache2_get@Base 1.15.0
@@ -15901,7 +15901,7 @@ libevas.so.1 libefl #MINVER#
  evas_common_image_get_cache@Base 1.15.0
  evas_common_image_image_all_unload@Base 1.15.0
  evas_common_image_init@Base 1.15.0
- evas_common_image_line_buffer_free@Base 1.26.1-0focal0
+ evas_common_image_line_buffer_free@Base 1.26.1
  evas_common_image_line_buffer_obtain@Base 1.15.0
  evas_common_image_line_buffer_release@Base 1.15.0
  evas_common_image_new@Base 1.15.0
@@ -15976,12 +15976,12 @@ libevas.so.1 libefl #MINVER#
  evas_common_scale_sample_init@Base 1.15.0
  evas_common_scale_sample_shutdown@Base 1.15.0
  evas_common_shutdown@Base 1.15.0
- evas_common_text_props_cluster_next@Base 1.26.1-0focal0
- evas_common_text_props_cluster_prev@Base 1.26.1-0focal0
- evas_common_text_props_content_create@Base 1.26.1-0focal0
- evas_common_text_props_index_find@Base 1.26.1-0focal0
- evas_common_text_props_merge@Base 1.26.1-0focal0
- evas_common_text_props_split@Base 1.26.1-0focal0
+ evas_common_text_props_cluster_next@Base 1.26.1
+ evas_common_text_props_cluster_prev@Base 1.26.1
+ evas_common_text_props_content_create@Base 1.26.1
+ evas_common_text_props_index_find@Base 1.26.1
+ evas_common_text_props_merge@Base 1.26.1
+ evas_common_text_props_split@Base 1.26.1
  evas_common_tilebuf_add_motion_vector@Base 1.15.0
  evas_common_tilebuf_add_redraw@Base 1.15.0
  evas_common_tilebuf_clear@Base 1.15.0
@@ -16005,7 +16005,7 @@ libevas.so.1 libefl #MINVER#
  evas_cserve_connected_get@Base 1.15.0
  evas_cserve_disconnect@Base 1.15.0
  evas_cserve_image_cache_contents_clean@Base 1.15.0
- evas_cserve_image_cache_contents_get@Base 1.26.1-0focal0
+ evas_cserve_image_cache_contents_get@Base 1.26.1
  evas_cserve_path_get@Base 1.15.0
  evas_cserve_stats_get@Base 1.15.0
  evas_cserve_want_get@Base 1.15.0
@@ -16149,7 +16149,7 @@ libevas.so.1 libefl #MINVER#
  evas_image_cache_get@Base 1.15.0
  evas_image_cache_reload@Base 1.15.0
  evas_image_cache_set@Base 1.15.0
- evas_image_class_get@Base 1.26.1-0focal0
+ evas_image_class_get@Base 1.26.1
  evas_image_max_size_get@Base 1.15.0
  evas_init@Base 1.15.0
  evas_key_lock_add@Base 1.15.0
@@ -17020,7 +17020,7 @@ libevas.so.1 libefl #MINVER#
  evas_textblock_cursor_line_char_last@Base 1.15.0
  evas_textblock_cursor_line_coord_set@Base 1.15.0
  evas_textblock_cursor_line_geometry_get@Base 1.15.0
- evas_textblock_cursor_line_jump_by@Base 1.26.1-0focal0
+ evas_textblock_cursor_line_jump_by@Base 1.26.1
  evas_textblock_cursor_line_set@Base 1.15.0
  evas_textblock_cursor_paragraph_char_first@Base 1.15.0
  evas_textblock_cursor_paragraph_char_last@Base 1.15.0
@@ -17046,7 +17046,7 @@ libevas.so.1 libefl #MINVER#
  evas_textblock_cursor_word_start@Base 1.15.0
  evas_textblock_escape_string_get@Base 1.15.0
  evas_textblock_escape_string_range_get@Base 1.15.0
- evas_textblock_fit_font_size_get@Base 1.26.1-0focal0
+ evas_textblock_fit_font_size_get@Base 1.26.1
  evas_textblock_fit_options_get@Base 1.22.4
  evas_textblock_fit_options_set@Base 1.22.4
  evas_textblock_fit_size_array_get@Base 1.22.4

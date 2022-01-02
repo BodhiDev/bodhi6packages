@@ -1,6 +1,7 @@
 efl (1.26.1-0focal0) focal; urgency=low
 
   * Upstream release
+  * elm theme - fix placement of procstats and volume so they don't fight
   * edje entry - complete key handling for cut (shft+del)
   * edje entry - fix past to use shft+ins for paste and no ctl
   * elm theme - fix mis-named colorclass for inwin bg
