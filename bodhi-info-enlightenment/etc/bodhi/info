@@ -1,0 +1,6 @@
+RELEASE=6.1
+CODENAME=kali
+EDITION="Enlightenment"
+DESCRIPTION="Bodhi Linux 6.1"
+DESKTOP=Moksha
+GRUB_TITLE=Bodhi Linux 6.1 Enlightenment
