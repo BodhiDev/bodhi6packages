@@ -1,3 +1,10 @@
+terminology (1.12.0-2) focal; urgency=low
+
+   * Wrong version fix
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Mon, 03 Jan 2022 14:14:43 -0500
+
+
 terminology (1.12.0-1) focal; urgency=low
 
    * New default theme
