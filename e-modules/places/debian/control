@@ -2,7 +2,7 @@ Source: enlightenment-module-places
 Section: utils
 Priority: optional
 Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
-Build-Depends: debhelper (>= 10), autotools-dev, pkg-config, libefl-dev, enlightenment
+Build-Depends: debhelper (>= 10), autotools-dev, pkg-config, libefl-dev, enlightenment, libudisks2-dev
 Standards-Version: 4.5.0
 Homepage: https://git.enlightenment.org/enlightenment/modules/places.git/
 Rules-Requires-Root: no
