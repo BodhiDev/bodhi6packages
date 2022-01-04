@@ -1,8 +1,8 @@
-evisum (0.5.10-1) focal; urgency=medium
+evisum (0.5.14-1) focal; urgency=medium
 
-  * Upstream release
+  * Development release for e25
 
- -- Robert Wiley <ylee@bodhilinux.com>  Mon, 01 Feb 2021 07:14:43 -0400 
+ -- Robert Wiley <ylee@bodhilinux.com>  Tue, 04 Jan 2022 06:51:43 -0500
 
 evisum (0.5.9-1) focal; urgency=medium
 
