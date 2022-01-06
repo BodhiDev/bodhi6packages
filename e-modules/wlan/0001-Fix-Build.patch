@@ -1,0 +1,39 @@
+From 0d6487bd716657deebd4b515aab86c03308fc54a Mon Sep 17 00:00:00 2001
+From: Robert Wiley <ylee@bodhilinux.com>
+Date: Thu, 6 Jan 2022 11:24:38 -0500
+Subject: [PATCH] Fix Build
+
+---
+ src/e_mod_config.c | 2 +-
+ src/e_mod_main.c   | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/e_mod_config.c b/src/e_mod_config.c
+index 73790c9..3cef048 100644
+--- a/src/e_mod_config.c
++++ b/src/e_mod_config.c
+@@ -35,7 +35,7 @@ void _config_wlan_module(Config_Item *ci) {
+     v->basic.create_widgets = _basic_create_widgets;
+ 
+     snprintf(buf, sizeof(buf), "%s/e-module-wlan.edj", wlan_config->mod_dir);
+-    cfd = e_config_dialog_new(e_util_comp_current_get(), D_("Wlan Settings"),
++    cfd = e_config_dialog_new(NULL, D_("Wlan Settings"),
+         "Wlan", "_e_modules_wlan_config_dialog", buf, 0, v, ci);
+     wlan_config->config_dialog = cfd;
+ }
+diff --git a/src/e_mod_main.c b/src/e_mod_main.c
+index b6d01e0..592b3d7 100644
+--- a/src/e_mod_main.c
++++ b/src/e_mod_main.c
+@@ -143,7 +143,7 @@ void *event_info)
+         e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &x, &y,
+             NULL, NULL);
+         e_menu_activate_mouse(m,
+-            e_util_zone_current_get(e_manager_current_get()),
++            e_zone_current_get(),
+             x + ev->output.x, y + ev->output.y, 1, 1,
+             E_MENU_POP_DIRECTION_DOWN, ev->timestamp);
+         evas_event_feed_mouse_up(inst->gcc->gadcon->evas, ev->button,
+-- 
+2.25.1
+
