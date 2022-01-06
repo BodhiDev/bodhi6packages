@@ -1,0 +1,13 @@
+Package: enlightenment-module-wlan-dbgsym
+Package-Type: ddeb
+Source: enlightenment-module-wlan
+Version: 0.1.1-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Installed-Size: 100
+Depends: enlightenment-module-wlan (= 0.1.1-1)
+Section: debug
+Priority: optional
+Description: debug symbols for enlightenment-module-wlan
+Build-Ids: 018d27929894e58a9bfb42bc110e35f58e645b9b

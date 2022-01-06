@@ -1,0 +1,14 @@
+Source: enlightenment-module-wlan
+Section: utils
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper (>= 10), autotools-dev, pkg-config, libefl-dev, enlightenment (= 1.25.1-0focal0)
+Standards-Version: 4.5.0
+Homepage: https://git.enlightenment.org/enlightenment/modules/wlan.git/
+Rules-Requires-Root: no
+
+Package: enlightenment-module-wlan
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Wlan module for the enlightenment desktop
+ Network manager independent wireless monitoring for the enlightenment desktop

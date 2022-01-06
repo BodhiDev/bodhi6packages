@@ -1,0 +1,2 @@
+enlightenment-module-wlan: new-package-should-close-itp-bug
+enlightenment-module-wlan: non-empty-dependency_libs-in-la-file
