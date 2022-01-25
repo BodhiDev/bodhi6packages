@@ -1,9 +1,15 @@
+moksha (0.3.4-10) focal; urgency=low
+
+  * Module icon fixed for better consistency
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Tue, 25 Jan 2022 11:35:10 -0500
+
 moksha (0.3.4-9) focal; urgency=low
 
   * Keybindings viewer: minor cleanup
   * Show history key bindings fix
   * Key bindings preview: eina_stringshare error
-  * Systray MOKSHA_SYSTRAY_ARROW env suppor
+  * Systray MOKSHA_SYSTRAY_ARROW env support
 
  -- Robert Wiley <ylee@bodhilinux.com>  Thu, 20 Jan 2022 07:26:33 -0500
 
