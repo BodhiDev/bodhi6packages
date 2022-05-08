@@ -1,3 +1,10 @@
+moksha-module-stickynotes (0.1.1-4) focal; urgency=medium
+
+  * ncal support fix
+  * popen condition added
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Sun, 08 May 2022 11:46:28 -0400
+
 moksha-module-stickynotes (0.1.1-3) focal; urgency=medium
 
   * E_EVENT_RESUME support
