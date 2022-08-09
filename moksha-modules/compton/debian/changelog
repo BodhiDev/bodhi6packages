@@ -1,4 +1,4 @@
-moksha-module-compton (0.1.1-2) focal; urgency=medium
+moksha-module-compton (0.1.1-3) focal; urgency=medium
 
   * Use config home for picom.conf
 
