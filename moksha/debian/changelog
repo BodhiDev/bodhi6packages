@@ -23,7 +23,7 @@ moksha (0.3.4-18) focal; urgency=low
   * Notification: fix potential mem issues
   * Notification: blacklist can be NULL
   * Mixer: volume slider value added into popup
-  * Border menu 'move to' item in case of multi monitor and only one virtual desktop
+  * Border menu 'move to' item fix
   * Bad smart menu direction for multi monitors
   * Systemd support for sysactions
   * Notification conditions simplified
